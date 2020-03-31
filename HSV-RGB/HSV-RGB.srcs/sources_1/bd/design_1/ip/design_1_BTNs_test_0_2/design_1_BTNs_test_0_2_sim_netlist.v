@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Tue Mar 31 13:32:29 2020
+// Date        : Tue Mar 31 14:37:07 2020
 // Host        : DESKTOP-TM8D8VH running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/bd/design_1/ip/design_1_BTNs_test_0_2/design_1_BTNs_test_0_2_sim_netlist.v
@@ -1445,7 +1445,7 @@ module design_1_BTNs_test_0_2_BTNs_test
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(\NLW_counter10_inferred__0/i__carry__0_O_UNCONNECTED [3:0]),
-        .S({i__carry__0_i_1_n_0,i__carry__0_i_2__0_n_0,i__carry__0_i_3_n_0,i__carry__0_i_4__0_n_0}));
+        .S({i__carry__0_i_1_n_0,i__carry__0_i_2_n_0,i__carry__0_i_3_n_0,i__carry__0_i_4__0_n_0}));
   CARRY4 \counter10_inferred__0/i__carry__1 
        (.CI(\counter10_inferred__0/i__carry__0_n_0 ),
         .CO({\NLW_counter10_inferred__0/i__carry__1_CO_UNCONNECTED [3],\counter10_inferred__0/i__carry__1_n_1 ,\counter10_inferred__0/i__carry__1_n_2 ,\counter10_inferred__0/i__carry__1_n_3 }),
@@ -2017,7 +2017,7 @@ module design_1_BTNs_test_0_2_BTNs_test
         .CYINIT(1'b0),
         .DI({1'b0,1'b1,1'b0,1'b1}),
         .O({\h0_inferred__0/i__carry__0_n_4 ,\h0_inferred__0/i__carry__0_n_5 ,\h0_inferred__0/i__carry__0_n_6 ,\h0_inferred__0/i__carry__0_n_7 }),
-        .S({h[9],i__carry__0_i_2_n_0,h[7],i__carry__0_i_4_n_0}));
+        .S({h[9],i__carry__0_i_2__0_n_0,h[7],i__carry__0_i_4_n_0}));
   CARRY4 \h0_inferred__0/i__carry__1 
        (.CI(\h0_inferred__0/i__carry__0_n_0 ),
         .CO({\h0_inferred__0/i__carry__1_n_0 ,\h0_inferred__0/i__carry__1_n_1 ,\h0_inferred__0/i__carry__1_n_2 ,\h0_inferred__0/i__carry__1_n_3 }),
@@ -2695,11 +2695,11 @@ module design_1_BTNs_test_0_2_BTNs_test
         .Q(\h_reg_n_0_[9] ),
         .R(1'b0));
   LUT3 #(
-    .INIT(8'h01)) 
+    .INIT(8'h02)) 
     i__carry__0_i_1
-       (.I0(p_0_in[23]),
-        .I1(p_0_in[22]),
-        .I2(p_0_in[21]),
+       (.I0(p_0_in[21]),
+        .I1(p_0_in[23]),
+        .I2(p_0_in[22]),
         .O(i__carry__0_i_1_n_0));
   LUT3 #(
     .INIT(8'hAC)) 
@@ -2709,21 +2709,21 @@ module design_1_BTNs_test_0_2_BTNs_test
         .I2(h1_carry__2_n_0),
         .O(h[9]));
   LUT3 #(
-    .INIT(8'h1B)) 
+    .INIT(8'h80)) 
     i__carry__0_i_2
+       (.I0(p_0_in[18]),
+        .I1(p_0_in[20]),
+        .I2(p_0_in[19]),
+        .O(i__carry__0_i_2_n_0));
+  LUT3 #(
+    .INIT(8'h1B)) 
+    i__carry__0_i_2__0
        (.I0(h1_carry__2_n_0),
         .I1(h2[8]),
         .I2(h0[8]),
-        .O(i__carry__0_i_2_n_0));
-  LUT3 #(
-    .INIT(8'h01)) 
-    i__carry__0_i_2__0
-       (.I0(p_0_in[20]),
-        .I1(p_0_in[19]),
-        .I2(p_0_in[18]),
         .O(i__carry__0_i_2__0_n_0));
   LUT3 #(
-    .INIT(8'h08)) 
+    .INIT(8'h04)) 
     i__carry__0_i_3
        (.I0(p_0_in[17]),
         .I1(p_0_in[16]),
@@ -2967,18 +2967,18 @@ module design_1_BTNs_test_0_2_BTNs_test
         .I2(h0[5]),
         .O(i__carry_i_1_n_0));
   LUT3 #(
-    .INIT(8'h08)) 
+    .INIT(8'h04)) 
     i__carry_i_1__0
-       (.I0(p_0_in[11]),
-        .I1(p_0_in[10]),
+       (.I0(p_0_in[10]),
+        .I1(p_0_in[11]),
         .I2(p_0_in[9]),
         .O(i__carry_i_1__0_n_0));
   LUT3 #(
-    .INIT(8'h20)) 
+    .INIT(8'h04)) 
     i__carry_i_2
-       (.I0(p_0_in[6]),
-        .I1(p_0_in[7]),
-        .I2(p_0_in[8]),
+       (.I0(p_0_in[7]),
+        .I1(p_0_in[8]),
+        .I2(p_0_in[6]),
         .O(i__carry_i_2_n_0));
   LUT3 #(
     .INIT(8'hAC)) 

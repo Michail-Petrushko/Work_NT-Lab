@@ -44,9 +44,15 @@ module PWM(
 //    end
     
     reg[7:0] counter;
-    
+    integer temp1=0,temp2=0,temp3=0;
     always@(posedge clk)
     begin
+    if ((temp1!=R)|(temp2!=G)|(temp3!=B)) begin
+    counter = 0;
+    temp1 = R;
+    temp2 = G;
+    temp3 = B;
+    end
     if(counter<=R) 
         rgb_led_tri_o[0] <=1'b1;
     else 

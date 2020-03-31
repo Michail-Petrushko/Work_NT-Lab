@@ -30,7 +30,7 @@ module hsv_to_rgb(
     integer a = 0;
     integer Vinc = 0;
     integer Vdec = 0;
-    
+    integer v = 0;
     initial R = 8'b0;
     initial G = 8'b0;
     initial B = 8'b0;
@@ -41,13 +41,19 @@ module hsv_to_rgb(
      a = (V-Vmin)* (H%60)/60;
      Vinc = Vmin + a;
      Vdec = Vmin - a; 
+     
+     Vinc = Vinc*255/100;
+     Vdec = Vdec*255/100;
+     Vmin = Vmin*255/100;
+     v = V*255/100;
+     
      case (Hi)
-           0  : begin R <= V; G <= Vinc; B <=Vmin; end
-           1  : begin R <= Vdec; G <= V; B <=Vmin; end
-           2  : begin R <= Vmin; G <= V; B <=Vinc; end
-           3  : begin R <= Vmin; G <= Vdec; B <=V; end
-           4  : begin R <= Vinc; G <= Vmin; B <=V; end
-           5  : begin R <= V; G <= Vmin; B <=Vdec; end
+           0  : begin R <= v; G <= Vinc; B <=Vmin; end
+           1  : begin R <= Vdec; G <= v; B <=Vmin; end
+           2  : begin R <= Vmin; G <= v; B <=Vinc; end
+           3  : begin R <= Vmin; G <= Vdec; B <=v; end
+           4  : begin R <= Vinc; G <= Vmin; B <=v; end
+           5  : begin R <= v; G <= Vmin; B <=Vdec; end
            default :  begin R <= 0; G <= 0; B <=0; end
      endcase
      end

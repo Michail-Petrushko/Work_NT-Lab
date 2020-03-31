@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Tue Mar 31 13:32:29 2020
+-- Date        : Tue Mar 31 14:37:06 2020
 -- Host        : DESKTOP-TM8D8VH running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_BTNs_test_0_2_sim_netlist.vhdl
@@ -1586,7 +1586,7 @@ begin
       DI(3 downto 0) => B"0000",
       O(3 downto 0) => \NLW_counter10_inferred__0/i__carry__0_O_UNCONNECTED\(3 downto 0),
       S(3) => \i__carry__0_i_1_n_0\,
-      S(2) => \i__carry__0_i_2__0_n_0\,
+      S(2) => \i__carry__0_i_2_n_0\,
       S(1) => \i__carry__0_i_3_n_0\,
       S(0) => \i__carry__0_i_4__0_n_0\
     );
@@ -2562,7 +2562,7 @@ h0_carry_i_4: unisim.vcomponents.LUT2
       O(1) => \h0_inferred__0/i__carry__0_n_6\,
       O(0) => \h0_inferred__0/i__carry__0_n_7\,
       S(3) => \^h_1\(9),
-      S(2) => \i__carry__0_i_2_n_0\,
+      S(2) => \i__carry__0_i_2__0_n_0\,
       S(1) => \^h_1\(7),
       S(0) => \i__carry__0_i_4_n_0\
     );
@@ -3578,12 +3578,12 @@ h1_carry_i_8: unisim.vcomponents.LUT2
     );
 \i__carry__0_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"01"
+      INIT => X"02"
     )
         port map (
-      I0 => p_0_in(23),
-      I1 => p_0_in(22),
-      I2 => p_0_in(21),
+      I0 => p_0_in(21),
+      I1 => p_0_in(23),
+      I2 => p_0_in(22),
       O => \i__carry__0_i_1_n_0\
     );
 \i__carry__0_i_1__0\: unisim.vcomponents.LUT3
@@ -3598,27 +3598,27 @@ h1_carry_i_8: unisim.vcomponents.LUT2
     );
 \i__carry__0_i_2\: unisim.vcomponents.LUT3
     generic map(
+      INIT => X"80"
+    )
+        port map (
+      I0 => p_0_in(18),
+      I1 => p_0_in(20),
+      I2 => p_0_in(19),
+      O => \i__carry__0_i_2_n_0\
+    );
+\i__carry__0_i_2__0\: unisim.vcomponents.LUT3
+    generic map(
       INIT => X"1B"
     )
         port map (
       I0 => \h1_carry__2_n_0\,
       I1 => h2(8),
       I2 => h0(8),
-      O => \i__carry__0_i_2_n_0\
-    );
-\i__carry__0_i_2__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"01"
-    )
-        port map (
-      I0 => p_0_in(20),
-      I1 => p_0_in(19),
-      I2 => p_0_in(18),
       O => \i__carry__0_i_2__0_n_0\
     );
 \i__carry__0_i_3\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"08"
+      INIT => X"04"
     )
         port map (
       I0 => p_0_in(17),
@@ -3978,22 +3978,22 @@ h1_carry_i_8: unisim.vcomponents.LUT2
     );
 \i__carry_i_1__0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"08"
+      INIT => X"04"
     )
         port map (
-      I0 => p_0_in(11),
-      I1 => p_0_in(10),
+      I0 => p_0_in(10),
+      I1 => p_0_in(11),
       I2 => p_0_in(9),
       O => \i__carry_i_1__0_n_0\
     );
 \i__carry_i_2\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"20"
+      INIT => X"04"
     )
         port map (
-      I0 => p_0_in(6),
-      I1 => p_0_in(7),
-      I2 => p_0_in(8),
+      I0 => p_0_in(7),
+      I1 => p_0_in(8),
+      I2 => p_0_in(6),
       O => \i__carry_i_2_n_0\
     );
 \i__carry_i_2__0\: unisim.vcomponents.LUT3

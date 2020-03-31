@@ -46,7 +46,7 @@ module BTNs_test(
     
     always@(posedge clk) begin   
     counter1 = counter1+1;
-    if (counter1 == 200000) begin 
+    if (counter1 == 4000000) begin 
     
     if (sw[0] == 1) begin
     h = h+temp;
