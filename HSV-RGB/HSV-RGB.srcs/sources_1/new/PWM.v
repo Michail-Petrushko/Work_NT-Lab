@@ -47,17 +47,17 @@ module PWM(
     
     always@(posedge clk)
     begin
-    if(counter<=R/4) 
+    if(counter<=R) 
         rgb_led_tri_o[0] <=1'b1;
     else 
         rgb_led_tri_o[0] <=1'b0;
         
-    if(counter<=G/4) 
+    if(counter<=G) 
         rgb_led_tri_o[1] <=1'b1;
     else 
         rgb_led_tri_o[1] <=1'b0;
                 
-     if(counter<=B/4) 
+     if(counter<=B) 
            rgb_led_tri_o[2] <=1'b1;
        else 
            rgb_led_tri_o[2] <=1'b0;    

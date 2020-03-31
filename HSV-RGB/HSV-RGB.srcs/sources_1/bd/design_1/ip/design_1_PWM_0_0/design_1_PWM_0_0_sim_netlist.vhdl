@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Tue Mar 31 12:00:52 2020
+-- Date        : Tue Mar 31 13:55:18 2020
 -- Host        : DESKTOP-TM8D8VH running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/bd/design_1/ip/design_1_PWM_0_0/design_1_PWM_0_0_sim_netlist.vhdl
@@ -18,9 +18,9 @@ entity design_1_PWM_0_0_PWM is
   port (
     rgb_led_tri_o : out STD_LOGIC_VECTOR ( 2 downto 0 );
     clk : in STD_LOGIC;
-    R : in STD_LOGIC_VECTOR ( 5 downto 0 );
-    G : in STD_LOGIC_VECTOR ( 5 downto 0 );
-    B : in STD_LOGIC_VECTOR ( 5 downto 0 )
+    R : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    G : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    B : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_1_PWM_0_0_PWM : entity is "PWM";
@@ -40,6 +40,7 @@ architecture STRUCTURE of design_1_PWM_0_0_PWM is
   signal \rgb_led_tri_o0__3_carry_i_5_n_0\ : STD_LOGIC;
   signal \rgb_led_tri_o0__3_carry_i_6_n_0\ : STD_LOGIC;
   signal \rgb_led_tri_o0__3_carry_i_7_n_0\ : STD_LOGIC;
+  signal \rgb_led_tri_o0__3_carry_i_8_n_0\ : STD_LOGIC;
   signal \rgb_led_tri_o0__3_carry_n_1\ : STD_LOGIC;
   signal \rgb_led_tri_o0__3_carry_n_2\ : STD_LOGIC;
   signal \rgb_led_tri_o0__3_carry_n_3\ : STD_LOGIC;
@@ -50,6 +51,7 @@ architecture STRUCTURE of design_1_PWM_0_0_PWM is
   signal \rgb_led_tri_o0__7_carry_i_5_n_0\ : STD_LOGIC;
   signal \rgb_led_tri_o0__7_carry_i_6_n_0\ : STD_LOGIC;
   signal \rgb_led_tri_o0__7_carry_i_7_n_0\ : STD_LOGIC;
+  signal \rgb_led_tri_o0__7_carry_i_8_n_0\ : STD_LOGIC;
   signal \rgb_led_tri_o0__7_carry_n_1\ : STD_LOGIC;
   signal \rgb_led_tri_o0__7_carry_n_2\ : STD_LOGIC;
   signal \rgb_led_tri_o0__7_carry_n_3\ : STD_LOGIC;
@@ -60,6 +62,7 @@ architecture STRUCTURE of design_1_PWM_0_0_PWM is
   signal rgb_led_tri_o0_carry_i_5_n_0 : STD_LOGIC;
   signal rgb_led_tri_o0_carry_i_6_n_0 : STD_LOGIC;
   signal rgb_led_tri_o0_carry_i_7_n_0 : STD_LOGIC;
+  signal rgb_led_tri_o0_carry_i_8_n_0 : STD_LOGIC;
   signal rgb_led_tri_o0_carry_n_1 : STD_LOGIC;
   signal rgb_led_tri_o0_carry_n_2 : STD_LOGIC;
   signal rgb_led_tri_o0_carry_n_3 : STD_LOGIC;
@@ -241,17 +244,28 @@ begin
       CO(1) => \rgb_led_tri_o0__3_carry_n_2\,
       CO(0) => \rgb_led_tri_o0__3_carry_n_3\,
       CYINIT => '1',
-      DI(3) => '0',
-      DI(2) => \rgb_led_tri_o0__3_carry_i_1_n_0\,
-      DI(1) => \rgb_led_tri_o0__3_carry_i_2_n_0\,
-      DI(0) => \rgb_led_tri_o0__3_carry_i_3_n_0\,
+      DI(3) => \rgb_led_tri_o0__3_carry_i_1_n_0\,
+      DI(2) => \rgb_led_tri_o0__3_carry_i_2_n_0\,
+      DI(1) => \rgb_led_tri_o0__3_carry_i_3_n_0\,
+      DI(0) => \rgb_led_tri_o0__3_carry_i_4_n_0\,
       O(3 downto 0) => \NLW_rgb_led_tri_o0__3_carry_O_UNCONNECTED\(3 downto 0),
-      S(3) => \rgb_led_tri_o0__3_carry_i_4_n_0\,
-      S(2) => \rgb_led_tri_o0__3_carry_i_5_n_0\,
-      S(1) => \rgb_led_tri_o0__3_carry_i_6_n_0\,
-      S(0) => \rgb_led_tri_o0__3_carry_i_7_n_0\
+      S(3) => \rgb_led_tri_o0__3_carry_i_5_n_0\,
+      S(2) => \rgb_led_tri_o0__3_carry_i_6_n_0\,
+      S(1) => \rgb_led_tri_o0__3_carry_i_7_n_0\,
+      S(0) => \rgb_led_tri_o0__3_carry_i_8_n_0\
     );
 \rgb_led_tri_o0__3_carry_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"2F02"
+    )
+        port map (
+      I0 => G(6),
+      I1 => \counter_reg__0\(6),
+      I2 => \counter_reg__0\(7),
+      I3 => G(7),
+      O => \rgb_led_tri_o0__3_carry_i_1_n_0\
+    );
+\rgb_led_tri_o0__3_carry_i_2\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2F02"
     )
@@ -260,9 +274,9 @@ begin
       I1 => \counter_reg__0\(4),
       I2 => \counter_reg__0\(5),
       I3 => G(5),
-      O => \rgb_led_tri_o0__3_carry_i_1_n_0\
+      O => \rgb_led_tri_o0__3_carry_i_2_n_0\
     );
-\rgb_led_tri_o0__3_carry_i_2\: unisim.vcomponents.LUT4
+\rgb_led_tri_o0__3_carry_i_3\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2F02"
     )
@@ -271,9 +285,9 @@ begin
       I1 => \counter_reg__0\(2),
       I2 => \counter_reg__0\(3),
       I3 => G(3),
-      O => \rgb_led_tri_o0__3_carry_i_2_n_0\
+      O => \rgb_led_tri_o0__3_carry_i_3_n_0\
     );
-\rgb_led_tri_o0__3_carry_i_3\: unisim.vcomponents.LUT4
+\rgb_led_tri_o0__3_carry_i_4\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2F02"
     )
@@ -282,18 +296,20 @@ begin
       I1 => \counter_reg__0\(0),
       I2 => \counter_reg__0\(1),
       I3 => G(1),
-      O => \rgb_led_tri_o0__3_carry_i_3_n_0\
-    );
-\rgb_led_tri_o0__3_carry_i_4\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => \counter_reg__0\(6),
-      I1 => \counter_reg__0\(7),
       O => \rgb_led_tri_o0__3_carry_i_4_n_0\
     );
 \rgb_led_tri_o0__3_carry_i_5\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"9009"
+    )
+        port map (
+      I0 => G(6),
+      I1 => \counter_reg__0\(6),
+      I2 => G(7),
+      I3 => \counter_reg__0\(7),
+      O => \rgb_led_tri_o0__3_carry_i_5_n_0\
+    );
+\rgb_led_tri_o0__3_carry_i_6\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"9009"
     )
@@ -302,9 +318,9 @@ begin
       I1 => \counter_reg__0\(4),
       I2 => G(5),
       I3 => \counter_reg__0\(5),
-      O => \rgb_led_tri_o0__3_carry_i_5_n_0\
+      O => \rgb_led_tri_o0__3_carry_i_6_n_0\
     );
-\rgb_led_tri_o0__3_carry_i_6\: unisim.vcomponents.LUT4
+\rgb_led_tri_o0__3_carry_i_7\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"9009"
     )
@@ -313,9 +329,9 @@ begin
       I1 => \counter_reg__0\(2),
       I2 => G(3),
       I3 => \counter_reg__0\(3),
-      O => \rgb_led_tri_o0__3_carry_i_6_n_0\
+      O => \rgb_led_tri_o0__3_carry_i_7_n_0\
     );
-\rgb_led_tri_o0__3_carry_i_7\: unisim.vcomponents.LUT4
+\rgb_led_tri_o0__3_carry_i_8\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"9009"
     )
@@ -324,7 +340,7 @@ begin
       I1 => \counter_reg__0\(0),
       I2 => G(1),
       I3 => \counter_reg__0\(1),
-      O => \rgb_led_tri_o0__3_carry_i_7_n_0\
+      O => \rgb_led_tri_o0__3_carry_i_8_n_0\
     );
 \rgb_led_tri_o0__7_carry\: unisim.vcomponents.CARRY4
      port map (
@@ -334,17 +350,28 @@ begin
       CO(1) => \rgb_led_tri_o0__7_carry_n_2\,
       CO(0) => \rgb_led_tri_o0__7_carry_n_3\,
       CYINIT => '1',
-      DI(3) => '0',
-      DI(2) => \rgb_led_tri_o0__7_carry_i_1_n_0\,
-      DI(1) => \rgb_led_tri_o0__7_carry_i_2_n_0\,
-      DI(0) => \rgb_led_tri_o0__7_carry_i_3_n_0\,
+      DI(3) => \rgb_led_tri_o0__7_carry_i_1_n_0\,
+      DI(2) => \rgb_led_tri_o0__7_carry_i_2_n_0\,
+      DI(1) => \rgb_led_tri_o0__7_carry_i_3_n_0\,
+      DI(0) => \rgb_led_tri_o0__7_carry_i_4_n_0\,
       O(3 downto 0) => \NLW_rgb_led_tri_o0__7_carry_O_UNCONNECTED\(3 downto 0),
-      S(3) => \rgb_led_tri_o0__7_carry_i_4_n_0\,
-      S(2) => \rgb_led_tri_o0__7_carry_i_5_n_0\,
-      S(1) => \rgb_led_tri_o0__7_carry_i_6_n_0\,
-      S(0) => \rgb_led_tri_o0__7_carry_i_7_n_0\
+      S(3) => \rgb_led_tri_o0__7_carry_i_5_n_0\,
+      S(2) => \rgb_led_tri_o0__7_carry_i_6_n_0\,
+      S(1) => \rgb_led_tri_o0__7_carry_i_7_n_0\,
+      S(0) => \rgb_led_tri_o0__7_carry_i_8_n_0\
     );
 \rgb_led_tri_o0__7_carry_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"2F02"
+    )
+        port map (
+      I0 => B(6),
+      I1 => \counter_reg__0\(6),
+      I2 => \counter_reg__0\(7),
+      I3 => B(7),
+      O => \rgb_led_tri_o0__7_carry_i_1_n_0\
+    );
+\rgb_led_tri_o0__7_carry_i_2\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2F02"
     )
@@ -353,9 +380,9 @@ begin
       I1 => \counter_reg__0\(4),
       I2 => \counter_reg__0\(5),
       I3 => B(5),
-      O => \rgb_led_tri_o0__7_carry_i_1_n_0\
+      O => \rgb_led_tri_o0__7_carry_i_2_n_0\
     );
-\rgb_led_tri_o0__7_carry_i_2\: unisim.vcomponents.LUT4
+\rgb_led_tri_o0__7_carry_i_3\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2F02"
     )
@@ -364,9 +391,9 @@ begin
       I1 => \counter_reg__0\(2),
       I2 => \counter_reg__0\(3),
       I3 => B(3),
-      O => \rgb_led_tri_o0__7_carry_i_2_n_0\
+      O => \rgb_led_tri_o0__7_carry_i_3_n_0\
     );
-\rgb_led_tri_o0__7_carry_i_3\: unisim.vcomponents.LUT4
+\rgb_led_tri_o0__7_carry_i_4\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2F02"
     )
@@ -375,18 +402,20 @@ begin
       I1 => \counter_reg__0\(0),
       I2 => \counter_reg__0\(1),
       I3 => B(1),
-      O => \rgb_led_tri_o0__7_carry_i_3_n_0\
-    );
-\rgb_led_tri_o0__7_carry_i_4\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => \counter_reg__0\(6),
-      I1 => \counter_reg__0\(7),
       O => \rgb_led_tri_o0__7_carry_i_4_n_0\
     );
 \rgb_led_tri_o0__7_carry_i_5\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"9009"
+    )
+        port map (
+      I0 => B(6),
+      I1 => \counter_reg__0\(6),
+      I2 => B(7),
+      I3 => \counter_reg__0\(7),
+      O => \rgb_led_tri_o0__7_carry_i_5_n_0\
+    );
+\rgb_led_tri_o0__7_carry_i_6\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"9009"
     )
@@ -395,9 +424,9 @@ begin
       I1 => \counter_reg__0\(4),
       I2 => B(5),
       I3 => \counter_reg__0\(5),
-      O => \rgb_led_tri_o0__7_carry_i_5_n_0\
+      O => \rgb_led_tri_o0__7_carry_i_6_n_0\
     );
-\rgb_led_tri_o0__7_carry_i_6\: unisim.vcomponents.LUT4
+\rgb_led_tri_o0__7_carry_i_7\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"9009"
     )
@@ -406,9 +435,9 @@ begin
       I1 => \counter_reg__0\(2),
       I2 => B(3),
       I3 => \counter_reg__0\(3),
-      O => \rgb_led_tri_o0__7_carry_i_6_n_0\
+      O => \rgb_led_tri_o0__7_carry_i_7_n_0\
     );
-\rgb_led_tri_o0__7_carry_i_7\: unisim.vcomponents.LUT4
+\rgb_led_tri_o0__7_carry_i_8\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"9009"
     )
@@ -417,7 +446,7 @@ begin
       I1 => \counter_reg__0\(0),
       I2 => B(1),
       I3 => \counter_reg__0\(1),
-      O => \rgb_led_tri_o0__7_carry_i_7_n_0\
+      O => \rgb_led_tri_o0__7_carry_i_8_n_0\
     );
 rgb_led_tri_o0_carry: unisim.vcomponents.CARRY4
      port map (
@@ -427,17 +456,28 @@ rgb_led_tri_o0_carry: unisim.vcomponents.CARRY4
       CO(1) => rgb_led_tri_o0_carry_n_2,
       CO(0) => rgb_led_tri_o0_carry_n_3,
       CYINIT => '1',
-      DI(3) => '0',
-      DI(2) => rgb_led_tri_o0_carry_i_1_n_0,
-      DI(1) => rgb_led_tri_o0_carry_i_2_n_0,
-      DI(0) => rgb_led_tri_o0_carry_i_3_n_0,
+      DI(3) => rgb_led_tri_o0_carry_i_1_n_0,
+      DI(2) => rgb_led_tri_o0_carry_i_2_n_0,
+      DI(1) => rgb_led_tri_o0_carry_i_3_n_0,
+      DI(0) => rgb_led_tri_o0_carry_i_4_n_0,
       O(3 downto 0) => NLW_rgb_led_tri_o0_carry_O_UNCONNECTED(3 downto 0),
-      S(3) => rgb_led_tri_o0_carry_i_4_n_0,
-      S(2) => rgb_led_tri_o0_carry_i_5_n_0,
-      S(1) => rgb_led_tri_o0_carry_i_6_n_0,
-      S(0) => rgb_led_tri_o0_carry_i_7_n_0
+      S(3) => rgb_led_tri_o0_carry_i_5_n_0,
+      S(2) => rgb_led_tri_o0_carry_i_6_n_0,
+      S(1) => rgb_led_tri_o0_carry_i_7_n_0,
+      S(0) => rgb_led_tri_o0_carry_i_8_n_0
     );
 rgb_led_tri_o0_carry_i_1: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"2F02"
+    )
+        port map (
+      I0 => R(6),
+      I1 => \counter_reg__0\(6),
+      I2 => \counter_reg__0\(7),
+      I3 => R(7),
+      O => rgb_led_tri_o0_carry_i_1_n_0
+    );
+rgb_led_tri_o0_carry_i_2: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2F02"
     )
@@ -446,9 +486,9 @@ rgb_led_tri_o0_carry_i_1: unisim.vcomponents.LUT4
       I1 => \counter_reg__0\(4),
       I2 => \counter_reg__0\(5),
       I3 => R(5),
-      O => rgb_led_tri_o0_carry_i_1_n_0
+      O => rgb_led_tri_o0_carry_i_2_n_0
     );
-rgb_led_tri_o0_carry_i_2: unisim.vcomponents.LUT4
+rgb_led_tri_o0_carry_i_3: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2F02"
     )
@@ -457,9 +497,9 @@ rgb_led_tri_o0_carry_i_2: unisim.vcomponents.LUT4
       I1 => \counter_reg__0\(2),
       I2 => \counter_reg__0\(3),
       I3 => R(3),
-      O => rgb_led_tri_o0_carry_i_2_n_0
+      O => rgb_led_tri_o0_carry_i_3_n_0
     );
-rgb_led_tri_o0_carry_i_3: unisim.vcomponents.LUT4
+rgb_led_tri_o0_carry_i_4: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2F02"
     )
@@ -468,18 +508,20 @@ rgb_led_tri_o0_carry_i_3: unisim.vcomponents.LUT4
       I1 => \counter_reg__0\(0),
       I2 => \counter_reg__0\(1),
       I3 => R(1),
-      O => rgb_led_tri_o0_carry_i_3_n_0
-    );
-rgb_led_tri_o0_carry_i_4: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => \counter_reg__0\(6),
-      I1 => \counter_reg__0\(7),
       O => rgb_led_tri_o0_carry_i_4_n_0
     );
 rgb_led_tri_o0_carry_i_5: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"9009"
+    )
+        port map (
+      I0 => R(6),
+      I1 => \counter_reg__0\(6),
+      I2 => R(7),
+      I3 => \counter_reg__0\(7),
+      O => rgb_led_tri_o0_carry_i_5_n_0
+    );
+rgb_led_tri_o0_carry_i_6: unisim.vcomponents.LUT4
     generic map(
       INIT => X"9009"
     )
@@ -488,9 +530,9 @@ rgb_led_tri_o0_carry_i_5: unisim.vcomponents.LUT4
       I1 => \counter_reg__0\(4),
       I2 => R(5),
       I3 => \counter_reg__0\(5),
-      O => rgb_led_tri_o0_carry_i_5_n_0
+      O => rgb_led_tri_o0_carry_i_6_n_0
     );
-rgb_led_tri_o0_carry_i_6: unisim.vcomponents.LUT4
+rgb_led_tri_o0_carry_i_7: unisim.vcomponents.LUT4
     generic map(
       INIT => X"9009"
     )
@@ -499,9 +541,9 @@ rgb_led_tri_o0_carry_i_6: unisim.vcomponents.LUT4
       I1 => \counter_reg__0\(2),
       I2 => R(3),
       I3 => \counter_reg__0\(3),
-      O => rgb_led_tri_o0_carry_i_6_n_0
+      O => rgb_led_tri_o0_carry_i_7_n_0
     );
-rgb_led_tri_o0_carry_i_7: unisim.vcomponents.LUT4
+rgb_led_tri_o0_carry_i_8: unisim.vcomponents.LUT4
     generic map(
       INIT => X"9009"
     )
@@ -510,7 +552,7 @@ rgb_led_tri_o0_carry_i_7: unisim.vcomponents.LUT4
       I1 => \counter_reg__0\(0),
       I2 => R(1),
       I3 => \counter_reg__0\(1),
-      O => rgb_led_tri_o0_carry_i_7_n_0
+      O => rgb_led_tri_o0_carry_i_8_n_0
     );
 \rgb_led_tri_o_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -578,9 +620,9 @@ architecture STRUCTURE of design_1_PWM_0_0 is
 begin
 inst: entity work.design_1_PWM_0_0_PWM
      port map (
-      B(5 downto 0) => B(7 downto 2),
-      G(5 downto 0) => G(7 downto 2),
-      R(5 downto 0) => R(7 downto 2),
+      B(7 downto 0) => B(7 downto 0),
+      G(7 downto 0) => G(7 downto 0),
+      R(7 downto 0) => R(7 downto 0),
       clk => clk,
       rgb_led_tri_o(2 downto 0) => rgb_led_tri_o(2 downto 0)
     );

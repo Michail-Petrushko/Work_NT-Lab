@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Tue Mar 31 13:35:44 2020
+| Date             : Tue Mar 31 13:58:21 2020
 | Host             : DESKTOP-TM8D8VH running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.219        |
+| Total On-Chip Power (W)  | 0.220        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.125        |
+| Dynamic (W)              | 0.126        |
 | Device Static (W)        | 0.094        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 82.5         |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        6 |       --- |             --- |
-| Slice Logic    |     0.010 |     1636 |       --- |             --- |
-|   LUT as Logic |     0.009 |      910 |     17600 |            5.17 |
+| Slice Logic    |     0.010 |     1655 |       --- |             --- |
+|   LUT as Logic |     0.009 |      918 |     17600 |            5.22 |
 |   CARRY4       |    <0.001 |      246 |      4400 |            5.59 |
-|   Register     |    <0.001 |      176 |     35200 |            0.50 |
+|   Register     |    <0.001 |      182 |     35200 |            0.52 |
 |   BUFG         |    <0.001 |        2 |        32 |            6.25 |
 |   Others       |     0.000 |       10 |       --- |             --- |
-| Signals        |     0.008 |     1474 |       --- |             --- |
+| Signals        |     0.009 |     1488 |       --- |             --- |
 | MMCM           |     0.103 |        1 |         2 |           50.00 |
 | DSPs           |     0.002 |        4 |        80 |            5.00 |
-| I/O            |    <0.001 |        8 |       100 |            8.00 |
+| I/O            |     0.001 |        8 |       100 |            8.00 |
 | Static Power   |     0.094 |          |           |                 |
-| Total          |     0.219 |          |           |                 |
+| Total          |     0.220 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -153,8 +153,8 @@ Table of Contents
 +------------------+-----------+
 | Name             | Power (W) |
 +------------------+-----------+
-| design_1_wrapper |     0.125 |
-|   design_1_i     |     0.124 |
+| design_1_wrapper |     0.126 |
+|   design_1_i     |     0.125 |
 |     BTNs_test_0  |     0.004 |
 |       inst       |     0.004 |
 |     PWM_0        |    <0.001 |

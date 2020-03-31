@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Tue Mar 31 12:00:52 2020
+// Date        : Tue Mar 31 13:55:18 2020
 // Host        : DESKTOP-TM8D8VH running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_PWM_0_0_sim_netlist.v
@@ -20,13 +20,13 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
     B);
   output [2:0]rgb_led_tri_o;
   input clk;
-  input [5:0]R;
-  input [5:0]G;
-  input [5:0]B;
+  input [7:0]R;
+  input [7:0]G;
+  input [7:0]B;
 
-  wire [5:0]B;
-  wire [5:0]G;
-  wire [5:0]R;
+  wire [7:0]B;
+  wire [7:0]G;
+  wire [7:0]R;
   wire clk;
   wire \counter[0]_i_1_n_0 ;
   wire \counter[7]_i_2_n_0 ;
@@ -42,6 +42,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
   wire rgb_led_tri_o0__3_carry_i_5_n_0;
   wire rgb_led_tri_o0__3_carry_i_6_n_0;
   wire rgb_led_tri_o0__3_carry_i_7_n_0;
+  wire rgb_led_tri_o0__3_carry_i_8_n_0;
   wire rgb_led_tri_o0__3_carry_n_1;
   wire rgb_led_tri_o0__3_carry_n_2;
   wire rgb_led_tri_o0__3_carry_n_3;
@@ -52,6 +53,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
   wire rgb_led_tri_o0__7_carry_i_5_n_0;
   wire rgb_led_tri_o0__7_carry_i_6_n_0;
   wire rgb_led_tri_o0__7_carry_i_7_n_0;
+  wire rgb_led_tri_o0__7_carry_i_8_n_0;
   wire rgb_led_tri_o0__7_carry_n_1;
   wire rgb_led_tri_o0__7_carry_n_2;
   wire rgb_led_tri_o0__7_carry_n_3;
@@ -62,6 +64,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
   wire rgb_led_tri_o0_carry_i_5_n_0;
   wire rgb_led_tri_o0_carry_i_6_n_0;
   wire rgb_led_tri_o0_carry_i_7_n_0;
+  wire rgb_led_tri_o0_carry_i_8_n_0;
   wire rgb_led_tri_o0_carry_n_1;
   wire rgb_led_tri_o0_carry_n_2;
   wire rgb_led_tri_o0_carry_n_3;
@@ -195,185 +198,215 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
        (.CI(1'b0),
         .CO({p_0_in[1],rgb_led_tri_o0__3_carry_n_1,rgb_led_tri_o0__3_carry_n_2,rgb_led_tri_o0__3_carry_n_3}),
         .CYINIT(1'b1),
-        .DI({1'b0,rgb_led_tri_o0__3_carry_i_1_n_0,rgb_led_tri_o0__3_carry_i_2_n_0,rgb_led_tri_o0__3_carry_i_3_n_0}),
+        .DI({rgb_led_tri_o0__3_carry_i_1_n_0,rgb_led_tri_o0__3_carry_i_2_n_0,rgb_led_tri_o0__3_carry_i_3_n_0,rgb_led_tri_o0__3_carry_i_4_n_0}),
         .O(NLW_rgb_led_tri_o0__3_carry_O_UNCONNECTED[3:0]),
-        .S({rgb_led_tri_o0__3_carry_i_4_n_0,rgb_led_tri_o0__3_carry_i_5_n_0,rgb_led_tri_o0__3_carry_i_6_n_0,rgb_led_tri_o0__3_carry_i_7_n_0}));
+        .S({rgb_led_tri_o0__3_carry_i_5_n_0,rgb_led_tri_o0__3_carry_i_6_n_0,rgb_led_tri_o0__3_carry_i_7_n_0,rgb_led_tri_o0__3_carry_i_8_n_0}));
   LUT4 #(
     .INIT(16'h2F02)) 
     rgb_led_tri_o0__3_carry_i_1
-       (.I0(G[4]),
-        .I1(counter_reg__0[4]),
-        .I2(counter_reg__0[5]),
-        .I3(G[5]),
+       (.I0(G[6]),
+        .I1(counter_reg__0[6]),
+        .I2(counter_reg__0[7]),
+        .I3(G[7]),
         .O(rgb_led_tri_o0__3_carry_i_1_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     rgb_led_tri_o0__3_carry_i_2
-       (.I0(G[2]),
-        .I1(counter_reg__0[2]),
-        .I2(counter_reg__0[3]),
-        .I3(G[3]),
+       (.I0(G[4]),
+        .I1(counter_reg__0[4]),
+        .I2(counter_reg__0[5]),
+        .I3(G[5]),
         .O(rgb_led_tri_o0__3_carry_i_2_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     rgb_led_tri_o0__3_carry_i_3
+       (.I0(G[2]),
+        .I1(counter_reg__0[2]),
+        .I2(counter_reg__0[3]),
+        .I3(G[3]),
+        .O(rgb_led_tri_o0__3_carry_i_3_n_0));
+  LUT4 #(
+    .INIT(16'h2F02)) 
+    rgb_led_tri_o0__3_carry_i_4
        (.I0(G[0]),
         .I1(counter_reg__0[0]),
         .I2(counter_reg__0[1]),
         .I3(G[1]),
-        .O(rgb_led_tri_o0__3_carry_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    rgb_led_tri_o0__3_carry_i_4
-       (.I0(counter_reg__0[6]),
-        .I1(counter_reg__0[7]),
         .O(rgb_led_tri_o0__3_carry_i_4_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     rgb_led_tri_o0__3_carry_i_5
-       (.I0(G[4]),
-        .I1(counter_reg__0[4]),
-        .I2(G[5]),
-        .I3(counter_reg__0[5]),
+       (.I0(G[6]),
+        .I1(counter_reg__0[6]),
+        .I2(G[7]),
+        .I3(counter_reg__0[7]),
         .O(rgb_led_tri_o0__3_carry_i_5_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     rgb_led_tri_o0__3_carry_i_6
-       (.I0(G[2]),
-        .I1(counter_reg__0[2]),
-        .I2(G[3]),
-        .I3(counter_reg__0[3]),
+       (.I0(G[4]),
+        .I1(counter_reg__0[4]),
+        .I2(G[5]),
+        .I3(counter_reg__0[5]),
         .O(rgb_led_tri_o0__3_carry_i_6_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     rgb_led_tri_o0__3_carry_i_7
+       (.I0(G[2]),
+        .I1(counter_reg__0[2]),
+        .I2(G[3]),
+        .I3(counter_reg__0[3]),
+        .O(rgb_led_tri_o0__3_carry_i_7_n_0));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    rgb_led_tri_o0__3_carry_i_8
        (.I0(G[0]),
         .I1(counter_reg__0[0]),
         .I2(G[1]),
         .I3(counter_reg__0[1]),
-        .O(rgb_led_tri_o0__3_carry_i_7_n_0));
+        .O(rgb_led_tri_o0__3_carry_i_8_n_0));
   CARRY4 rgb_led_tri_o0__7_carry
        (.CI(1'b0),
         .CO({rgb_led_tri_o0,rgb_led_tri_o0__7_carry_n_1,rgb_led_tri_o0__7_carry_n_2,rgb_led_tri_o0__7_carry_n_3}),
         .CYINIT(1'b1),
-        .DI({1'b0,rgb_led_tri_o0__7_carry_i_1_n_0,rgb_led_tri_o0__7_carry_i_2_n_0,rgb_led_tri_o0__7_carry_i_3_n_0}),
+        .DI({rgb_led_tri_o0__7_carry_i_1_n_0,rgb_led_tri_o0__7_carry_i_2_n_0,rgb_led_tri_o0__7_carry_i_3_n_0,rgb_led_tri_o0__7_carry_i_4_n_0}),
         .O(NLW_rgb_led_tri_o0__7_carry_O_UNCONNECTED[3:0]),
-        .S({rgb_led_tri_o0__7_carry_i_4_n_0,rgb_led_tri_o0__7_carry_i_5_n_0,rgb_led_tri_o0__7_carry_i_6_n_0,rgb_led_tri_o0__7_carry_i_7_n_0}));
+        .S({rgb_led_tri_o0__7_carry_i_5_n_0,rgb_led_tri_o0__7_carry_i_6_n_0,rgb_led_tri_o0__7_carry_i_7_n_0,rgb_led_tri_o0__7_carry_i_8_n_0}));
   LUT4 #(
     .INIT(16'h2F02)) 
     rgb_led_tri_o0__7_carry_i_1
-       (.I0(B[4]),
-        .I1(counter_reg__0[4]),
-        .I2(counter_reg__0[5]),
-        .I3(B[5]),
+       (.I0(B[6]),
+        .I1(counter_reg__0[6]),
+        .I2(counter_reg__0[7]),
+        .I3(B[7]),
         .O(rgb_led_tri_o0__7_carry_i_1_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     rgb_led_tri_o0__7_carry_i_2
-       (.I0(B[2]),
-        .I1(counter_reg__0[2]),
-        .I2(counter_reg__0[3]),
-        .I3(B[3]),
+       (.I0(B[4]),
+        .I1(counter_reg__0[4]),
+        .I2(counter_reg__0[5]),
+        .I3(B[5]),
         .O(rgb_led_tri_o0__7_carry_i_2_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     rgb_led_tri_o0__7_carry_i_3
+       (.I0(B[2]),
+        .I1(counter_reg__0[2]),
+        .I2(counter_reg__0[3]),
+        .I3(B[3]),
+        .O(rgb_led_tri_o0__7_carry_i_3_n_0));
+  LUT4 #(
+    .INIT(16'h2F02)) 
+    rgb_led_tri_o0__7_carry_i_4
        (.I0(B[0]),
         .I1(counter_reg__0[0]),
         .I2(counter_reg__0[1]),
         .I3(B[1]),
-        .O(rgb_led_tri_o0__7_carry_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    rgb_led_tri_o0__7_carry_i_4
-       (.I0(counter_reg__0[6]),
-        .I1(counter_reg__0[7]),
         .O(rgb_led_tri_o0__7_carry_i_4_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     rgb_led_tri_o0__7_carry_i_5
-       (.I0(B[4]),
-        .I1(counter_reg__0[4]),
-        .I2(B[5]),
-        .I3(counter_reg__0[5]),
+       (.I0(B[6]),
+        .I1(counter_reg__0[6]),
+        .I2(B[7]),
+        .I3(counter_reg__0[7]),
         .O(rgb_led_tri_o0__7_carry_i_5_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     rgb_led_tri_o0__7_carry_i_6
-       (.I0(B[2]),
-        .I1(counter_reg__0[2]),
-        .I2(B[3]),
-        .I3(counter_reg__0[3]),
+       (.I0(B[4]),
+        .I1(counter_reg__0[4]),
+        .I2(B[5]),
+        .I3(counter_reg__0[5]),
         .O(rgb_led_tri_o0__7_carry_i_6_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     rgb_led_tri_o0__7_carry_i_7
+       (.I0(B[2]),
+        .I1(counter_reg__0[2]),
+        .I2(B[3]),
+        .I3(counter_reg__0[3]),
+        .O(rgb_led_tri_o0__7_carry_i_7_n_0));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    rgb_led_tri_o0__7_carry_i_8
        (.I0(B[0]),
         .I1(counter_reg__0[0]),
         .I2(B[1]),
         .I3(counter_reg__0[1]),
-        .O(rgb_led_tri_o0__7_carry_i_7_n_0));
+        .O(rgb_led_tri_o0__7_carry_i_8_n_0));
   CARRY4 rgb_led_tri_o0_carry
        (.CI(1'b0),
         .CO({p_0_in[0],rgb_led_tri_o0_carry_n_1,rgb_led_tri_o0_carry_n_2,rgb_led_tri_o0_carry_n_3}),
         .CYINIT(1'b1),
-        .DI({1'b0,rgb_led_tri_o0_carry_i_1_n_0,rgb_led_tri_o0_carry_i_2_n_0,rgb_led_tri_o0_carry_i_3_n_0}),
+        .DI({rgb_led_tri_o0_carry_i_1_n_0,rgb_led_tri_o0_carry_i_2_n_0,rgb_led_tri_o0_carry_i_3_n_0,rgb_led_tri_o0_carry_i_4_n_0}),
         .O(NLW_rgb_led_tri_o0_carry_O_UNCONNECTED[3:0]),
-        .S({rgb_led_tri_o0_carry_i_4_n_0,rgb_led_tri_o0_carry_i_5_n_0,rgb_led_tri_o0_carry_i_6_n_0,rgb_led_tri_o0_carry_i_7_n_0}));
+        .S({rgb_led_tri_o0_carry_i_5_n_0,rgb_led_tri_o0_carry_i_6_n_0,rgb_led_tri_o0_carry_i_7_n_0,rgb_led_tri_o0_carry_i_8_n_0}));
   LUT4 #(
     .INIT(16'h2F02)) 
     rgb_led_tri_o0_carry_i_1
-       (.I0(R[4]),
-        .I1(counter_reg__0[4]),
-        .I2(counter_reg__0[5]),
-        .I3(R[5]),
+       (.I0(R[6]),
+        .I1(counter_reg__0[6]),
+        .I2(counter_reg__0[7]),
+        .I3(R[7]),
         .O(rgb_led_tri_o0_carry_i_1_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     rgb_led_tri_o0_carry_i_2
-       (.I0(R[2]),
-        .I1(counter_reg__0[2]),
-        .I2(counter_reg__0[3]),
-        .I3(R[3]),
+       (.I0(R[4]),
+        .I1(counter_reg__0[4]),
+        .I2(counter_reg__0[5]),
+        .I3(R[5]),
         .O(rgb_led_tri_o0_carry_i_2_n_0));
   LUT4 #(
     .INIT(16'h2F02)) 
     rgb_led_tri_o0_carry_i_3
+       (.I0(R[2]),
+        .I1(counter_reg__0[2]),
+        .I2(counter_reg__0[3]),
+        .I3(R[3]),
+        .O(rgb_led_tri_o0_carry_i_3_n_0));
+  LUT4 #(
+    .INIT(16'h2F02)) 
+    rgb_led_tri_o0_carry_i_4
        (.I0(R[0]),
         .I1(counter_reg__0[0]),
         .I2(counter_reg__0[1]),
         .I3(R[1]),
-        .O(rgb_led_tri_o0_carry_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    rgb_led_tri_o0_carry_i_4
-       (.I0(counter_reg__0[6]),
-        .I1(counter_reg__0[7]),
         .O(rgb_led_tri_o0_carry_i_4_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     rgb_led_tri_o0_carry_i_5
-       (.I0(R[4]),
-        .I1(counter_reg__0[4]),
-        .I2(R[5]),
-        .I3(counter_reg__0[5]),
+       (.I0(R[6]),
+        .I1(counter_reg__0[6]),
+        .I2(R[7]),
+        .I3(counter_reg__0[7]),
         .O(rgb_led_tri_o0_carry_i_5_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     rgb_led_tri_o0_carry_i_6
-       (.I0(R[2]),
-        .I1(counter_reg__0[2]),
-        .I2(R[3]),
-        .I3(counter_reg__0[3]),
+       (.I0(R[4]),
+        .I1(counter_reg__0[4]),
+        .I2(R[5]),
+        .I3(counter_reg__0[5]),
         .O(rgb_led_tri_o0_carry_i_6_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     rgb_led_tri_o0_carry_i_7
+       (.I0(R[2]),
+        .I1(counter_reg__0[2]),
+        .I2(R[3]),
+        .I3(counter_reg__0[3]),
+        .O(rgb_led_tri_o0_carry_i_7_n_0));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    rgb_led_tri_o0_carry_i_8
        (.I0(R[0]),
         .I1(counter_reg__0[0]),
         .I2(R[1]),
         .I3(counter_reg__0[1]),
-        .O(rgb_led_tri_o0_carry_i_7_n_0));
+        .O(rgb_led_tri_o0_carry_i_8_n_0));
   FDRE #(
     .INIT(1'b0)) 
     \rgb_led_tri_o_reg[0] 
@@ -422,9 +455,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   wire [2:0]rgb_led_tri_o;
 
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM inst
-       (.B(B[7:2]),
-        .G(G[7:2]),
-        .R(R[7:2]),
+       (.B(B),
+        .G(G),
+        .R(R),
         .clk(clk),
         .rgb_led_tri_o(rgb_led_tri_o));
 endmodule
