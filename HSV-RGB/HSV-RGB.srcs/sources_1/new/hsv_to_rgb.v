@@ -34,6 +34,9 @@ module hsv_to_rgb(
     initial R = 8'b0;
     initial G = 8'b0;
     initial B = 8'b0;
+    reg [7:0] sostR=0, sostG=0, sostB=0;
+    
+    
     
     always@(posedge clk) begin
      Hi = (H/60)%6;
@@ -46,16 +49,22 @@ module hsv_to_rgb(
      Vdec = Vdec*255/100;
      Vmin = Vmin*255/100;
      v = V*255/100;
-     
+     sostR = R;
+     sostG = G;
+     sostB = B;
      case (Hi)
-           0  : begin R <= v; G <= Vinc; B <=Vmin; end
-           1  : begin R <= Vdec; G <= v; B <=Vmin; end
-           2  : begin R <= Vmin; G <= v; B <=Vinc; end
-           3  : begin R <= Vmin; G <= Vdec; B <=v; end
-           4  : begin R <= Vinc; G <= Vmin; B <=v; end
-           5  : begin R <= v; G <= Vmin; B <=Vdec; end
+           0  : begin R = v; G = Vinc; B =Vmin; end
+           1  : begin R = Vdec; G = v; B =Vmin; end
+           2  : begin R = Vmin; G = v; B =Vinc; end
+           3  : begin R = Vmin; G = Vdec; B =v; end
+           4  : begin R = Vinc; G = Vmin; B =v; end
+           5  : begin R = v; G = Vmin; B =Vdec; end
            default :  begin R <= 0; G <= 0; B <=0; end
      endcase
+     if ((sostR==8'b11111111)&(R==0)) R = 8'b11111111;
+     if ((sostG==8'b11111111)&(G==0)) G = 8'b11111111;
+     if ((sostB==8'b11111111)&(B==0)) B = 8'b11111111;
+     
      end
      
       

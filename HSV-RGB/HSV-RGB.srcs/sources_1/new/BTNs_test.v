@@ -70,13 +70,15 @@ module BTNs_test(
     always@(posedge btn[1])begin
     s = s+5;
     if (s>100) s = 0;
-    S = s;
+    //S = s;
+    S = 100;
     end
      ////////////////////////   
      always@(posedge btn[2])begin
      v = v+5;
      if (v>100) v = 0;
-     V = v;
+     //V = v;
+     V = 100;
      end
     
 endmodule
