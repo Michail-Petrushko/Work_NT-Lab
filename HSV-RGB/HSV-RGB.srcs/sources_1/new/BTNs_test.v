@@ -26,9 +26,9 @@ module BTNs_test(
     output reg [8:0] H,S,V
     );
     //initial 
-    initial H = 8'b0;
-    initial S = 8'b0;
-    initial V = 8'b0;
+    initial H = 9'b0;
+    initial S = 9'b0;
+    initial V = 9'b0;
     integer h = 0,s = 0,v = 0;
     //reg
     reg sost = 0;
@@ -45,17 +45,17 @@ module BTNs_test(
     
     
     always@(posedge clk) begin   
-    counter1 = counter1+1;
-    if (counter1 == 4000000) begin 
-    
     if (sw[0] == 1) begin
+    counter1 = counter1+1;
+    
+    if (counter1 == 1000000) begin 
     h = h+temp;
-    if (h>360) h = h - 360;
+    if (h>359) h = h - 360;
     if (h<0) h = h+360;
     H = h;
+    counter1 = 0;
     end
     
-    counter1 = 0;
     end
     end
     
@@ -69,13 +69,13 @@ module BTNs_test(
     ///////////////
     always@(posedge btn[1])begin
     s = s+5;
-    if (s>100) s = s - 100;
+    if (s>100) s = 0;
     S = s;
     end
      ////////////////////////   
      always@(posedge btn[2])begin
      v = v+5;
-     if (v>100) v = v - 100;
+     if (v>100) v = 0;
      V = v;
      end
     
