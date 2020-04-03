@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Apr  2 14:03:43 2020" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Apr  3 13:43:44 2020" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.0" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -24,9 +24,21 @@
         <CONNECTION INSTANCE="BTNs_test_0" PORT="sw"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="2" NAME="btn" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_btn">
+    <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_reset">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="BTNs_test_0" PORT="btn"/>
+        <CONNECTION INSTANCE="PWM_0" PORT="reset"/>
+        <CONNECTION INSTANCE="hsv_to_rgb_0" PORT="reset"/>
+        <CONNECTION INSTANCE="BTNs_test_0" PORT="reset"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="btn2" SIGIS="undef" SIGNAME="External_Ports_btn2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BTNs_test_0" PORT="btn2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="btn1" SIGIS="undef" SIGNAME="External_Ports_btn1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BTNs_test_0" PORT="btn1"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -41,9 +53,14 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="2" NAME="btn" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_btn">
+        <PORT DIR="I" NAME="btn1" SIGIS="undef" SIGNAME="External_Ports_btn1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="btn"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="btn1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="btn2" SIGIS="undef" SIGNAME="External_Ports_btn2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btn2"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="sw" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sw">
@@ -56,19 +73,24 @@
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="8" NAME="H" RIGHT="0" SIGIS="undef" SIGNAME="BTNs_test_0_H">
+        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_reset">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hsv_to_rgb_0" PORT="H"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="8" NAME="S" RIGHT="0" SIGIS="undef" SIGNAME="BTNs_test_0_S">
+        <PORT DIR="O" LEFT="8" NAME="Hue" RIGHT="0" SIGIS="undef" SIGNAME="BTNs_test_0_Hue">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hsv_to_rgb_0" PORT="S"/>
+            <CONNECTION INSTANCE="hsv_to_rgb_0" PORT="Hue"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="8" NAME="V" RIGHT="0" SIGIS="undef" SIGNAME="BTNs_test_0_V">
+        <PORT DIR="O" LEFT="8" NAME="Saturation" RIGHT="0" SIGIS="undef" SIGNAME="BTNs_test_0_Saturation">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hsv_to_rgb_0" PORT="V"/>
+            <CONNECTION INSTANCE="hsv_to_rgb_0" PORT="Saturation"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="8" NAME="Value" RIGHT="0" SIGIS="undef" SIGNAME="BTNs_test_0_Value">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hsv_to_rgb_0" PORT="Value"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -99,6 +121,11 @@
         <PORT CLKFREQUENCY="80000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="2" NAME="rgb_led_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="PWM_0_rgb_led_tri_o">
@@ -711,24 +738,29 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="8" NAME="H" RIGHT="0" SIGIS="undef" SIGNAME="BTNs_test_0_H">
+        <PORT DIR="I" LEFT="8" NAME="Hue" RIGHT="0" SIGIS="undef" SIGNAME="BTNs_test_0_Hue">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BTNs_test_0" PORT="H"/>
+            <CONNECTION INSTANCE="BTNs_test_0" PORT="Hue"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="8" NAME="S" RIGHT="0" SIGIS="undef" SIGNAME="BTNs_test_0_S">
+        <PORT DIR="I" LEFT="8" NAME="Saturation" RIGHT="0" SIGIS="undef" SIGNAME="BTNs_test_0_Saturation">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BTNs_test_0" PORT="S"/>
+            <CONNECTION INSTANCE="BTNs_test_0" PORT="Saturation"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="8" NAME="V" RIGHT="0" SIGIS="undef" SIGNAME="BTNs_test_0_V">
+        <PORT DIR="I" LEFT="8" NAME="Value" RIGHT="0" SIGIS="undef" SIGNAME="BTNs_test_0_Value">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="BTNs_test_0" PORT="V"/>
+            <CONNECTION INSTANCE="BTNs_test_0" PORT="Value"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="10000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="R" RIGHT="0" SIGIS="undef" SIGNAME="hsv_to_rgb_0_R">

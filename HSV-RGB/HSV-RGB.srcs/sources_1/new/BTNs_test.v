@@ -21,64 +21,80 @@
 
 
 module BTNs_test(
-    input [2:0] btn,
+    input  btn1, btn2,
     input  [3:0]sw, input clk,
-    output reg [8:0] H,S,V
+    input reset,
+    output reg [8:0] Hue,Saturation ,Value 
     );
     //initial 
-    initial H = 9'b0;
-    initial S = 9'b0;
-    initial V = 9'b0;
-    integer h = 0,s = 0,v = 0;
-    //reg
-    reg sost = 0;
-    integer temp = 0;
-    integer counter1 = 0, counter2 =0;
-    always@(posedge btn[0]) begin
-    sost = sost+1;
-    end
-    
-    always@(posedge sw[0], negedge sw[0]) begin
-    if (sw[0]==1) temp = 1;
-    else temp = 0;
-    end
-    
-    
-    always@(posedge clk) begin   
-    if (sw[0] == 1) begin
-    counter1 = counter1+1;
-    
-    if (counter1 == 1000000) begin 
-    h = h+temp;
-    if (h>359) h = h - 360;
-    if (h<0) h = h+360;
-    H = h;
-    counter1 = 0;
-    end
-    
-    end
-    end
-    
+    integer h ,s ,v;
+    integer temp;
+    reg [19:0] counter1;
+    reg [19:0]counter2;
+    reg [19:0]counter3;
     
     //main
-//    always@(posedge btn[0])begin
-//    h = h+10;
-//    if (h>360) h = h - 360;
-//    H = h;
-//    end
-    ///////////////
-    always@(posedge btn[1])begin
-    s = s+5;
-    if (s>100) s = 0;
-    //S = s;
-    S = 100;
+    always@(posedge clk) begin   
+        if (sw[1]==1) begin
+            Hue<=0;
+            h <= 0;
+            counter1 <= 0;
+        end
+        if (sw[0] == 1) begin
+            counter1 = counter1+1;
+            if (counter1 == 0) begin 
+                h = h+1;
+                if (h>359) h = h - 360;
+                if (h<0) h = h+360;
+                Hue = h;
+                counter1 = 0;
+            end
+        end
     end
-     ////////////////////////   
-     always@(posedge btn[2])begin
-     v = v+5;
-     if (v>100) v = 0;
-     //V = v;
-     V = 100;
-     end
+
+    always@(posedge clk && (btn1==1)) begin
+        if (sw[1]==1) begin
+            s <= 0;
+            Saturation  <= 0;
+            counter3 <= 0;
+        end
+        counter3 = counter3 + 1;
+        if (counter3==0) begin
+            s = s+5;
+            if (s>100) s = 100;
+            Saturation  = s;
+            //Saturation = 100;           
+        end
+    end
+    
+    always@(posedge clk && (btn2==1)) begin
+        if (sw[1]==1) begin
+            Value<=0; 
+            v <= 0;
+            counter2 <= 0;
+        end
+        counter2 = counter2 + 1;
+        if (counter2==0) begin
+             v = v+5;
+             if (v>100) v = 100;
+             Value  = v;
+             //Value = 100;   
+        end
+    end
+    
+    //////////////
+//    always@(posedge btn[1])begin
+//    s = s+5;
+//    if (s>100) s = 0;
+//    //Saturation  = s;
+//    Saturation = 100;
+//    end
+//     ////////////////////////   
+//     always@(posedge btn[2])begin
+//     v = v+5;
+//     if (v>100) v = 0;
+//     //Value  = v;
+//     Value = 100;
+//     end
     
 endmodule

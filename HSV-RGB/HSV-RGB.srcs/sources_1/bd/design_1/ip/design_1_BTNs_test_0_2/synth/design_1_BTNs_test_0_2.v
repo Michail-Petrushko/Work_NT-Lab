@@ -56,29 +56,37 @@
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_BTNs_test_0_2 (
-  btn,
+  btn1,
+  btn2,
   sw,
   clk,
-  H,
-  S,
-  V
+  reset,
+  Hue,
+  Saturation,
+  Value
 );
 
-input wire [2 : 0] btn;
+input wire btn1;
+input wire btn2;
 input wire [3 : 0] sw;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 10000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 10000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
-output wire [8 : 0] H;
-output wire [8 : 0] S;
-output wire [8 : 0] V;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *)
+input wire reset;
+output wire [8 : 0] Hue;
+output wire [8 : 0] Saturation;
+output wire [8 : 0] Value;
 
   BTNs_test inst (
-    .btn(btn),
+    .btn1(btn1),
+    .btn2(btn2),
     .sw(sw),
     .clk(clk),
-    .H(H),
-    .S(S),
-    .V(V)
+    .reset(reset),
+    .Hue(Hue),
+    .Saturation(Saturation),
+    .Value(Value)
   );
 endmodule

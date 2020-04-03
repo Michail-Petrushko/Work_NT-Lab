@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xF94BAA9F6B80D950" bd:device="xc7z010clg400-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.2" bd:top="design_1" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xB17F4DE6CB05C6D6" bd:device="xc7z010clg400-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.2" bd:top="design_1" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -89,6 +89,35 @@
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>RST.RESET</spirit:name>
+        <spirit:displayName>Reset</spirit:displayName>
+        <spirit:description>Reset</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>RST</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>reset</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>POLARITY</spirit:name>
+            <spirit:value>ACTIVE_HIGH</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
     </spirit:busInterfaces>
     <spirit:model>
       <spirit:views>
@@ -132,13 +161,21 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>btn</spirit:name>
+          <spirit:name>reset</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
-            <spirit:vector>
-              <spirit:left>2</spirit:left>
-              <spirit:right>0</spirit:right>
-            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>btn2</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>btn1</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
           </spirit:wire>
         </spirit:port>
       </spirit:ports>
@@ -211,11 +248,6 @@
         <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_in1"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>reset_0_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="reset_0"/>
-        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="reset"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>hsv_to_rgb_0_R</spirit:name>
         <spirit:internalPortReference spirit:componentRef="hsv_to_rgb_0" spirit:portRef="R"/>
         <spirit:internalPortReference spirit:componentRef="PWM_0" spirit:portRef="R"/>
@@ -248,18 +280,12 @@
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>BTNs_test_0_H</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="BTNs_test_0" spirit:portRef="H"/>
-        <spirit:internalPortReference spirit:componentRef="hsv_to_rgb_0" spirit:portRef="H"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>BTNs_test_0_S</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="BTNs_test_0" spirit:portRef="S"/>
-        <spirit:internalPortReference spirit:componentRef="hsv_to_rgb_0" spirit:portRef="S"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>BTNs_test_0_V</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="BTNs_test_0" spirit:portRef="V"/>
-        <spirit:internalPortReference spirit:componentRef="hsv_to_rgb_0" spirit:portRef="V"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>sw_0_1</spirit:name>
@@ -267,9 +293,41 @@
         <spirit:internalPortReference spirit:componentRef="BTNs_test_0" spirit:portRef="sw"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>btn_0_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="btn"/>
-        <spirit:internalPortReference spirit:componentRef="BTNs_test_0" spirit:portRef="btn"/>
+        <spirit:name>BTNs_test_0_Hue</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="BTNs_test_0" spirit:portRef="Hue"/>
+        <spirit:internalPortReference spirit:componentRef="hsv_to_rgb_0" spirit:portRef="Hue"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>BTNs_test_0_Saturation</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="BTNs_test_0" spirit:portRef="Saturation"/>
+        <spirit:internalPortReference spirit:componentRef="hsv_to_rgb_0" spirit:portRef="Saturation"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>BTNs_test_0_Value</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="BTNs_test_0" spirit:portRef="Value"/>
+        <spirit:internalPortReference spirit:componentRef="hsv_to_rgb_0" spirit:portRef="Value"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>reset_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="reset_0"/>
+        <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="reset"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>reset_1_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="PWM_0" spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="hsv_to_rgb_0" spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="BTNs_test_0" spirit:portRef="reset"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>btn2_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="btn2"/>
+        <spirit:internalPortReference spirit:componentRef="BTNs_test_0" spirit:portRef="btn2"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>btn1_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="btn1"/>
+        <spirit:internalPortReference spirit:componentRef="BTNs_test_0" spirit:portRef="btn1"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
   </spirit:design>

@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Apr  2 14:04:01 2020
-# Process ID: 4848
+# Start of session at: Fri Apr  3 13:45:43 2020
+# Process ID: 3192
 # Current directory: C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.runs/design_1_BTNs_test_0_2_synth_1
 # Command line: vivado.exe -log design_1_BTNs_test_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_BTNs_test_0_2.tcl
 # Log file: C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.runs/design_1_BTNs_test_0_2_synth_1/design_1_BTNs_test_0_2.vds
@@ -15,22 +15,33 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 9416 
+INFO: Helper process launched with PID 13388 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 449.695 ; gain = 101.242
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 449.047 ; gain = 101.254
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_BTNs_test_0_2' [c:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/bd/design_1/ip/design_1_BTNs_test_0_2/synth/design_1_BTNs_test_0_2.v:58]
 INFO: [Synth 8-6157] synthesizing module 'BTNs_test' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:23]
-WARNING: [Synth 8-6014] Unused sequential element s_reg was removed.  [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:71]
-WARNING: [Synth 8-6014] Unused sequential element v_reg was removed.  [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:78]
+WARNING: [Synth 8-6090] variable 'counter1' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:44]
+WARNING: [Synth 8-6090] variable 'h' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:46]
+WARNING: [Synth 8-6090] variable 'h' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:47]
+WARNING: [Synth 8-6090] variable 'h' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:48]
+WARNING: [Synth 8-6090] variable 'Hue' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:49]
+WARNING: [Synth 8-6090] variable 'counter1' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:50]
+WARNING: [Synth 8-6090] variable 'counter3' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:61]
+WARNING: [Synth 8-6090] variable 's' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:63]
+WARNING: [Synth 8-6090] variable 's' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:64]
+WARNING: [Synth 8-6090] variable 'Saturation' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:65]
+WARNING: [Synth 8-6090] variable 'counter2' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:76]
+WARNING: [Synth 8-6090] variable 'v' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:78]
+WARNING: [Synth 8-6090] variable 'v' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:79]
+WARNING: [Synth 8-6090] variable 'Value' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:80]
 INFO: [Synth 8-6155] done synthesizing module 'BTNs_test' (1#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_BTNs_test_0_2' (2#1) [c:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/bd/design_1/ip/design_1_BTNs_test_0_2/synth/design_1_BTNs_test_0_2.v:58]
-WARNING: [Synth 8-3331] design BTNs_test has unconnected port btn[0]
 WARNING: [Synth 8-3331] design BTNs_test has unconnected port sw[3]
 WARNING: [Synth 8-3331] design BTNs_test has unconnected port sw[2]
-WARNING: [Synth 8-3331] design BTNs_test has unconnected port sw[1]
+WARNING: [Synth 8-3331] design BTNs_test has unconnected port reset
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 504.027 ; gain = 155.574
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 503.371 ; gain = 155.578
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -43,10 +54,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 504.027 ; gain = 155.574
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 503.371 ; gain = 155.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 504.027 ; gain = 155.574
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 503.371 ; gain = 155.578
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -59,25 +70,25 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 WARNING: [Constraints 18-5210] No constraint will be written out.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.141 . Memory (MB): peak = 828.371 ; gain = 3.016
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.146 . Memory (MB): peak = 823.160 ; gain = 2.578
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:39 . Memory (MB): peak = 828.371 ; gain = 479.918
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:36 . Memory (MB): peak = 823.160 ; gain = 475.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:39 . Memory (MB): peak = 828.371 ; gain = 479.918
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:36 . Memory (MB): peak = 823.160 ; gain = 475.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:39 . Memory (MB): peak = 828.371 ; gain = 479.918
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:36 . Memory (MB): peak = 823.160 ; gain = 475.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:40 . Memory (MB): peak = 828.371 ; gain = 479.918
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:36 . Memory (MB): peak = 823.160 ; gain = 475.367
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -90,12 +101,14 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 4     
+	   2 Input     32 Bit       Adders := 5     
+	   2 Input     20 Bit       Adders := 3     
 +---Registers : 
-	               32 Bit    Registers := 2     
+	               32 Bit    Registers := 1     
 	                9 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -106,12 +119,14 @@ Hierarchical RTL Component report
 Module BTNs_test 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 4     
+	   2 Input     32 Bit       Adders := 5     
+	   2 Input     20 Bit       Adders := 3     
 +---Registers : 
-	               32 Bit    Registers := 2     
+	               32 Bit    Registers := 1     
 	                9 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -128,71 +143,20 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design design_1_BTNs_test_0_2 has unconnected port btn[0]
 WARNING: [Synth 8-3331] design design_1_BTNs_test_0_2 has unconnected port sw[3]
 WARNING: [Synth 8-3331] design design_1_BTNs_test_0_2 has unconnected port sw[2]
-WARNING: [Synth 8-3331] design design_1_BTNs_test_0_2 has unconnected port sw[1]
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[9]' (FDC_1) to 'inst/temp_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[10]' (FDC_1) to 'inst/temp_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[11]' (FDC_1) to 'inst/temp_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[12]' (FDC_1) to 'inst/temp_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[13]' (FDC_1) to 'inst/temp_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[14]' (FDC_1) to 'inst/temp_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[15]' (FDC_1) to 'inst/temp_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[16]' (FDC_1) to 'inst/temp_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[17]' (FDC_1) to 'inst/temp_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[18]' (FDC_1) to 'inst/temp_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[19]' (FDC_1) to 'inst/temp_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[20]' (FDC_1) to 'inst/temp_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[21]' (FDC_1) to 'inst/temp_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[22]' (FDC_1) to 'inst/temp_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[23]' (FDC_1) to 'inst/temp_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[24]' (FDC_1) to 'inst/temp_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[25]' (FDC_1) to 'inst/temp_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[26]' (FDC_1) to 'inst/temp_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[27]' (FDC_1) to 'inst/temp_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[28]' (FDC_1) to 'inst/temp_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[29]' (FDC_1) to 'inst/temp_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[30]' (FDC_1) to 'inst/temp_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[31]' (FDC_1) to 'inst/temp_reg[8]'
-INFO: [Synth 8-3886] merging instance 'inst/h_reg[0]' (FDE) to 'inst/H_reg[0]'
-INFO: [Synth 8-3886] merging instance 'inst/h_reg[1]' (FDE) to 'inst/H_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[1]' (FDC_1) to 'inst/temp_reg[8]'
-INFO: [Synth 8-3886] merging instance 'inst/h_reg[2]' (FDE) to 'inst/H_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[2]' (FDC_1) to 'inst/temp_reg[8]'
-INFO: [Synth 8-3886] merging instance 'inst/h_reg[3]' (FDE) to 'inst/H_reg[3]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[3]' (FDC_1) to 'inst/temp_reg[8]'
-INFO: [Synth 8-3886] merging instance 'inst/h_reg[4]' (FDE) to 'inst/H_reg[4]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[4]' (FDC_1) to 'inst/temp_reg[8]'
-INFO: [Synth 8-3886] merging instance 'inst/h_reg[5]' (FDE) to 'inst/H_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[5]' (FDC_1) to 'inst/temp_reg[8]'
-INFO: [Synth 8-3886] merging instance 'inst/h_reg[6]' (FDE) to 'inst/H_reg[6]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[6]' (FDC_1) to 'inst/temp_reg[8]'
-INFO: [Synth 8-3886] merging instance 'inst/h_reg[7]' (FDE) to 'inst/H_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/temp_reg[7]' (FDC_1) to 'inst/temp_reg[8]'
-INFO: [Synth 8-3886] merging instance 'inst/h_reg[8]' (FDE) to 'inst/H_reg[8]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/temp_reg[8] )
-INFO: [Synth 8-3886] merging instance 'inst/V_reg[0]' (FD) to 'inst/V_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/V_reg[1]' (FD) to 'inst/V_reg[3]'
-INFO: [Synth 8-3886] merging instance 'inst/V_reg[2]' (FD) to 'inst/V_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/V_reg[3]' (FD) to 'inst/V_reg[4]'
-INFO: [Synth 8-3886] merging instance 'inst/V_reg[4]' (FD) to 'inst/V_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/V_reg[5]' (FD) to 'inst/V_reg[6]'
-INFO: [Synth 8-3886] merging instance 'inst/V_reg[7]' (FD) to 'inst/V_reg[8]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/V_reg[8] )
-INFO: [Synth 8-3886] merging instance 'inst/S_reg[0]' (FD) to 'inst/S_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/S_reg[1]' (FD) to 'inst/S_reg[3]'
-INFO: [Synth 8-3886] merging instance 'inst/S_reg[2]' (FD) to 'inst/S_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/S_reg[3]' (FD) to 'inst/S_reg[4]'
-INFO: [Synth 8-3886] merging instance 'inst/S_reg[4]' (FD) to 'inst/S_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/S_reg[5]' (FD) to 'inst/S_reg[6]'
-INFO: [Synth 8-3886] merging instance 'inst/S_reg[7]' (FD) to 'inst/S_reg[8]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/S_reg[8] )
-INFO: [Synth 8-3332] Sequential element (inst/temp_reg[8]) is unused and will be removed from module design_1_BTNs_test_0_2.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[8]) is unused and will be removed from module design_1_BTNs_test_0_2.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[8]) is unused and will be removed from module design_1_BTNs_test_0_2.
+WARNING: [Synth 8-3331] design design_1_BTNs_test_0_2 has unconnected port reset
+INFO: [Synth 8-3886] merging instance 'inst/h_reg[0]' (FDRE) to 'inst/Hue_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/h_reg[1]' (FDRE) to 'inst/Hue_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/h_reg[2]' (FDRE) to 'inst/Hue_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/h_reg[3]' (FDRE) to 'inst/Hue_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/h_reg[4]' (FDRE) to 'inst/Hue_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/h_reg[5]' (FDRE) to 'inst/Hue_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/h_reg[6]' (FDRE) to 'inst/Hue_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/h_reg[7]' (FDRE) to 'inst/Hue_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/h_reg[8]' (FDRE) to 'inst/Hue_reg[8]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:42 . Memory (MB): peak = 828.371 ; gain = 479.918
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:39 . Memory (MB): peak = 823.160 ; gain = 475.367
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -204,13 +168,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:01:04 . Memory (MB): peak = 829.316 ; gain = 480.863
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:59 . Memory (MB): peak = 833.570 ; gain = 485.777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:01:04 . Memory (MB): peak = 829.465 ; gain = 481.012
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:59 . Memory (MB): peak = 833.867 ; gain = 486.074
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -222,7 +186,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:01:05 . Memory (MB): peak = 839.215 ; gain = 490.762
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:59 . Memory (MB): peak = 848.008 ; gain = 500.215
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -246,7 +210,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:01:06 . Memory (MB): peak = 839.215 ; gain = 490.762
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:01:01 . Memory (MB): peak = 848.008 ; gain = 500.215
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -259,7 +223,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:01:06 . Memory (MB): peak = 839.215 ; gain = 490.762
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:01:01 . Memory (MB): peak = 848.008 ; gain = 500.215
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -271,25 +235,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:01:06 . Memory (MB): peak = 839.215 ; gain = 490.762
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:01:01 . Memory (MB): peak = 848.008 ; gain = 500.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:01:06 . Memory (MB): peak = 839.215 ; gain = 490.762
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:01:01 . Memory (MB): peak = 848.008 ; gain = 500.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:01:06 . Memory (MB): peak = 839.215 ; gain = 490.762
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:01:01 . Memory (MB): peak = 848.008 ; gain = 500.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:01:06 . Memory (MB): peak = 839.215 ; gain = 490.762
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:01:01 . Memory (MB): peak = 848.008 ; gain = 500.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -305,31 +269,31 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |CARRY4 |    47|
-|2     |LUT1   |    29|
-|3     |LUT2   |    30|
-|4     |LUT3   |    40|
-|5     |LUT4   |     1|
-|6     |LUT6   |    29|
-|7     |FDPE   |     1|
-|8     |FDRE   |    66|
+|1     |CARRY4 |    98|
+|2     |LUT1   |    36|
+|3     |LUT2   |   171|
+|4     |LUT3   |    31|
+|5     |LUT4   |     2|
+|6     |LUT5   |     3|
+|7     |LUT6   |    39|
+|8     |FDRE   |   174|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+---------+----------+------+
 |      |Instance |Module    |Cells |
 +------+---------+----------+------+
-|1     |top      |          |   243|
-|2     |  inst   |BTNs_test |   243|
+|1     |top      |          |   554|
+|2     |  inst   |BTNs_test |   554|
 +------+---------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:01:06 . Memory (MB): peak = 839.215 ; gain = 490.762
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:01:01 . Memory (MB): peak = 848.008 ; gain = 500.215
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:44 . Memory (MB): peak = 839.215 ; gain = 166.418
-Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:01:07 . Memory (MB): peak = 839.215 ; gain = 490.762
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:42 . Memory (MB): peak = 848.008 ; gain = 180.426
+Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:01:01 . Memory (MB): peak = 848.008 ; gain = 500.215
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 47 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 98 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -337,13 +301,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-74 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+24 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:01:11 . Memory (MB): peak = 850.801 ; gain = 515.586
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:01:05 . Memory (MB): peak = 854.910 ; gain = 519.840
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.runs/design_1_BTNs_test_0_2_synth_1/design_1_BTNs_test_0_2.dcp' has been generated.
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.runs/design_1_BTNs_test_0_2_synth_1/design_1_BTNs_test_0_2.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_BTNs_test_0_2_utilization_synth.rpt -pb design_1_BTNs_test_0_2_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 850.801 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Apr  2 14:05:39 2020...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 854.910 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Apr  3 13:47:17 2020...

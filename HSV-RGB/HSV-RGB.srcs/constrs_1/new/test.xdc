@@ -25,9 +25,9 @@ set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/module_2_0/inst
 
 
 #BTNs
-set_property -dict { PACKAGE_PIN K18   IOSTANDARD LVCMOS33 } [get_ports { btn[0] }]; #IO_L12N_T1_MRCC_35 Sch=btn[0]
-set_property -dict { PACKAGE_PIN P16   IOSTANDARD LVCMOS33 } [get_ports { btn[1] }]; #IO_L24N_T3_34 Sch=btn[1]
-set_property -dict { PACKAGE_PIN K19   IOSTANDARD LVCMOS33 } [get_ports { btn[2] }]; #IO_L10P_T1_AD11P_35 Sch=btn[2]
+set_property -dict { PACKAGE_PIN K18   IOSTANDARD LVCMOS33 } [get_ports { reset }]; #IO_L12N_T1_MRCC_35 Sch=btn[0]
+set_property -dict { PACKAGE_PIN P16   IOSTANDARD LVCMOS33 } [get_ports { btn1 }]; #IO_L24N_T3_34 Sch=btn[1]
+set_property -dict { PACKAGE_PIN K19   IOSTANDARD LVCMOS33 } [get_ports { btn2 }]; #IO_L10P_T1_AD11P_35 Sch=btn[2]
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {btn_IBUF[0]}];
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {btn_IBUF[1]}];
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {btn_IBUF[2]}];

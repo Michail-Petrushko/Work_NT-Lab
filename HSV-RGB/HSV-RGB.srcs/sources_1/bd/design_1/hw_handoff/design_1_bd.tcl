@@ -165,8 +165,13 @@ proc create_root_design { parentCell } {
   # Create interface ports
 
   # Create ports
-  set btn [ create_bd_port -dir I -from 2 -to 0 btn ]
+  set btn1 [ create_bd_port -dir I btn1 ]
+  set btn2 [ create_bd_port -dir I btn2 ]
   set clk_in [ create_bd_port -dir I -type clk clk_in ]
+  set reset [ create_bd_port -dir I -type rst reset ]
+  set_property -dict [ list \
+   CONFIG.POLARITY {ACTIVE_HIGH} \
+ ] $reset
   set reset_0 [ create_bd_port -dir I -type rst reset_0 ]
   set_property -dict [ list \
    CONFIG.POLARITY {ACTIVE_HIGH} \
@@ -225,11 +230,12 @@ proc create_root_design { parentCell } {
    }
   
   # Create port connections
-  connect_bd_net -net BTNs_test_0_H [get_bd_pins BTNs_test_0/H] [get_bd_pins hsv_to_rgb_0/H]
-  connect_bd_net -net BTNs_test_0_S [get_bd_pins BTNs_test_0/S] [get_bd_pins hsv_to_rgb_0/S]
-  connect_bd_net -net BTNs_test_0_V [get_bd_pins BTNs_test_0/V] [get_bd_pins hsv_to_rgb_0/V]
+  connect_bd_net -net BTNs_test_0_Hue [get_bd_pins BTNs_test_0/Hue] [get_bd_pins hsv_to_rgb_0/Hue]
+  connect_bd_net -net BTNs_test_0_Saturation [get_bd_pins BTNs_test_0/Saturation] [get_bd_pins hsv_to_rgb_0/Saturation]
+  connect_bd_net -net BTNs_test_0_Value [get_bd_pins BTNs_test_0/Value] [get_bd_pins hsv_to_rgb_0/Value]
   connect_bd_net -net PWM_0_rgb_led_tri_o [get_bd_ports rgb_led_tri_o] [get_bd_pins PWM_0/rgb_led_tri_o]
-  connect_bd_net -net btn_0_1 [get_bd_ports btn] [get_bd_pins BTNs_test_0/btn]
+  connect_bd_net -net btn1_0_1 [get_bd_ports btn1] [get_bd_pins BTNs_test_0/btn1]
+  connect_bd_net -net btn2_0_1 [get_bd_ports btn2] [get_bd_pins BTNs_test_0/btn2]
   connect_bd_net -net clk_in1_0_1 [get_bd_ports clk_in] [get_bd_pins clk_wiz_0/clk_in1]
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins BTNs_test_0/clk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins hsv_to_rgb_0/clk]
   connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_pins PWM_0/clk] [get_bd_pins clk_wiz_0/clk_out2]
@@ -237,6 +243,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net hsv_to_rgb_0_G [get_bd_pins PWM_0/G] [get_bd_pins hsv_to_rgb_0/G]
   connect_bd_net -net hsv_to_rgb_0_R [get_bd_pins PWM_0/R] [get_bd_pins hsv_to_rgb_0/R]
   connect_bd_net -net reset_0_1 [get_bd_ports reset_0] [get_bd_pins clk_wiz_0/reset]
+  connect_bd_net -net reset_1_1 [get_bd_ports reset] [get_bd_pins BTNs_test_0/reset] [get_bd_pins PWM_0/reset] [get_bd_pins hsv_to_rgb_0/reset]
   connect_bd_net -net sw_0_1 [get_bd_ports sw] [get_bd_pins BTNs_test_0/sw]
 
   # Create address segments
