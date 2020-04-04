@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Apr  3 13:43:57 2020
-# Process ID: 8332
+# Start of session at: Sat Apr  4 12:44:31 2020
+# Process ID: 8704
 # Current directory: C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.runs/design_1_hsv_to_rgb_0_0_synth_1
 # Command line: vivado.exe -log design_1_hsv_to_rgb_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_hsv_to_rgb_0_0.tcl
 # Log file: C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.runs/design_1_hsv_to_rgb_0_0_synth_1/design_1_hsv_to_rgb_0_0.vds
@@ -15,42 +15,12 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 14008 
+INFO: Helper process launched with PID 5960 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 448.906 ; gain = 101.148
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 448.902 ; gain = 101.648
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_hsv_to_rgb_0_0' [c:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/bd/design_1/ip/design_1_hsv_to_rgb_0_0/synth/design_1_hsv_to_rgb_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'hsv_to_rgb' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:23]
-WARNING: [Synth 8-6090] variable 'Hi' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:48]
-WARNING: [Synth 8-6090] variable 'Vmin' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:49]
-WARNING: [Synth 8-6090] variable 'a' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:50]
-WARNING: [Synth 8-6090] variable 'Vinc' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:51]
-WARNING: [Synth 8-6090] variable 'Vdec' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:52]
-WARNING: [Synth 8-6090] variable 'Vinc' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:54]
-WARNING: [Synth 8-6090] variable 'Vdec' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:55]
-WARNING: [Synth 8-6090] variable 'Vmin' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:56]
-WARNING: [Synth 8-6090] variable 'v' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:57]
-WARNING: [Synth 8-6090] variable 'sostR' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:58]
-WARNING: [Synth 8-6090] variable 'sostG' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:59]
-WARNING: [Synth 8-6090] variable 'sostB' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:60]
-WARNING: [Synth 8-6090] variable 'R' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:62]
-WARNING: [Synth 8-6090] variable 'G' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:62]
-WARNING: [Synth 8-6090] variable 'B' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:62]
-WARNING: [Synth 8-6090] variable 'R' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:63]
-WARNING: [Synth 8-6090] variable 'G' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:63]
-WARNING: [Synth 8-6090] variable 'B' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:63]
-WARNING: [Synth 8-6090] variable 'R' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:64]
-WARNING: [Synth 8-6090] variable 'G' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:64]
-WARNING: [Synth 8-6090] variable 'B' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:64]
-WARNING: [Synth 8-6090] variable 'R' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:65]
-WARNING: [Synth 8-6090] variable 'G' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:65]
-WARNING: [Synth 8-6090] variable 'B' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:65]
-WARNING: [Synth 8-6090] variable 'R' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:66]
-WARNING: [Synth 8-6090] variable 'G' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:66]
-WARNING: [Synth 8-6090] variable 'B' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:66]
-WARNING: [Synth 8-6090] variable 'R' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:67]
-WARNING: [Synth 8-6090] variable 'G' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:67]
-WARNING: [Synth 8-6090] variable 'B' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:67]
 WARNING: [Synth 8-6090] variable 'R' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:70]
 WARNING: [Synth 8-6090] variable 'G' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:71]
 WARNING: [Synth 8-6090] variable 'B' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:72]
@@ -66,7 +36,7 @@ WARNING: [Synth 8-6014] Unused sequential element sostB_reg was removed.  [C:/Us
 INFO: [Synth 8-6155] done synthesizing module 'hsv_to_rgb' (1#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/hsv_to_rgb.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_hsv_to_rgb_0_0' (2#1) [c:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/bd/design_1/ip/design_1_hsv_to_rgb_0_0/synth/design_1_hsv_to_rgb_0_0.v:58]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 504.012 ; gain = 156.254
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 503.422 ; gain = 156.168
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -79,10 +49,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 504.012 ; gain = 156.254
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 503.422 ; gain = 156.168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 504.012 ; gain = 156.254
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 503.422 ; gain = 156.168
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -95,25 +65,25 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 WARNING: [Constraints 18-5210] No constraint will be written out.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.160 . Memory (MB): peak = 816.930 ; gain = 2.008
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.081 . Memory (MB): peak = 823.594 ; gain = 2.578
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:41 . Memory (MB): peak = 816.930 ; gain = 469.172
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 823.594 ; gain = 476.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:41 . Memory (MB): peak = 816.930 ; gain = 469.172
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 823.594 ; gain = 476.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:41 . Memory (MB): peak = 816.930 ; gain = 469.172
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 823.594 ; gain = 476.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:42 . Memory (MB): peak = 816.930 ; gain = 469.172
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 823.594 ; gain = 476.340
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -143,6 +113,8 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit        Muxes := 3     
 	   2 Input      8 Bit        Muxes := 15    
 	   7 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -170,6 +142,8 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit        Muxes := 3     
 	   2 Input      8 Bit        Muxes := 15    
 	   7 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -201,7 +175,7 @@ DSP Report: Generating DSP R6, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator R6 is absorbed into DSP R6.
 DSP Report: operator R6 is absorbed into DSP R6.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:01:03 . Memory (MB): peak = 816.930 ; gain = 469.172
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 823.594 ; gain = 476.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -231,13 +205,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:13 ; elapsed = 00:01:47 . Memory (MB): peak = 887.477 ; gain = 539.719
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:53 . Memory (MB): peak = 885.195 ; gain = 537.941
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:14 ; elapsed = 00:01:49 . Memory (MB): peak = 890.785 ; gain = 543.027
+Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 888.410 ; gain = 541.156
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -249,7 +223,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:18 ; elapsed = 00:01:53 . Memory (MB): peak = 1018.484 ; gain = 670.727
+Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 932.570 ; gain = 585.316
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -273,7 +247,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:20 ; elapsed = 00:01:56 . Memory (MB): peak = 1018.484 ; gain = 670.727
+Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 933.633 ; gain = 586.379
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -286,7 +260,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:20 ; elapsed = 00:01:56 . Memory (MB): peak = 1018.484 ; gain = 670.727
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 933.633 ; gain = 586.379
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -298,25 +272,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:20 ; elapsed = 00:01:56 . Memory (MB): peak = 1018.484 ; gain = 670.727
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 933.633 ; gain = 586.379
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:20 ; elapsed = 00:01:56 . Memory (MB): peak = 1018.484 ; gain = 670.727
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 933.633 ; gain = 586.379
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:20 ; elapsed = 00:01:56 . Memory (MB): peak = 1018.484 ; gain = 670.727
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:00:57 . Memory (MB): peak = 933.633 ; gain = 586.379
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:20 ; elapsed = 00:01:56 . Memory (MB): peak = 1018.484 ; gain = 670.727
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:00:57 . Memory (MB): peak = 933.633 ; gain = 586.379
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -334,28 +308,28 @@ Report Cell Usage:
 +------+--------+------+
 |1     |CARRY4  |   505|
 |2     |DSP48E1 |     4|
-|3     |LUT1    |   156|
-|4     |LUT2    |   441|
-|5     |LUT3    |   712|
-|6     |LUT4    |   466|
-|7     |LUT5    |   603|
-|8     |LUT6    |  1043|
-|9     |FDRE    |    24|
+|3     |LUT1    |   148|
+|4     |LUT2    |   442|
+|5     |LUT3    |   689|
+|6     |LUT4    |   476|
+|7     |LUT5    |   617|
+|8     |LUT6    |  1040|
+|9     |FDCE    |    24|
 +------+--------+------+
 
 Report Instance Areas: 
 +------+---------+-----------+------+
 |      |Instance |Module     |Cells |
 +------+---------+-----------+------+
-|1     |top      |           |  3954|
-|2     |  inst   |hsv_to_rgb |  3764|
+|1     |top      |           |  3945|
+|2     |  inst   |hsv_to_rgb |  3810|
 +------+---------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:20 ; elapsed = 00:01:56 . Memory (MB): peak = 1018.484 ; gain = 670.727
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:00:57 . Memory (MB): peak = 933.633 ; gain = 586.379
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:00 ; elapsed = 00:01:30 . Memory (MB): peak = 1018.484 ; gain = 357.809
-Synthesis Optimization Complete : Time (s): cpu = 00:01:21 ; elapsed = 00:01:57 . Memory (MB): peak = 1018.484 ; gain = 670.727
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:46 . Memory (MB): peak = 933.633 ; gain = 266.207
+Synthesis Optimization Complete : Time (s): cpu = 00:00:52 ; elapsed = 00:00:57 . Memory (MB): peak = 933.633 ; gain = 586.379
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 509 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -366,13 +340,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-17 Infos, 44 Warnings, 0 Critical Warnings and 0 Errors encountered.
+17 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:26 ; elapsed = 00:02:04 . Memory (MB): peak = 1018.484 ; gain = 683.777
+synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:01:01 . Memory (MB): peak = 933.633 ; gain = 599.195
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.runs/design_1_hsv_to_rgb_0_0_synth_1/design_1_hsv_to_rgb_0_0.dcp' has been generated.
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.runs/design_1_hsv_to_rgb_0_0_synth_1/design_1_hsv_to_rgb_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_hsv_to_rgb_0_0_utilization_synth.rpt -pb design_1_hsv_to_rgb_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.102 . Memory (MB): peak = 1018.484 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Apr  3 13:46:24 2020...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 933.633 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Apr  4 12:45:52 2020...

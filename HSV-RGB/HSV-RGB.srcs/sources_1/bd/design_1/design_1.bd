@@ -135,12 +135,6 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>reset_0</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
           <spirit:name>rgb_led_tri_o</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
@@ -158,6 +152,12 @@
               <spirit:left>3</spirit:left>
               <spirit:right>0</spirit:right>
             </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>reset_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
           </spirit:wire>
         </spirit:port>
         <spirit:port>
@@ -277,15 +277,6 @@
         <spirit:name>clk_wiz_0_clk_out2</spirit:name>
         <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_out2"/>
         <spirit:internalPortReference spirit:componentRef="PWM_0" spirit:portRef="clk"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>BTNs_test_0_H</spirit:name>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>BTNs_test_0_S</spirit:name>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>BTNs_test_0_V</spirit:name>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>sw_0_1</spirit:name>

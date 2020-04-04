@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Fri Apr  3 13:45:34 2020
+-- Date        : Sat Apr  4 11:50:13 2020
 -- Host        : DESKTOP-TM8D8VH running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/bd/design_1/ip/design_1_PWM_0_0/design_1_PWM_0_0_sim_netlist.vhdl
@@ -17,7 +17,6 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1_PWM_0_0_PWM is
   port (
     rgb_led_tri_o : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    reset : in STD_LOGIC;
     G : in STD_LOGIC_VECTOR ( 7 downto 0 );
     clk : in STD_LOGIC;
     B : in STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -102,14 +101,7 @@ architecture STRUCTURE of design_1_PWM_0_0_PWM is
   signal temp1 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal temp2 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \temp2[7]_i_1_n_0\ : STD_LOGIC;
-  signal \temp3_reg_n_0_[0]\ : STD_LOGIC;
-  signal \temp3_reg_n_0_[1]\ : STD_LOGIC;
-  signal \temp3_reg_n_0_[2]\ : STD_LOGIC;
-  signal \temp3_reg_n_0_[3]\ : STD_LOGIC;
-  signal \temp3_reg_n_0_[4]\ : STD_LOGIC;
-  signal \temp3_reg_n_0_[5]\ : STD_LOGIC;
-  signal \temp3_reg_n_0_[6]\ : STD_LOGIC;
-  signal \temp3_reg_n_0_[7]\ : STD_LOGIC;
+  signal temp3 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_counter2_carry_CO_UNCONNECTED : STD_LOGIC_VECTOR ( 3 to 3 );
   signal NLW_counter2_carry_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_counter3_carry_CO_UNCONNECTED : STD_LOGIC_VECTOR ( 3 to 3 );
@@ -150,9 +142,9 @@ counter2_carry_i_1: unisim.vcomponents.LUT4
     )
         port map (
       I0 => B(7),
-      I1 => \temp3_reg_n_0_[7]\,
+      I1 => temp3(7),
       I2 => B(6),
-      I3 => \temp3_reg_n_0_[6]\,
+      I3 => temp3(6),
       O => counter2_carry_i_1_n_0
     );
 counter2_carry_i_2: unisim.vcomponents.LUT6
@@ -161,10 +153,10 @@ counter2_carry_i_2: unisim.vcomponents.LUT6
     )
         port map (
       I0 => B(5),
-      I1 => \temp3_reg_n_0_[5]\,
+      I1 => temp3(5),
       I2 => B(4),
-      I3 => \temp3_reg_n_0_[4]\,
-      I4 => \temp3_reg_n_0_[3]\,
+      I3 => temp3(4),
+      I4 => temp3(3),
       I5 => B(3),
       O => counter2_carry_i_2_n_0
     );
@@ -174,10 +166,10 @@ counter2_carry_i_3: unisim.vcomponents.LUT6
     )
         port map (
       I0 => B(2),
-      I1 => \temp3_reg_n_0_[2]\,
+      I1 => temp3(2),
       I2 => B(1),
-      I3 => \temp3_reg_n_0_[1]\,
-      I4 => \temp3_reg_n_0_[0]\,
+      I3 => temp3(1),
+      I4 => temp3(0),
       I5 => B(0),
       O => counter2_carry_i_3_n_0
     );
@@ -918,7 +910,7 @@ rgb_led_tri_o0_carry_i_8: unisim.vcomponents.LUT5
       CE => \temp2[7]_i_1_n_0\,
       D => R(0),
       Q => temp1(0),
-      R => reset
+      R => '0'
     );
 \temp1_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -926,7 +918,7 @@ rgb_led_tri_o0_carry_i_8: unisim.vcomponents.LUT5
       CE => \temp2[7]_i_1_n_0\,
       D => R(1),
       Q => temp1(1),
-      R => reset
+      R => '0'
     );
 \temp1_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -934,7 +926,7 @@ rgb_led_tri_o0_carry_i_8: unisim.vcomponents.LUT5
       CE => \temp2[7]_i_1_n_0\,
       D => R(2),
       Q => temp1(2),
-      R => reset
+      R => '0'
     );
 \temp1_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -942,7 +934,7 @@ rgb_led_tri_o0_carry_i_8: unisim.vcomponents.LUT5
       CE => \temp2[7]_i_1_n_0\,
       D => R(3),
       Q => temp1(3),
-      R => reset
+      R => '0'
     );
 \temp1_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -950,7 +942,7 @@ rgb_led_tri_o0_carry_i_8: unisim.vcomponents.LUT5
       CE => \temp2[7]_i_1_n_0\,
       D => R(4),
       Q => temp1(4),
-      R => reset
+      R => '0'
     );
 \temp1_reg[5]\: unisim.vcomponents.FDRE
      port map (
@@ -958,7 +950,7 @@ rgb_led_tri_o0_carry_i_8: unisim.vcomponents.LUT5
       CE => \temp2[7]_i_1_n_0\,
       D => R(5),
       Q => temp1(5),
-      R => reset
+      R => '0'
     );
 \temp1_reg[6]\: unisim.vcomponents.FDRE
      port map (
@@ -966,7 +958,7 @@ rgb_led_tri_o0_carry_i_8: unisim.vcomponents.LUT5
       CE => \temp2[7]_i_1_n_0\,
       D => R(6),
       Q => temp1(6),
-      R => reset
+      R => '0'
     );
 \temp1_reg[7]\: unisim.vcomponents.FDRE
      port map (
@@ -974,7 +966,7 @@ rgb_led_tri_o0_carry_i_8: unisim.vcomponents.LUT5
       CE => \temp2[7]_i_1_n_0\,
       D => R(7),
       Q => temp1(7),
-      R => reset
+      R => '0'
     );
 \temp2[7]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -992,7 +984,7 @@ rgb_led_tri_o0_carry_i_8: unisim.vcomponents.LUT5
       CE => \temp2[7]_i_1_n_0\,
       D => G(0),
       Q => temp2(0),
-      R => reset
+      R => '0'
     );
 \temp2_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -1000,7 +992,7 @@ rgb_led_tri_o0_carry_i_8: unisim.vcomponents.LUT5
       CE => \temp2[7]_i_1_n_0\,
       D => G(1),
       Q => temp2(1),
-      R => reset
+      R => '0'
     );
 \temp2_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -1008,7 +1000,7 @@ rgb_led_tri_o0_carry_i_8: unisim.vcomponents.LUT5
       CE => \temp2[7]_i_1_n_0\,
       D => G(2),
       Q => temp2(2),
-      R => reset
+      R => '0'
     );
 \temp2_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -1016,7 +1008,7 @@ rgb_led_tri_o0_carry_i_8: unisim.vcomponents.LUT5
       CE => \temp2[7]_i_1_n_0\,
       D => G(3),
       Q => temp2(3),
-      R => reset
+      R => '0'
     );
 \temp2_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -1024,7 +1016,7 @@ rgb_led_tri_o0_carry_i_8: unisim.vcomponents.LUT5
       CE => \temp2[7]_i_1_n_0\,
       D => G(4),
       Q => temp2(4),
-      R => reset
+      R => '0'
     );
 \temp2_reg[5]\: unisim.vcomponents.FDRE
      port map (
@@ -1032,7 +1024,7 @@ rgb_led_tri_o0_carry_i_8: unisim.vcomponents.LUT5
       CE => \temp2[7]_i_1_n_0\,
       D => G(5),
       Q => temp2(5),
-      R => reset
+      R => '0'
     );
 \temp2_reg[6]\: unisim.vcomponents.FDRE
      port map (
@@ -1040,7 +1032,7 @@ rgb_led_tri_o0_carry_i_8: unisim.vcomponents.LUT5
       CE => \temp2[7]_i_1_n_0\,
       D => G(6),
       Q => temp2(6),
-      R => reset
+      R => '0'
     );
 \temp2_reg[7]\: unisim.vcomponents.FDRE
      port map (
@@ -1048,71 +1040,71 @@ rgb_led_tri_o0_carry_i_8: unisim.vcomponents.LUT5
       CE => \temp2[7]_i_1_n_0\,
       D => G(7),
       Q => temp2(7),
-      R => reset
+      R => '0'
     );
 \temp3_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => \temp2[7]_i_1_n_0\,
       D => B(0),
-      Q => \temp3_reg_n_0_[0]\,
-      R => reset
+      Q => temp3(0),
+      R => '0'
     );
 \temp3_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => \temp2[7]_i_1_n_0\,
       D => B(1),
-      Q => \temp3_reg_n_0_[1]\,
-      R => reset
+      Q => temp3(1),
+      R => '0'
     );
 \temp3_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => \temp2[7]_i_1_n_0\,
       D => B(2),
-      Q => \temp3_reg_n_0_[2]\,
-      R => reset
+      Q => temp3(2),
+      R => '0'
     );
 \temp3_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => \temp2[7]_i_1_n_0\,
       D => B(3),
-      Q => \temp3_reg_n_0_[3]\,
-      R => reset
+      Q => temp3(3),
+      R => '0'
     );
 \temp3_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => \temp2[7]_i_1_n_0\,
       D => B(4),
-      Q => \temp3_reg_n_0_[4]\,
-      R => reset
+      Q => temp3(4),
+      R => '0'
     );
 \temp3_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => \temp2[7]_i_1_n_0\,
       D => B(5),
-      Q => \temp3_reg_n_0_[5]\,
-      R => reset
+      Q => temp3(5),
+      R => '0'
     );
 \temp3_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => \temp2[7]_i_1_n_0\,
       D => B(6),
-      Q => \temp3_reg_n_0_[6]\,
-      R => reset
+      Q => temp3(6),
+      R => '0'
     );
 \temp3_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => \temp2[7]_i_1_n_0\,
       D => B(7),
-      Q => \temp3_reg_n_0_[7]\,
-      R => reset
+      Q => temp3(7),
+      R => '0'
     );
 end STRUCTURE;
 library IEEE;
@@ -1154,7 +1146,6 @@ inst: entity work.design_1_PWM_0_0_PWM
       G(7 downto 0) => G(7 downto 0),
       R(7 downto 0) => R(7 downto 0),
       clk => clk,
-      reset => reset,
       rgb_led_tri_o(2 downto 0) => rgb_led_tri_o(2 downto 0)
     );
 end STRUCTURE;
