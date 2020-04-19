@@ -34,20 +34,20 @@ module PWM(
     
     always@(posedge clk)
     begin
-//        if (reset==1) begin
-//            rgb_led_tri_o <= 0;
-//            temp1<=0;
-//            temp2<=0;
-//            temp3<=0;
-//            counter <= 0;
-//        end
-        if ((temp1!=R)|(temp2!=G)|(temp3!=B)) begin
+        if (reset==1) begin                         //reset values
+            rgb_led_tri_o <= 0;
+            temp1<=0;
+            temp2<=0;
+            temp3<=0;
+            counter <= 0;
+        end
+        if ((temp1!=R)|(temp2!=G)|(temp3!=B)) begin //bug fix
             counter = 0;
             temp1 = R;
             temp2 = G;
             temp3 = B;
         end
-        if(counter<=R) 
+        if(counter<=R)                              
             rgb_led_tri_o[0] <=1'b1;
         else 
             rgb_led_tri_o[0] <=1'b0;

@@ -30,7 +30,7 @@ module hsv_to_rgb(
     reg [7:0] sostR, sostG, sostB;
     
     always@(posedge clk, posedge reset ) begin
-        if (reset==1) begin
+        if (reset==1) begin                     //reset values
             Hi <= 0;
             Vmin <= 0;
             a <= 0;   
@@ -44,17 +44,17 @@ module hsv_to_rgb(
             sostG<=0;
             sostB<=0;
         end
-        else begin
+        else begin                              //chanding values acording to formula
              Hi = (Hue/60)%6;
              Vmin = (100-Saturation)*Value/100;
              a = (Value-Vmin)* (Hue%60)/60;
              Vinc = Vmin + a;
              Vdec = Vmin - a; 
              
-             Vinc = Vinc*255/100;
-             Vdec = Vdec*255/100;
-             Vmin = Vmin*255/100;
-             v = Value*255/100;
+             Vinc = Vinc + Vinc + Vinc/2;
+             Vdec = Vdec + Vdec + Vdec/2;
+             Vmin = Vmin + Vmin + Vmin/2;
+             v = Value + Value + Value/2;
              sostR = R;
              sostG = G;
              sostB = B;

@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Sat Apr  4 11:50:12 2020
+// Date        : Sun Apr 19 16:52:16 2020
 // Host        : DESKTOP-TM8D8VH running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_PWM_0_0_sim_netlist.v
@@ -14,11 +14,13 @@
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
    (rgb_led_tri_o,
+    reset,
     G,
     clk,
     B,
     R);
   output [2:0]rgb_led_tri_o;
+  input reset;
   input [7:0]G;
   input clk;
   input [7:0]B;
@@ -75,6 +77,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
   wire i__carry_i_8__0_n_0;
   wire i__carry_i_8_n_0;
   wire [8:0]p_0_in;
+  wire reset;
   wire [2:0]rgb_led_tri_o;
   wire rgb_led_tri_o0;
   wire rgb_led_tri_o0_carry__0_i_1_n_0;
@@ -103,7 +106,14 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
   wire [7:0]temp1;
   wire [7:0]temp2;
   wire \temp2[7]_i_1_n_0 ;
-  wire [7:0]temp3;
+  wire \temp3_reg_n_0_[0] ;
+  wire \temp3_reg_n_0_[1] ;
+  wire \temp3_reg_n_0_[2] ;
+  wire \temp3_reg_n_0_[3] ;
+  wire \temp3_reg_n_0_[4] ;
+  wire \temp3_reg_n_0_[5] ;
+  wire \temp3_reg_n_0_[6] ;
+  wire \temp3_reg_n_0_[7] ;
   wire [3:3]NLW_counter2_carry_CO_UNCONNECTED;
   wire [3:0]NLW_counter2_carry_O_UNCONNECTED;
   wire [3:3]NLW_counter3_carry_CO_UNCONNECTED;
@@ -131,28 +141,28 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
     .INIT(16'h9009)) 
     counter2_carry_i_1
        (.I0(B[7]),
-        .I1(temp3[7]),
+        .I1(\temp3_reg_n_0_[7] ),
         .I2(B[6]),
-        .I3(temp3[6]),
+        .I3(\temp3_reg_n_0_[6] ),
         .O(counter2_carry_i_1_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     counter2_carry_i_2
        (.I0(B[5]),
-        .I1(temp3[5]),
+        .I1(\temp3_reg_n_0_[5] ),
         .I2(B[4]),
-        .I3(temp3[4]),
-        .I4(temp3[3]),
+        .I3(\temp3_reg_n_0_[4] ),
+        .I4(\temp3_reg_n_0_[3] ),
         .I5(B[3]),
         .O(counter2_carry_i_2_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     counter2_carry_i_3
        (.I0(B[2]),
-        .I1(temp3[2]),
+        .I1(\temp3_reg_n_0_[2] ),
         .I2(B[1]),
-        .I3(temp3[1]),
-        .I4(temp3[0]),
+        .I3(\temp3_reg_n_0_[1] ),
+        .I4(\temp3_reg_n_0_[0] ),
         .I5(B[0]),
         .O(counter2_carry_i_3_n_0));
   CARRY4 counter3_carry
@@ -679,49 +689,49 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
         .CE(\temp2[7]_i_1_n_0 ),
         .D(R[0]),
         .Q(temp1[0]),
-        .R(1'b0));
+        .R(reset));
   FDRE \temp1_reg[1] 
        (.C(clk),
         .CE(\temp2[7]_i_1_n_0 ),
         .D(R[1]),
         .Q(temp1[1]),
-        .R(1'b0));
+        .R(reset));
   FDRE \temp1_reg[2] 
        (.C(clk),
         .CE(\temp2[7]_i_1_n_0 ),
         .D(R[2]),
         .Q(temp1[2]),
-        .R(1'b0));
+        .R(reset));
   FDRE \temp1_reg[3] 
        (.C(clk),
         .CE(\temp2[7]_i_1_n_0 ),
         .D(R[3]),
         .Q(temp1[3]),
-        .R(1'b0));
+        .R(reset));
   FDRE \temp1_reg[4] 
        (.C(clk),
         .CE(\temp2[7]_i_1_n_0 ),
         .D(R[4]),
         .Q(temp1[4]),
-        .R(1'b0));
+        .R(reset));
   FDRE \temp1_reg[5] 
        (.C(clk),
         .CE(\temp2[7]_i_1_n_0 ),
         .D(R[5]),
         .Q(temp1[5]),
-        .R(1'b0));
+        .R(reset));
   FDRE \temp1_reg[6] 
        (.C(clk),
         .CE(\temp2[7]_i_1_n_0 ),
         .D(R[6]),
         .Q(temp1[6]),
-        .R(1'b0));
+        .R(reset));
   FDRE \temp1_reg[7] 
        (.C(clk),
         .CE(\temp2[7]_i_1_n_0 ),
         .D(R[7]),
         .Q(temp1[7]),
-        .R(1'b0));
+        .R(reset));
   LUT3 #(
     .INIT(8'hFE)) 
     \temp2[7]_i_1 
@@ -734,97 +744,97 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
         .CE(\temp2[7]_i_1_n_0 ),
         .D(G[0]),
         .Q(temp2[0]),
-        .R(1'b0));
+        .R(reset));
   FDRE \temp2_reg[1] 
        (.C(clk),
         .CE(\temp2[7]_i_1_n_0 ),
         .D(G[1]),
         .Q(temp2[1]),
-        .R(1'b0));
+        .R(reset));
   FDRE \temp2_reg[2] 
        (.C(clk),
         .CE(\temp2[7]_i_1_n_0 ),
         .D(G[2]),
         .Q(temp2[2]),
-        .R(1'b0));
+        .R(reset));
   FDRE \temp2_reg[3] 
        (.C(clk),
         .CE(\temp2[7]_i_1_n_0 ),
         .D(G[3]),
         .Q(temp2[3]),
-        .R(1'b0));
+        .R(reset));
   FDRE \temp2_reg[4] 
        (.C(clk),
         .CE(\temp2[7]_i_1_n_0 ),
         .D(G[4]),
         .Q(temp2[4]),
-        .R(1'b0));
+        .R(reset));
   FDRE \temp2_reg[5] 
        (.C(clk),
         .CE(\temp2[7]_i_1_n_0 ),
         .D(G[5]),
         .Q(temp2[5]),
-        .R(1'b0));
+        .R(reset));
   FDRE \temp2_reg[6] 
        (.C(clk),
         .CE(\temp2[7]_i_1_n_0 ),
         .D(G[6]),
         .Q(temp2[6]),
-        .R(1'b0));
+        .R(reset));
   FDRE \temp2_reg[7] 
        (.C(clk),
         .CE(\temp2[7]_i_1_n_0 ),
         .D(G[7]),
         .Q(temp2[7]),
-        .R(1'b0));
+        .R(reset));
   FDRE \temp3_reg[0] 
        (.C(clk),
         .CE(\temp2[7]_i_1_n_0 ),
         .D(B[0]),
-        .Q(temp3[0]),
-        .R(1'b0));
+        .Q(\temp3_reg_n_0_[0] ),
+        .R(reset));
   FDRE \temp3_reg[1] 
        (.C(clk),
         .CE(\temp2[7]_i_1_n_0 ),
         .D(B[1]),
-        .Q(temp3[1]),
-        .R(1'b0));
+        .Q(\temp3_reg_n_0_[1] ),
+        .R(reset));
   FDRE \temp3_reg[2] 
        (.C(clk),
         .CE(\temp2[7]_i_1_n_0 ),
         .D(B[2]),
-        .Q(temp3[2]),
-        .R(1'b0));
+        .Q(\temp3_reg_n_0_[2] ),
+        .R(reset));
   FDRE \temp3_reg[3] 
        (.C(clk),
         .CE(\temp2[7]_i_1_n_0 ),
         .D(B[3]),
-        .Q(temp3[3]),
-        .R(1'b0));
+        .Q(\temp3_reg_n_0_[3] ),
+        .R(reset));
   FDRE \temp3_reg[4] 
        (.C(clk),
         .CE(\temp2[7]_i_1_n_0 ),
         .D(B[4]),
-        .Q(temp3[4]),
-        .R(1'b0));
+        .Q(\temp3_reg_n_0_[4] ),
+        .R(reset));
   FDRE \temp3_reg[5] 
        (.C(clk),
         .CE(\temp2[7]_i_1_n_0 ),
         .D(B[5]),
-        .Q(temp3[5]),
-        .R(1'b0));
+        .Q(\temp3_reg_n_0_[5] ),
+        .R(reset));
   FDRE \temp3_reg[6] 
        (.C(clk),
         .CE(\temp2[7]_i_1_n_0 ),
         .D(B[6]),
-        .Q(temp3[6]),
-        .R(1'b0));
+        .Q(\temp3_reg_n_0_[6] ),
+        .R(reset));
   FDRE \temp3_reg[7] 
        (.C(clk),
         .CE(\temp2[7]_i_1_n_0 ),
         .D(B[7]),
-        .Q(temp3[7]),
-        .R(1'b0));
+        .Q(\temp3_reg_n_0_[7] ),
+        .R(reset));
 endmodule
 
 (* CHECK_LICENSE_TYPE = "design_1_PWM_0_0,PWM,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "module_ref" *) 
@@ -848,6 +858,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   wire [7:0]G;
   wire [7:0]R;
   wire clk;
+  wire reset;
   wire [2:0]rgb_led_tri_o;
 
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM inst
@@ -855,6 +866,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
         .G(G),
         .R(R),
         .clk(clk),
+        .reset(reset),
         .rgb_led_tri_o(rgb_led_tri_o));
 endmodule
 `ifndef GLBL

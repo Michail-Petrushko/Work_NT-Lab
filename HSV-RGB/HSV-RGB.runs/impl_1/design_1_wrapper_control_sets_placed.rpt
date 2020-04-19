@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat Apr  4 13:16:28 2020
+| Date         : Sun Apr 19 16:56:02 2020
 | Host         : DESKTOP-TM8D8VH running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
 | Design       : design_1_wrapper
@@ -24,7 +24,7 @@ Table of Contents
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
 | Number of unique control sets                            |     9 |
-| Unused register locations in slices containing registers |    12 |
+| Unused register locations in slices containing registers |    20 |
 +----------------------------------------------------------+-------+
 
 
@@ -44,12 +44,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              24 |            6 |
+| No           | No                    | No                     |              24 |            7 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |              48 |            6 |
-| Yes          | No                    | Yes                    |              48 |            8 |
-| Yes          | Yes                   | No                     |             348 |           46 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              48 |            9 |
+| Yes          | Yes                   | No                     |             412 |           55 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -59,13 +59,13 @@ Table of Contents
 +-------------------------------------+--------------------------------------------+-------------------------------------------------+------------------+----------------+
 |             Clock Signal            |                Enable Signal               |                 Set/Reset Signal                | Slice Load Count | Bel Load Count |
 +-------------------------------------+--------------------------------------------+-------------------------------------------------+------------------+----------------+
-|  design_1_i/clk_wiz_0/inst/clk_out2 |                                            |                                                 |                6 |             24 |
-|  design_1_i/clk_wiz_0/inst/clk_out1 | btn2_IBUF                                  | reset_IBUF                                      |                5 |             40 |
+|  design_1_i/clk_wiz_0/inst/clk_out2 |                                            |                                                 |                7 |             24 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | btn1_IBUF                                  | reset_IBUF                                      |                5 |             38 |
 |  design_1_i/clk_wiz_0/inst/clk_out1 | sw_IBUF[0]                                 | design_1_i/BTNs_test_0/inst/counter1[0]_i_1_n_0 |                5 |             40 |
-|  design_1_i/clk_wiz_0/inst/clk_out1 | btn1_IBUF                                  | reset_IBUF                                      |                5 |             40 |
-|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/hsv_to_rgb_0/inst/R[7]_i_1_n_0  | reset_IBUF                                      |                8 |             48 |
-|  design_1_i/clk_wiz_0/inst/clk_out2 | design_1_i/PWM_0/inst/temp2[7]_i_1_n_0     |                                                 |                6 |             48 |
-|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/BTNs_test_0/inst/Hue[8]_i_1_n_0 | reset_IBUF                                      |               11 |             64 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | btn2_IBUF                                  | reset_IBUF                                      |                5 |             40 |
+|  design_1_i/clk_wiz_0/inst/clk_out2 | design_1_i/PWM_0/inst/temp2[7]_i_1_n_0     | reset_IBUF                                      |                7 |             48 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/hsv_to_rgb_0/inst/R[7]_i_1_n_0  | reset_IBUF                                      |                9 |             48 |
+|  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/BTNs_test_0/inst/Hue[8]_i_1_n_0 | reset_IBUF                                      |               13 |             82 |
 |  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/BTNs_test_0/inst/s              | reset_IBUF                                      |               10 |             82 |
 |  design_1_i/clk_wiz_0/inst/clk_out1 | design_1_i/BTNs_test_0/inst/v              | reset_IBUF                                      |               10 |             82 |
 +-------------------------------------+--------------------------------------------+-------------------------------------------------+------------------+----------------+
