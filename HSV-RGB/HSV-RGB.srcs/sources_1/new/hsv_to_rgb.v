@@ -29,7 +29,7 @@ module hsv_to_rgb(
     integer Hi, Vmin,a, Vinc, Vdec, v;
     reg [7:0] sostR, sostG, sostB;
     
-    always@(posedge clk, posedge reset ) begin
+    always@(posedge clk) begin
         if (reset==1) begin                     //reset values
             Hi <= 0;
             Vmin <= 0;

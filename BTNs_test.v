@@ -31,8 +31,8 @@ module BTNs_test(
     integer h ,s ,v;
     integer temp;
     reg [19:0] counter1;
-    reg [19:0]counter2;
-    reg [19:0]counter3;
+    reg [20:0]counter2;
+    reg [20:0]counter3;
     
     //main
     always@(posedge clk) begin   
@@ -43,12 +43,11 @@ module BTNs_test(
         end
         else begin
             if (sw[0] == 1) begin               //start changing hue 
-                counter1 = counter1+1;
+                counter1 <= counter1+1;
                 if (counter1 == 0) begin        //reduce changing speed
                     h = h+1;                    //it will work only after owerflow reg[19:0] counter1
                     if (h>359) h = h - 360;     //remove owerflow hue if it more then  359 
                     Hue = h;
-                    counter1 = 0;
                 end
             end
         end
@@ -62,7 +61,7 @@ module BTNs_test(
         end
         else begin
             if (btn1 == 1) begin                //only if btn1 turn on
-                counter3 = counter3 + 2;        //fixing button debounce
+                counter3 <= counter3 + 1;        //fixing button debounce
                 if (counter3==0) begin          
                     s = s+1;                    //it will work only after owerflow reg[19:0] counter3
                     if (s>100) s = 100;
@@ -81,7 +80,7 @@ module BTNs_test(
         end
         else begin
             if (btn2==1) begin                  //only if btn2 turn on
-                counter2 = counter2 + 5;        //fixing button debounce
+                counter2 <= counter2 + 1;        //fixing button debounce
                 if (counter2==0) begin
                      v = v+1;                   //it will work only after owerflow reg[19:0] counter2
                      if (v>100) v = 100;
