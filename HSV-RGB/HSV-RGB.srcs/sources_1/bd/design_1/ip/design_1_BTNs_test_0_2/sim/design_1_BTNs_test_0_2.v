@@ -55,9 +55,9 @@
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_BTNs_test_0_2 (
-  btn1,
   btn2,
   sw,
+  sost,
   clk,
   reset,
   Hue,
@@ -65,9 +65,9 @@ module design_1_BTNs_test_0_2 (
   Value
 );
 
-input wire btn1;
 input wire btn2;
 input wire [3 : 0] sw;
+input wire [3 : 0] sost;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 10000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
@@ -79,9 +79,9 @@ output wire [8 : 0] Saturation;
 output wire [8 : 0] Value;
 
   BTNs_test inst (
-    .btn1(btn1),
     .btn2(btn2),
     .sw(sw),
+    .sost(sost),
     .clk(clk),
     .reset(reset),
     .Hue(Hue),

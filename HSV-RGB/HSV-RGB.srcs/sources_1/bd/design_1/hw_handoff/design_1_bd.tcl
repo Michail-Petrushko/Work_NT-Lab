@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# BTNs_test, PWM, hsv_to_rgb
+# BTNs_test, PWM, hsv_to_rgb, sost
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -168,6 +168,7 @@ proc create_root_design { parentCell } {
   set btn1 [ create_bd_port -dir I btn1 ]
   set btn2 [ create_bd_port -dir I btn2 ]
   set clk_in [ create_bd_port -dir I -type clk clk_in ]
+  set leds [ create_bd_port -dir O -from 3 -to 0 leds ]
   set reset [ create_bd_port -dir I -type rst reset ]
   set_property -dict [ list \
    CONFIG.POLARITY {ACTIVE_HIGH} \
@@ -204,18 +205,23 @@ proc create_root_design { parentCell } {
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
   set_property -dict [ list \
-   CONFIG.CLKOUT1_JITTER {372.827} \
-   CONFIG.CLKOUT1_PHASE_ERROR {301.601} \
+   CONFIG.CLKOUT1_JITTER {290.478} \
+   CONFIG.CLKOUT1_PHASE_ERROR {133.882} \
    CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {10.000} \
    CONFIG.CLKOUT2_JITTER {260.522} \
    CONFIG.CLKOUT2_PHASE_ERROR {301.601} \
    CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {80.000} \
-   CONFIG.CLKOUT2_USED {true} \
-   CONFIG.MMCM_CLKFBOUT_MULT_F {48.000} \
-   CONFIG.MMCM_CLKOUT0_DIVIDE_F {96.000} \
-   CONFIG.MMCM_CLKOUT1_DIVIDE {12} \
-   CONFIG.MMCM_DIVCLK_DIVIDE {5} \
-   CONFIG.NUM_OUT_CLKS {2} \
+   CONFIG.CLKOUT2_USED {false} \
+   CONFIG.CLKOUT3_JITTER {235.916} \
+   CONFIG.CLKOUT3_PHASE_ERROR {301.601} \
+   CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {160.000} \
+   CONFIG.CLKOUT3_USED {false} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {15.625} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {78.125} \
+   CONFIG.MMCM_CLKOUT1_DIVIDE {1} \
+   CONFIG.MMCM_CLKOUT2_DIVIDE {1} \
+   CONFIG.MMCM_DIVCLK_DIVIDE {2} \
+   CONFIG.NUM_OUT_CLKS {1} \
  ] $clk_wiz_0
 
   # Create instance: hsv_to_rgb_0, and set properties
@@ -229,21 +235,33 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: sost_0, and set properties
+  set block_name sost
+  set block_cell_name sost_0
+  if { [catch {set sost_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $sost_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create port connections
   connect_bd_net -net BTNs_test_0_Hue [get_bd_pins BTNs_test_0/Hue] [get_bd_pins hsv_to_rgb_0/Hue]
   connect_bd_net -net BTNs_test_0_Saturation [get_bd_pins BTNs_test_0/Saturation] [get_bd_pins hsv_to_rgb_0/Saturation]
   connect_bd_net -net BTNs_test_0_Value [get_bd_pins BTNs_test_0/Value] [get_bd_pins hsv_to_rgb_0/Value]
   connect_bd_net -net PWM_0_rgb_led_tri_o [get_bd_ports rgb_led_tri_o] [get_bd_pins PWM_0/rgb_led_tri_o]
-  connect_bd_net -net btn1_0_1 [get_bd_ports btn1] [get_bd_pins BTNs_test_0/btn1]
+  connect_bd_net -net btn1_0_1 [get_bd_ports btn1] [get_bd_pins sost_0/btn1]
   connect_bd_net -net btn2_0_1 [get_bd_ports btn2] [get_bd_pins BTNs_test_0/btn2]
   connect_bd_net -net clk_in1_0_1 [get_bd_ports clk_in] [get_bd_pins clk_wiz_0/clk_in1]
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins BTNs_test_0/clk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins hsv_to_rgb_0/clk]
-  connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_pins PWM_0/clk] [get_bd_pins clk_wiz_0/clk_out2]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins BTNs_test_0/clk] [get_bd_pins PWM_0/clk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins hsv_to_rgb_0/clk] [get_bd_pins sost_0/clk]
   connect_bd_net -net hsv_to_rgb_0_B [get_bd_pins PWM_0/B] [get_bd_pins hsv_to_rgb_0/B]
   connect_bd_net -net hsv_to_rgb_0_G [get_bd_pins PWM_0/G] [get_bd_pins hsv_to_rgb_0/G]
   connect_bd_net -net hsv_to_rgb_0_R [get_bd_pins PWM_0/R] [get_bd_pins hsv_to_rgb_0/R]
   connect_bd_net -net reset_0_1 [get_bd_ports reset_0] [get_bd_pins clk_wiz_0/reset]
-  connect_bd_net -net reset_1_1 [get_bd_ports reset] [get_bd_pins BTNs_test_0/reset] [get_bd_pins PWM_0/reset] [get_bd_pins hsv_to_rgb_0/reset]
+  connect_bd_net -net reset_1_1 [get_bd_ports reset] [get_bd_pins BTNs_test_0/reset] [get_bd_pins PWM_0/reset] [get_bd_pins hsv_to_rgb_0/reset] [get_bd_pins sost_0/reset]
+  connect_bd_net -net sost_0_leds [get_bd_ports leds] [get_bd_pins sost_0/leds]
+  connect_bd_net -net sost_0_sost [get_bd_pins BTNs_test_0/sost] [get_bd_pins sost_0/sost]
   connect_bd_net -net sw_0_1 [get_bd_ports sw] [get_bd_pins BTNs_test_0/sw]
 
   # Create address segments
