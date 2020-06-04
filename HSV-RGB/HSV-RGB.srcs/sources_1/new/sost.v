@@ -25,12 +25,12 @@ module sost(
     input clk,
     input reset,                                //btn[0] to reset values
     output reg [3:0] leds,                      //using for representing sost  leds = sost+1;
-    output reg [3:0] sost
+    output reg [3:0] sost,
+    output reg btnSost                          // save info about auto change
     );
     reg [22:0] counter1;
     reg [22:0] counter2;
-    reg [3:0] dopCounter;                       //using for auto changing sost
-    reg btnSost;                                // save info about auto change
+    reg [27:0] dopCounter;                       //using for auto changing sost
     
     //sost0     Hue = 120;
     //sost1     Hue = Hue + 60;
@@ -51,25 +51,26 @@ module sost(
         else begin
             if (btn1==1) begin                  
                 counter1 <= counter1+1;
-                if (counter1 == 23'h7fffff) begin
+                dopCounter<=dopCounter + 1;
+                if (counter1 == 23'h7a1200) begin                           //0.8s
                     if (sost == 6) sost = 0;
                     else sost = sost+1;
-                    if (btnSost == 1) dopCounter = 0;               //stop auto change
-                    else if (dopCounter < 5) dopCounter = dopCounter+1;
+                    if (dopCounter < 24'hffffff) btnSost = 0;               //stop auto change
+                    counter1=0;
                     counter2=0;
-                    btnSost = 0;
+                end
+                if (dopCounter == 28'h1c9c380) begin                        //3s
+                    dopCounter = 0;
+                    btnSost=1;
                 end
             end
             else begin
                 counter2<= counter2+1;
-                if (counter2 ==  23'h7fffff) begin
-                    if (dopCounter<5) begin                         //если "длительного" удержания не было
-                        dopCounter = 0;
-                        counter1=0;
-                        counter2 = 0;
-                    end
-                    else begin                                      //если "длительное" удержание произошло
-                        btnSost = 1;
+                if (counter2 ==  23'h7a1200) begin                          //0.8s
+                    counter1 = 0;
+                    counter2 = 0;                       
+                    dopCounter = 0;
+                    if (btnSost==1) begin                                       
                         if (sost == 6) sost = 0;
                         else sost = sost+1;
                     end

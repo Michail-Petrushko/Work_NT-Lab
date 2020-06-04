@@ -14,19 +14,23 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 3724 
+INFO: Helper process launched with PID 5316 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 449.465 ; gain = 101.797
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 448.984 ; gain = 100.777
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_BTNs_test_0_2' [c:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/bd/design_1/ip/design_1_BTNs_test_0_2/synth/design_1_BTNs_test_0_2.v:58]
 INFO: [Synth 8-6157] synthesizing module 'BTNs_test' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:23]
+WARNING: [Synth 8-6090] variable 'counterSost1' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:56]
+WARNING: [Synth 8-6090] variable 'counterSost2' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:65]
+WARNING: [Synth 8-6090] variable 'counterSost4' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:103]
+WARNING: [Synth 8-6090] variable 'counterSost5' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:129]
 INFO: [Synth 8-6155] done synthesizing module 'BTNs_test' (1#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/new/BTNs_test.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_BTNs_test_0_2' (2#1) [c:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/bd/design_1/ip/design_1_BTNs_test_0_2/synth/design_1_BTNs_test_0_2.v:58]
 WARNING: [Synth 8-3331] design BTNs_test has unconnected port sw[3]
 WARNING: [Synth 8-3331] design BTNs_test has unconnected port sw[2]
 WARNING: [Synth 8-3331] design BTNs_test has unconnected port sw[1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 504.242 ; gain = 156.574
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 503.520 ; gain = 155.313
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -39,10 +43,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 504.242 ; gain = 156.574
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 503.520 ; gain = 155.313
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 504.242 ; gain = 156.574
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 503.520 ; gain = 155.313
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -55,36 +59,34 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 WARNING: [Constraints 18-5210] No constraint will be written out.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.236 . Memory (MB): peak = 830.813 ; gain = 2.492
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.151 . Memory (MB): peak = 831.586 ; gain = 3.332
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 830.813 ; gain = 483.145
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 831.586 ; gain = 483.379
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 830.813 ; gain = 483.145
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 831.586 ; gain = 483.379
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 830.813 ; gain = 483.145
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 831.586 ; gain = 483.379
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "Hue" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "Hue" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "Hue" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "h" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "h" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "counterSost1" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "counterSost2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "s" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "Saturation" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "Value" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "v" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 830.813 ; gain = 483.145
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 831.586 ; gain = 483.379
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -99,20 +101,32 @@ Detailed RTL Component Info :
 +---Adders : 
 	   3 Input     32 Bit       Adders := 6     
 	   2 Input     32 Bit       Adders := 5     
+	   2 Input     23 Bit       Adders := 1     
+	   2 Input     20 Bit       Adders := 2     
+	   2 Input     17 Bit       Adders := 1     
 	   2 Input      9 Bit       Adders := 1     
 +---Registers : 
 	               32 Bit    Registers := 3     
+	               23 Bit    Registers := 1     
+	               20 Bit    Registers := 2     
+	               17 Bit    Registers := 1     
 	                9 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 10    
 	   6 Input     32 Bit        Muxes := 1     
 	   3 Input     32 Bit        Muxes := 2     
+	   2 Input     23 Bit        Muxes := 1     
+	   6 Input     23 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 4     
+	   3 Input     20 Bit        Muxes := 2     
+	   2 Input     17 Bit        Muxes := 1     
+	   6 Input     17 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 4     
 	   3 Input      9 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 18    
-	   6 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 24    
+	   6 Input      1 Bit        Muxes := 6     
 	   7 Input      1 Bit        Muxes := 1     
-	   3 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 8     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -125,20 +139,32 @@ Detailed RTL Component Info :
 +---Adders : 
 	   3 Input     32 Bit       Adders := 6     
 	   2 Input     32 Bit       Adders := 5     
+	   2 Input     23 Bit       Adders := 1     
+	   2 Input     20 Bit       Adders := 2     
+	   2 Input     17 Bit       Adders := 1     
 	   2 Input      9 Bit       Adders := 1     
 +---Registers : 
 	               32 Bit    Registers := 3     
+	               23 Bit    Registers := 1     
+	               20 Bit    Registers := 2     
+	               17 Bit    Registers := 1     
 	                9 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 10    
 	   6 Input     32 Bit        Muxes := 1     
 	   3 Input     32 Bit        Muxes := 2     
+	   2 Input     23 Bit        Muxes := 1     
+	   6 Input     23 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 4     
+	   3 Input     20 Bit        Muxes := 2     
+	   2 Input     17 Bit        Muxes := 1     
+	   6 Input     17 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 4     
 	   3 Input      9 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 18    
-	   6 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 24    
+	   6 Input      1 Bit        Muxes := 6     
 	   7 Input      1 Bit        Muxes := 1     
-	   3 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 8     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -176,7 +202,7 @@ INFO: [Synth 8-3886] merging instance 'inst/v_reg[6]' (FDRE) to 'inst/Value_reg[
 INFO: [Synth 8-3886] merging instance 'inst/v_reg[7]' (FDRE) to 'inst/Value_reg[7]'
 INFO: [Synth 8-3886] merging instance 'inst/v_reg[8]' (FDRE) to 'inst/Value_reg[8]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:50 . Memory (MB): peak = 830.813 ; gain = 483.145
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 831.586 ; gain = 483.379
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -188,13 +214,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:01:17 . Memory (MB): peak = 835.137 ; gain = 487.469
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:01:10 . Memory (MB): peak = 837.910 ; gain = 489.703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:18 . Memory (MB): peak = 835.508 ; gain = 487.840
+Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:01:10 . Memory (MB): peak = 838.430 ; gain = 490.223
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -206,7 +232,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:01 ; elapsed = 00:01:18 . Memory (MB): peak = 848.734 ; gain = 501.066
+Finished Technology Mapping : Time (s): cpu = 00:00:55 ; elapsed = 00:01:10 . Memory (MB): peak = 851.754 ; gain = 503.547
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -230,7 +256,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:04 ; elapsed = 00:01:22 . Memory (MB): peak = 848.734 ; gain = 501.066
+Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:01:12 . Memory (MB): peak = 851.754 ; gain = 503.547
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -243,7 +269,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:04 ; elapsed = 00:01:22 . Memory (MB): peak = 848.734 ; gain = 501.066
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:01:12 . Memory (MB): peak = 851.754 ; gain = 503.547
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -255,25 +281,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:04 ; elapsed = 00:01:22 . Memory (MB): peak = 848.734 ; gain = 501.066
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:01:12 . Memory (MB): peak = 851.754 ; gain = 503.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:04 ; elapsed = 00:01:22 . Memory (MB): peak = 848.734 ; gain = 501.066
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:01:12 . Memory (MB): peak = 851.754 ; gain = 503.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:04 ; elapsed = 00:01:22 . Memory (MB): peak = 848.734 ; gain = 501.066
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:01:12 . Memory (MB): peak = 851.754 ; gain = 503.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:04 ; elapsed = 00:01:22 . Memory (MB): peak = 848.734 ; gain = 501.066
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:01:12 . Memory (MB): peak = 851.754 ; gain = 503.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -289,31 +315,31 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |CARRY4 |   132|
+|1     |CARRY4 |   129|
 |2     |LUT1   |   113|
 |3     |LUT2   |   219|
 |4     |LUT3   |   128|
-|5     |LUT4   |    23|
+|5     |LUT4   |    22|
 |6     |LUT5   |    76|
-|7     |LUT6   |    90|
-|8     |FDRE   |   217|
+|7     |LUT6   |    88|
+|8     |FDRE   |   211|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+---------+----------+------+
 |      |Instance |Module    |Cells |
 +------+---------+----------+------+
-|1     |top      |          |   998|
-|2     |  inst   |BTNs_test |   998|
+|1     |top      |          |   986|
+|2     |  inst   |BTNs_test |   986|
 +------+---------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:04 ; elapsed = 00:01:22 . Memory (MB): peak = 848.734 ; gain = 501.066
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:01:12 . Memory (MB): peak = 851.754 ; gain = 503.547
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:41 ; elapsed = 00:01:00 . Memory (MB): peak = 848.734 ; gain = 174.496
-Synthesis Optimization Complete : Time (s): cpu = 00:01:05 ; elapsed = 00:01:22 . Memory (MB): peak = 848.734 ; gain = 501.066
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:55 . Memory (MB): peak = 851.754 ; gain = 175.480
+Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:01:13 . Memory (MB): peak = 851.754 ; gain = 503.547
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 132 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 129 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -321,13 +347,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-43 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+41 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:08 ; elapsed = 00:01:33 . Memory (MB): peak = 854.512 ; gain = 519.813
+synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:01:19 . Memory (MB): peak = 857.637 ; gain = 522.348
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.runs/design_1_BTNs_test_0_2_synth_1/design_1_BTNs_test_0_2.dcp' has been generated.
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.runs/design_1_BTNs_test_0_2_synth_1/design_1_BTNs_test_0_2.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_BTNs_test_0_2_utilization_synth.rpt -pb design_1_BTNs_test_0_2_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.099 . Memory (MB): peak = 854.512 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 30 17:46:10 2020...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 857.637 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Jun  4 17:08:55 2020...

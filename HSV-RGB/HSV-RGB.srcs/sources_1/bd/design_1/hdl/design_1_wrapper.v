@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Thu Apr 30 17:39:18 2020
+//Date        : Thu Jun  4 17:06:47 2020
 //Host        : DESKTOP-TM8D8VH running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -12,6 +12,7 @@
 module design_1_wrapper
    (btn1,
     btn2,
+    btnSost,
     clk_in,
     leds,
     reset,
@@ -20,6 +21,7 @@ module design_1_wrapper
     sw);
   input btn1;
   input btn2;
+  output btnSost;
   input clk_in;
   output [3:0]leds;
   input reset;
@@ -29,6 +31,7 @@ module design_1_wrapper
 
   wire btn1;
   wire btn2;
+  wire btnSost;
   wire clk_in;
   wire [3:0]leds;
   wire reset;
@@ -39,6 +42,7 @@ module design_1_wrapper
   design_1 design_1_i
        (.btn1(btn1),
         .btn2(btn2),
+        .btnSost(btnSost),
         .clk_in(clk_in),
         .leds(leds),
         .reset(reset),

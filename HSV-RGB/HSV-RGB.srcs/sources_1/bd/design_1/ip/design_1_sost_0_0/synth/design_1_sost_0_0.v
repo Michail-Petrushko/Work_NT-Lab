@@ -60,7 +60,8 @@ module design_1_sost_0_0 (
   clk,
   reset,
   leds,
-  sost
+  sost,
+  btnSost
 );
 
 input wire btn1;
@@ -72,12 +73,14 @@ input wire clk;
 input wire reset;
 output wire [3 : 0] leds;
 output wire [3 : 0] sost;
+output wire btnSost;
 
   sost inst (
     .btn1(btn1),
     .clk(clk),
     .reset(reset),
     .leds(leds),
-    .sost(sost)
+    .sost(sost),
+    .btnSost(btnSost)
   );
 endmodule

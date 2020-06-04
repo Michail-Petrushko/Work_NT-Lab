@@ -167,6 +167,7 @@ proc create_root_design { parentCell } {
   # Create ports
   set btn1 [ create_bd_port -dir I btn1 ]
   set btn2 [ create_bd_port -dir I btn2 ]
+  set btnSost [ create_bd_port -dir O btnSost ]
   set clk_in [ create_bd_port -dir I -type clk clk_in ]
   set leds [ create_bd_port -dir O -from 3 -to 0 leds ]
   set reset [ create_bd_port -dir I -type rst reset ]
@@ -260,6 +261,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net hsv_to_rgb_0_R [get_bd_pins PWM_0/R] [get_bd_pins hsv_to_rgb_0/R]
   connect_bd_net -net reset_0_1 [get_bd_ports reset_0] [get_bd_pins clk_wiz_0/reset]
   connect_bd_net -net reset_1_1 [get_bd_ports reset] [get_bd_pins BTNs_test_0/reset] [get_bd_pins PWM_0/reset] [get_bd_pins hsv_to_rgb_0/reset] [get_bd_pins sost_0/reset]
+  connect_bd_net -net sost_0_btnSost [get_bd_ports btnSost] [get_bd_pins sost_0/btnSost]
   connect_bd_net -net sost_0_leds [get_bd_ports leds] [get_bd_pins sost_0/leds]
   connect_bd_net -net sost_0_sost [get_bd_pins BTNs_test_0/sost] [get_bd_pins sost_0/sost]
   connect_bd_net -net sw_0_1 [get_bd_ports sw] [get_bd_pins BTNs_test_0/sw]

@@ -31,11 +31,11 @@ module BTNs_test(
     //initial 
     integer h ,s ,v;
     integer temp;
-    reg [21:0] counterSost1;
-    reg [18:0] counterSost2;
-    reg [19:0] counterSost3;
-    reg [20:0] counterSost4;
-    reg [20:0] counterSost5;
+    reg [22:0] counterSost1;
+    reg [16:0] counterSost2;
+    reg [16:0] counterSost3;
+    reg [19:0] counterSost4;
+    reg [19:0] counterSost5;
     //main
     always@(posedge clk) begin   
         if (reset==1) begin                     // reset hue value
@@ -50,23 +50,25 @@ module BTNs_test(
                 0: begin    Hue = 120;  end
                 1: begin    
                     counterSost1 <= counterSost1 + 1; 
-                    if (counterSost1 == 0) begin
+                    if (counterSost1 == 23'h4c4b40) begin           //0.5s
                         if(Hue == 360) Hue = 0;
                         else Hue = Hue + 60;  
+                        counterSost1 = 0;
                     end
                 end
                 2: begin    
                     counterSost2 <= counterSost2 + 1; 
-                    if (counterSost2 == 0) begin
+                    if (counterSost2 == 17'h186a0) begin            //0.01s
                         h = h+1;                
                         if (h>359) h = h - 360;
                         Hue = h;  
+                        counterSost2 = 0;
                     end
                 end
                 3: begin
                     if (btn2==1) begin
                         counterSost3 <= counterSost3 + 1; 
-                        if (counterSost3 == 0) begin
+                        if (counterSost3 == 17'h186a0) begin        //0.01s
                             h = h-1 + 2 * (1-sw[0]);
                             if (h>360) h = h - 361;
                             if (h<0) h = h + 361;
@@ -93,15 +95,16 @@ module BTNs_test(
                 4: begin    
                     if (btn2==1) begin
                         counterSost4 <= counterSost4 + 1; 
-                        if (counterSost4 == 0) begin
+                        if (counterSost4 == 20'hf4240) begin        //0.1s
                             s = s-1 + 2 * (1-sw[0]);
                             if (s>100) s = s - 101;
                             if (s<0) s = s + 101;
                             Saturation = s;
+                            counterSost4 = 0;
                         end
                     end
                 end
-                6: begin  Saturation = 50; s = 50;  end 
+                //6: begin  Saturation = 50; s = 50;  end 
                 default: begin    Saturation = s;  end                
             endcase
         end
@@ -118,11 +121,12 @@ module BTNs_test(
                 5: begin                                  
                     if (btn2==1) begin                    
                         counterSost5 <= counterSost5 + 1; 
-                        if (counterSost5 == 0) begin      
+                        if (counterSost5 == 20'hf4240) begin        //0.1s    
                             v = v-1 + 2 * (1-sw[0]);      
                             if (v>100) v = v - 101;       
                             if (v<0) v = v + 101;         
-                            Value = v;               
+                            Value = v;
+                            counterSost5 = 0;               
                         end                               
                     end                                   
                 end 

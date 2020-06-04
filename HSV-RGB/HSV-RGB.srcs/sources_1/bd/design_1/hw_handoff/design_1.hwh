@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Apr 30 17:39:23 2020" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jun  4 17:06:48 2020" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.0" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -28,8 +28,8 @@
       <CONNECTIONS>
         <CONNECTION INSTANCE="PWM_0" PORT="reset"/>
         <CONNECTION INSTANCE="hsv_to_rgb_0" PORT="reset"/>
-        <CONNECTION INSTANCE="BTNs_test_0" PORT="reset"/>
         <CONNECTION INSTANCE="sost_0" PORT="reset"/>
+        <CONNECTION INSTANCE="BTNs_test_0" PORT="reset"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="btn2" SIGIS="undef" SIGNAME="External_Ports_btn2">
@@ -45,6 +45,11 @@
     <PORT DIR="I" NAME="btn1" SIGIS="undef" SIGNAME="External_Ports_btn1">
       <CONNECTIONS>
         <CONNECTION INSTANCE="sost_0" PORT="btn1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="btnSost" SIGIS="undef" SIGNAME="sost_0_btnSost">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="sost_0" PORT="btnSost"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -726,8 +731,8 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="hsv_to_rgb_0" PORT="clk"/>
             <CONNECTION INSTANCE="PWM_0" PORT="clk"/>
-            <CONNECTION INSTANCE="BTNs_test_0" PORT="clk"/>
             <CONNECTION INSTANCE="sost_0" PORT="clk"/>
+            <CONNECTION INSTANCE="BTNs_test_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef"/>
@@ -814,6 +819,11 @@
         <PORT DIR="O" LEFT="3" NAME="sost" RIGHT="0" SIGIS="undef" SIGNAME="sost_0_sost">
           <CONNECTIONS>
             <CONNECTION INSTANCE="BTNs_test_0" PORT="sost"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="btnSost" SIGIS="undef" SIGNAME="sost_0_btnSost">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btnSost"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
