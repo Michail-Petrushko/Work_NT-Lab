@@ -168,7 +168,6 @@ proc create_root_design { parentCell } {
   set btn1 [ create_bd_port -dir I btn1 ]
   set btn2 [ create_bd_port -dir I btn2 ]
   set btnSost [ create_bd_port -dir O btnSost ]
-  set clk_in [ create_bd_port -dir I -type clk clk_in ]
   set leds [ create_bd_port -dir O -from 3 -to 0 leds ]
   set reset [ create_bd_port -dir I -type rst reset ]
   set_property -dict [ list \
@@ -180,6 +179,11 @@ proc create_root_design { parentCell } {
  ] $reset_0
   set rgb_led_tri_o [ create_bd_port -dir O -from 2 -to 0 rgb_led_tri_o ]
   set sw [ create_bd_port -dir I -from 3 -to 0 sw ]
+  set sys_clock [ create_bd_port -dir I -type clk sys_clock ]
+  set_property -dict [ list \
+   CONFIG.FREQ_HZ {125000000} \
+   CONFIG.PHASE {0.000} \
+ ] $sys_clock
 
   # Create instance: BTNs_test_0, and set properties
   set block_name BTNs_test
@@ -203,27 +207,30 @@ proc create_root_design { parentCell } {
      return 1
    }
   
-  # Create instance: clk_wiz_0, and set properties
-  set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
+  # Create instance: clk_wiz_1, and set properties
+  set clk_wiz_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_1 ]
   set_property -dict [ list \
-   CONFIG.CLKOUT1_JITTER {290.478} \
-   CONFIG.CLKOUT1_PHASE_ERROR {133.882} \
+   CONFIG.CLKIN1_JITTER_PS {80.0} \
+   CONFIG.CLKOUT1_JITTER {418.383} \
+   CONFIG.CLKOUT1_PHASE_ERROR {265.359} \
    CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {10.000} \
-   CONFIG.CLKOUT2_JITTER {260.522} \
-   CONFIG.CLKOUT2_PHASE_ERROR {301.601} \
+   CONFIG.CLKOUT2_JITTER {277.027} \
+   CONFIG.CLKOUT2_PHASE_ERROR {265.359} \
    CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {80.000} \
-   CONFIG.CLKOUT2_USED {false} \
-   CONFIG.CLKOUT3_JITTER {235.916} \
-   CONFIG.CLKOUT3_PHASE_ERROR {301.601} \
-   CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {160.000} \
-   CONFIG.CLKOUT3_USED {false} \
-   CONFIG.MMCM_CLKFBOUT_MULT_F {15.625} \
-   CONFIG.MMCM_CLKOUT0_DIVIDE_F {78.125} \
-   CONFIG.MMCM_CLKOUT1_DIVIDE {1} \
-   CONFIG.MMCM_CLKOUT2_DIVIDE {1} \
-   CONFIG.MMCM_DIVCLK_DIVIDE {2} \
-   CONFIG.NUM_OUT_CLKS {1} \
- ] $clk_wiz_0
+   CONFIG.CLKOUT2_USED {true} \
+   CONFIG.CLK_IN1_BOARD_INTERFACE {sys_clock} \
+   CONFIG.ENABLE_CLOCK_MONITOR {false} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {32.000} \
+   CONFIG.MMCM_CLKIN1_PERIOD {8.000} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {80.000} \
+   CONFIG.MMCM_CLKOUT1_DIVIDE {10} \
+   CONFIG.MMCM_DIVCLK_DIVIDE {5} \
+   CONFIG.NUM_OUT_CLKS {2} \
+   CONFIG.PRIMITIVE {MMCM} \
+   CONFIG.USE_BOARD_FLOW {true} \
+   CONFIG.USE_LOCKED {false} \
+   CONFIG.USE_POWER_DOWN {false} \
+ ] $clk_wiz_1
 
   # Create instance: hsv_to_rgb_0, and set properties
   set block_name hsv_to_rgb
@@ -254,17 +261,18 @@ proc create_root_design { parentCell } {
   connect_bd_net -net PWM_0_rgb_led_tri_o [get_bd_ports rgb_led_tri_o] [get_bd_pins PWM_0/rgb_led_tri_o]
   connect_bd_net -net btn1_0_1 [get_bd_ports btn1] [get_bd_pins sost_0/btn1]
   connect_bd_net -net btn2_0_1 [get_bd_ports btn2] [get_bd_pins BTNs_test_0/btn2]
-  connect_bd_net -net clk_in1_0_1 [get_bd_ports clk_in] [get_bd_pins clk_wiz_0/clk_in1]
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins BTNs_test_0/clk] [get_bd_pins PWM_0/clk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins hsv_to_rgb_0/clk] [get_bd_pins sost_0/clk]
+  connect_bd_net -net clk_wiz_1_clk_out1 [get_bd_pins BTNs_test_0/clk] [get_bd_pins clk_wiz_1/clk_out1] [get_bd_pins hsv_to_rgb_0/clk] [get_bd_pins sost_0/clk]
+  connect_bd_net -net clk_wiz_1_clk_out2 [get_bd_pins PWM_0/clk] [get_bd_pins clk_wiz_1/clk_out2]
   connect_bd_net -net hsv_to_rgb_0_B [get_bd_pins PWM_0/B] [get_bd_pins hsv_to_rgb_0/B]
   connect_bd_net -net hsv_to_rgb_0_G [get_bd_pins PWM_0/G] [get_bd_pins hsv_to_rgb_0/G]
   connect_bd_net -net hsv_to_rgb_0_R [get_bd_pins PWM_0/R] [get_bd_pins hsv_to_rgb_0/R]
-  connect_bd_net -net reset_0_1 [get_bd_ports reset_0] [get_bd_pins clk_wiz_0/reset]
+  connect_bd_net -net reset_0_1 [get_bd_ports reset_0] [get_bd_pins clk_wiz_1/reset]
   connect_bd_net -net reset_1_1 [get_bd_ports reset] [get_bd_pins BTNs_test_0/reset] [get_bd_pins PWM_0/reset] [get_bd_pins hsv_to_rgb_0/reset] [get_bd_pins sost_0/reset]
   connect_bd_net -net sost_0_btnSost [get_bd_ports btnSost] [get_bd_pins sost_0/btnSost]
   connect_bd_net -net sost_0_leds [get_bd_ports leds] [get_bd_pins sost_0/leds]
   connect_bd_net -net sost_0_sost [get_bd_pins BTNs_test_0/sost] [get_bd_pins sost_0/sost]
   connect_bd_net -net sw_0_1 [get_bd_ports sw] [get_bd_pins BTNs_test_0/sw]
+  connect_bd_net -net sys_clock_1 [get_bd_ports sys_clock] [get_bd_pins clk_wiz_1/clk_in1]
 
   # Create address segments
 

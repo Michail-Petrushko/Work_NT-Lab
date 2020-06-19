@@ -29,8 +29,8 @@ set_property -dict { PACKAGE_PIN J14   IOSTANDARD LVCMOS33 } [get_ports { btnSos
 
 
 #CLK_Wizard
-set_property PACKAGE_PIN K17  [get_ports {clk_in}];			
-set_property IOSTANDARD LVCMOS33 [get_ports {clk_in}];
+#set_property PACKAGE_PIN K17  [get_ports {clk_in}];			
+#set_property IOSTANDARD LVCMOS33 [get_ports {clk_in}];
 
 set_property PACKAGE_PIN Y16  [get_ports {reset_0}];			
 set_property IOSTANDARD LVCMOS33 [get_ports {reset_0}];

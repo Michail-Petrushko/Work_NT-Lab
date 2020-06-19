@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Thu Jun  4 17:08:45 2020
+// Date        : Wed Jun 17 12:55:38 2020
 // Host        : DESKTOP-TM8D8VH running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/bd/design_1/ip/design_1_sost_0_0/design_1_sost_0_0_sim_netlist.v
@@ -68,9 +68,6 @@ module design_1_sost_0_0_sost
   wire btnSost_i_12_n_0;
   wire btnSost_i_13_n_0;
   wire btnSost_i_14_n_0;
-  wire btnSost_i_15_n_0;
-  wire btnSost_i_16_n_0;
-  wire btnSost_i_17_n_0;
   wire btnSost_i_1_n_0;
   wire btnSost_i_2_n_0;
   wire btnSost_i_3_n_0;
@@ -81,7 +78,6 @@ module design_1_sost_0_0_sost
   wire btnSost_i_8_n_0;
   wire btnSost_i_9_n_0;
   wire clk;
-  wire \counter1[0]_i_1_n_0 ;
   wire \counter1[0]_i_3_n_0 ;
   wire \counter1[0]_i_4_n_0 ;
   wire \counter1[0]_i_5_n_0 ;
@@ -223,6 +219,7 @@ module design_1_sost_0_0_sost
   wire \counter2_reg[8]_i_1_n_5 ;
   wire \counter2_reg[8]_i_1_n_6 ;
   wire \counter2_reg[8]_i_1_n_7 ;
+  wire dopCounter;
   wire \dopCounter[0]_i_2_n_0 ;
   wire \dopCounter[0]_i_3_n_0 ;
   wire \dopCounter[0]_i_4_n_0 ;
@@ -308,10 +305,6 @@ module design_1_sost_0_0_sost
   wire \dopCounter_reg[8]_i_1_n_6 ;
   wire \dopCounter_reg[8]_i_1_n_7 ;
   wire [3:0]leds;
-  wire \leds[0]_i_1_n_0 ;
-  wire \leds[1]_i_1_n_0 ;
-  wire \leds[2]_i_1_n_0 ;
-  wire \leds[3]_i_1_n_0 ;
   wire reset;
   wire \sost[0]_i_1_n_0 ;
   wire \sost[1]_i_1_n_0 ;
@@ -337,152 +330,131 @@ module design_1_sost_0_0_sost
   wire [3:3]\NLW_counter2_reg[20]_i_1_O_UNCONNECTED ;
   wire [3:3]\NLW_dopCounter_reg[24]_i_1_CO_UNCONNECTED ;
 
-  LUT5 #(
-    .INIT(32'h0000E2EA)) 
+  LUT6 #(
+    .INIT(64'h00000000EAE2EAEA)) 
     btnSost_i_1
        (.I0(btnSost),
         .I1(btn1),
         .I2(btnSost_i_2_n_0),
         .I3(btnSost_i_3_n_0),
-        .I4(reset),
+        .I4(btnSost_i_4_n_0),
+        .I5(reset),
         .O(btnSost_i_1_n_0));
-  LUT5 #(
-    .INIT(32'hFFFF7FFF)) 
-    btnSost_i_10
-       (.I0(dopCounter_reg[19]),
-        .I1(dopCounter_reg[10]),
-        .I2(dopCounter_reg[5]),
-        .I3(dopCounter_reg[0]),
-        .I4(btnSost_i_16_n_0),
-        .O(btnSost_i_10_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFBFFFFFFFF)) 
-    btnSost_i_11
-       (.I0(dopCounter_reg[25]),
-        .I1(counter1_reg[21]),
-        .I2(dopCounter_reg[24]),
-        .I3(btnSost_i_17_n_0),
-        .I4(counter1_reg[7]),
-        .I5(counter1_reg[9]),
-        .O(btnSost_i_11_n_0));
+    .INIT(64'h7FFFFFFFFFFFFFFF)) 
+    btnSost_i_10
+       (.I0(dopCounter_reg[8]),
+        .I1(dopCounter_reg[6]),
+        .I2(dopCounter_reg[18]),
+        .I3(dopCounter_reg[12]),
+        .I4(dopCounter_reg[23]),
+        .I5(dopCounter_reg[20]),
+        .O(btnSost_i_10_n_0));
   LUT4 #(
     .INIT(16'hFFFE)) 
+    btnSost_i_11
+       (.I0(dopCounter_reg[11]),
+        .I1(dopCounter_reg[21]),
+        .I2(dopCounter_reg[10]),
+        .I3(dopCounter_reg[17]),
+        .O(btnSost_i_11_n_0));
+  LUT4 #(
+    .INIT(16'h7FFF)) 
     btnSost_i_12
-       (.I0(dopCounter_reg[0]),
-        .I1(dopCounter_reg[3]),
-        .I2(dopCounter_reg[25]),
-        .I3(dopCounter_reg[6]),
+       (.I0(dopCounter_reg[14]),
+        .I1(dopCounter_reg[1]),
+        .I2(dopCounter_reg[9]),
+        .I3(dopCounter_reg[0]),
         .O(btnSost_i_12_n_0));
   LUT4 #(
     .INIT(16'h7FFF)) 
     btnSost_i_13
        (.I0(dopCounter_reg[15]),
-        .I1(dopCounter_reg[16]),
-        .I2(dopCounter_reg[22]),
-        .I3(dopCounter_reg[23]),
+        .I1(dopCounter_reg[22]),
+        .I2(dopCounter_reg[16]),
+        .I3(dopCounter_reg[5]),
         .O(btnSost_i_13_n_0));
-  LUT4 #(
-    .INIT(16'hFFDF)) 
-    btnSost_i_14
-       (.I0(dopCounter_reg[8]),
-        .I1(dopCounter_reg[18]),
-        .I2(dopCounter_reg[24]),
-        .I3(dopCounter_reg[17]),
-        .O(btnSost_i_14_n_0));
-  LUT4 #(
-    .INIT(16'h7FFF)) 
-    btnSost_i_15
-       (.I0(dopCounter_reg[1]),
-        .I1(dopCounter_reg[17]),
-        .I2(dopCounter_reg[7]),
-        .I3(dopCounter_reg[12]),
-        .O(btnSost_i_15_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT4 #(
-    .INIT(16'h7FFF)) 
-    btnSost_i_16
-       (.I0(dopCounter_reg[9]),
-        .I1(dopCounter_reg[14]),
-        .I2(dopCounter_reg[8]),
-        .I3(dopCounter_reg[13]),
-        .O(btnSost_i_16_n_0));
   LUT2 #(
     .INIT(4'hE)) 
-    btnSost_i_17
+    btnSost_i_14
        (.I0(dopCounter_reg[27]),
         .I1(dopCounter_reg[26]),
-        .O(btnSost_i_17_n_0));
+        .O(btnSost_i_14_n_0));
   LUT6 #(
-    .INIT(64'h0000000000000002)) 
+    .INIT(64'h0000000000000004)) 
     btnSost_i_2
-       (.I0(btnSost_i_4_n_0),
-        .I1(btnSost_i_5_n_0),
-        .I2(btnSost_i_6_n_0),
-        .I3(btnSost_i_7_n_0),
-        .I4(dopCounter_reg[27]),
-        .I5(dopCounter_reg[26]),
+       (.I0(dopCounter_reg[13]),
+        .I1(dopCounter_reg[24]),
+        .I2(dopCounter_reg[7]),
+        .I3(btnSost_i_5_n_0),
+        .I4(btnSost_i_6_n_0),
+        .I5(btnSost_i_7_n_0),
         .O(btnSost_i_2_n_0));
   LUT6 #(
-    .INIT(64'h00000000000000FE)) 
+    .INIT(64'hFFFFFFFFFFFFFFEF)) 
     btnSost_i_3
-       (.I0(btnSost_i_8_n_0),
-        .I1(btnSost_i_9_n_0),
-        .I2(btnSost_i_10_n_0),
-        .I3(\sost[3]_i_12_n_0 ),
-        .I4(btnSost_i_11_n_0),
-        .I5(\sost[3]_i_11_n_0 ),
+       (.I0(\sost[3]_i_10_n_0 ),
+        .I1(btnSost_i_8_n_0),
+        .I2(counter1_reg[21]),
+        .I3(counter1_reg[13]),
+        .I4(counter1_reg[15]),
+        .I5(counter1_reg[18]),
         .O(btnSost_i_3_n_0));
   LUT6 #(
-    .INIT(64'h0000000000000001)) 
+    .INIT(64'hFFFFFFFFFFFFBFFF)) 
     btnSost_i_4
-       (.I0(btnSost_i_12_n_0),
-        .I1(dopCounter_reg[12]),
-        .I2(dopCounter_reg[20]),
-        .I3(dopCounter_reg[2]),
-        .I4(dopCounter_reg[21]),
-        .I5(btnSost_i_13_n_0),
+       (.I0(btnSost_i_7_n_0),
+        .I1(dopCounter_reg[17]),
+        .I2(dopCounter_reg[7]),
+        .I3(dopCounter_reg[21]),
+        .I4(btnSost_i_9_n_0),
+        .I5(btnSost_i_10_n_0),
         .O(btnSost_i_4_n_0));
   LUT5 #(
-    .INIT(32'hFFFFFFFB)) 
+    .INIT(32'hFFFFFFFE)) 
     btnSost_i_5
-       (.I0(dopCounter_reg[13]),
-        .I1(dopCounter_reg[19]),
-        .I2(dopCounter_reg[11]),
-        .I3(dopCounter_reg[5]),
-        .I4(btnSost_i_14_n_0),
-        .O(btnSost_i_5_n_0));
-  LUT4 #(
-    .INIT(16'hFFEF)) 
-    btnSost_i_6
-       (.I0(dopCounter_reg[1]),
-        .I1(dopCounter_reg[10]),
-        .I2(dopCounter_reg[7]),
-        .I3(dopCounter_reg[4]),
-        .O(btnSost_i_6_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT2 #(
-    .INIT(4'h7)) 
-    btnSost_i_7
-       (.I0(dopCounter_reg[14]),
-        .I1(dopCounter_reg[9]),
-        .O(btnSost_i_7_n_0));
-  LUT5 #(
-    .INIT(32'hFFFF7FFF)) 
-    btnSost_i_8
-       (.I0(dopCounter_reg[21]),
-        .I1(dopCounter_reg[3]),
+       (.I0(dopCounter_reg[18]),
+        .I1(dopCounter_reg[12]),
         .I2(dopCounter_reg[20]),
-        .I3(dopCounter_reg[11]),
-        .I4(btnSost_i_15_n_0),
-        .O(btnSost_i_8_n_0));
-  LUT5 #(
-    .INIT(32'hBFFFFFFF)) 
-    btnSost_i_9
-       (.I0(btnSost_i_13_n_0),
-        .I1(dopCounter_reg[4]),
-        .I2(dopCounter_reg[2]),
-        .I3(dopCounter_reg[18]),
+        .I3(dopCounter_reg[25]),
+        .I4(btnSost_i_11_n_0),
+        .O(btnSost_i_5_n_0));
+  LUT6 #(
+    .INIT(64'hEFFFFFFFFFFFFFFF)) 
+    btnSost_i_6
+       (.I0(dopCounter_reg[26]),
+        .I1(dopCounter_reg[27]),
+        .I2(dopCounter_reg[3]),
+        .I3(dopCounter_reg[23]),
         .I4(dopCounter_reg[6]),
+        .I5(dopCounter_reg[8]),
+        .O(btnSost_i_6_n_0));
+  LUT5 #(
+    .INIT(32'hEFFFFFFF)) 
+    btnSost_i_7
+       (.I0(btnSost_i_12_n_0),
+        .I1(btnSost_i_13_n_0),
+        .I2(dopCounter_reg[2]),
+        .I3(dopCounter_reg[19]),
+        .I4(dopCounter_reg[4]),
+        .O(btnSost_i_7_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFEFFFFF)) 
+    btnSost_i_8
+       (.I0(counter1_reg[14]),
+        .I1(dopCounter_reg[25]),
+        .I2(counter1_reg[8]),
+        .I3(dopCounter_reg[24]),
+        .I4(counter1_reg[22]),
+        .I5(btnSost_i_14_n_0),
+        .O(btnSost_i_8_n_0));
+  LUT4 #(
+    .INIT(16'h7FFF)) 
+    btnSost_i_9
+       (.I0(dopCounter_reg[11]),
+        .I1(dopCounter_reg[3]),
+        .I2(dopCounter_reg[10]),
+        .I3(dopCounter_reg[13]),
         .O(btnSost_i_9_n_0));
   FDRE btnSost_reg
        (.C(clk),
@@ -490,12 +462,14 @@ module design_1_sost_0_0_sost
         .D(btnSost_i_1_n_0),
         .Q(btnSost),
         .R(1'b0));
-  LUT2 #(
-    .INIT(4'hB)) 
+  LUT4 #(
+    .INIT(16'hABAA)) 
     \counter1[0]_i_1 
        (.I0(reset),
-        .I1(\sost[3]_i_3_n_0 ),
-        .O(\counter1[0]_i_1_n_0 ));
+        .I1(btn1),
+        .I2(counter2_reg[14]),
+        .I3(\sost[3]_i_3_n_0 ),
+        .O(dopCounter));
   LUT2 #(
     .INIT(4'h8)) 
     \counter1[0]_i_3 
@@ -577,8 +551,8 @@ module design_1_sost_0_0_sost
   LUT2 #(
     .INIT(4'h8)) 
     \counter1[20]_i_3 
-       (.I0(counter1_reg[21]),
-        .I1(btn1),
+       (.I0(btn1),
+        .I1(counter1_reg[21]),
         .O(\counter1[20]_i_3_n_0 ));
   LUT2 #(
     .INIT(4'h8)) 
@@ -631,15 +605,15 @@ module design_1_sost_0_0_sost
   LUT2 #(
     .INIT(4'h8)) 
     \counter1[8]_i_5 
-       (.I0(btn1),
-        .I1(counter1_reg[8]),
+       (.I0(counter1_reg[8]),
+        .I1(btn1),
         .O(\counter1[8]_i_5_n_0 ));
   FDRE \counter1_reg[0] 
        (.C(clk),
         .CE(btn1),
         .D(\counter1_reg[0]_i_2_n_7 ),
         .Q(counter1_reg[0]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   CARRY4 \counter1_reg[0]_i_2 
        (.CI(1'b0),
         .CO({\counter1_reg[0]_i_2_n_0 ,\counter1_reg[0]_i_2_n_1 ,\counter1_reg[0]_i_2_n_2 ,\counter1_reg[0]_i_2_n_3 }),
@@ -652,19 +626,19 @@ module design_1_sost_0_0_sost
         .CE(btn1),
         .D(\counter1_reg[8]_i_1_n_5 ),
         .Q(counter1_reg[10]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \counter1_reg[11] 
        (.C(clk),
         .CE(btn1),
         .D(\counter1_reg[8]_i_1_n_4 ),
         .Q(counter1_reg[11]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \counter1_reg[12] 
        (.C(clk),
         .CE(btn1),
         .D(\counter1_reg[12]_i_1_n_7 ),
         .Q(counter1_reg[12]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   CARRY4 \counter1_reg[12]_i_1 
        (.CI(\counter1_reg[8]_i_1_n_0 ),
         .CO({\counter1_reg[12]_i_1_n_0 ,\counter1_reg[12]_i_1_n_1 ,\counter1_reg[12]_i_1_n_2 ,\counter1_reg[12]_i_1_n_3 }),
@@ -677,25 +651,25 @@ module design_1_sost_0_0_sost
         .CE(btn1),
         .D(\counter1_reg[12]_i_1_n_6 ),
         .Q(counter1_reg[13]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \counter1_reg[14] 
        (.C(clk),
         .CE(btn1),
         .D(\counter1_reg[12]_i_1_n_5 ),
         .Q(counter1_reg[14]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \counter1_reg[15] 
        (.C(clk),
         .CE(btn1),
         .D(\counter1_reg[12]_i_1_n_4 ),
         .Q(counter1_reg[15]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \counter1_reg[16] 
        (.C(clk),
         .CE(btn1),
         .D(\counter1_reg[16]_i_1_n_7 ),
         .Q(counter1_reg[16]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   CARRY4 \counter1_reg[16]_i_1 
        (.CI(\counter1_reg[12]_i_1_n_0 ),
         .CO({\counter1_reg[16]_i_1_n_0 ,\counter1_reg[16]_i_1_n_1 ,\counter1_reg[16]_i_1_n_2 ,\counter1_reg[16]_i_1_n_3 }),
@@ -708,31 +682,31 @@ module design_1_sost_0_0_sost
         .CE(btn1),
         .D(\counter1_reg[16]_i_1_n_6 ),
         .Q(counter1_reg[17]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \counter1_reg[18] 
        (.C(clk),
         .CE(btn1),
         .D(\counter1_reg[16]_i_1_n_5 ),
         .Q(counter1_reg[18]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \counter1_reg[19] 
        (.C(clk),
         .CE(btn1),
         .D(\counter1_reg[16]_i_1_n_4 ),
         .Q(counter1_reg[19]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \counter1_reg[1] 
        (.C(clk),
         .CE(btn1),
         .D(\counter1_reg[0]_i_2_n_6 ),
         .Q(counter1_reg[1]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \counter1_reg[20] 
        (.C(clk),
         .CE(btn1),
         .D(\counter1_reg[20]_i_1_n_7 ),
         .Q(counter1_reg[20]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   CARRY4 \counter1_reg[20]_i_1 
        (.CI(\counter1_reg[16]_i_1_n_0 ),
         .CO({\NLW_counter1_reg[20]_i_1_CO_UNCONNECTED [3:2],\counter1_reg[20]_i_1_n_2 ,\counter1_reg[20]_i_1_n_3 }),
@@ -745,31 +719,31 @@ module design_1_sost_0_0_sost
         .CE(btn1),
         .D(\counter1_reg[20]_i_1_n_6 ),
         .Q(counter1_reg[21]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \counter1_reg[22] 
        (.C(clk),
         .CE(btn1),
         .D(\counter1_reg[20]_i_1_n_5 ),
         .Q(counter1_reg[22]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \counter1_reg[2] 
        (.C(clk),
         .CE(btn1),
         .D(\counter1_reg[0]_i_2_n_5 ),
         .Q(counter1_reg[2]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \counter1_reg[3] 
        (.C(clk),
         .CE(btn1),
         .D(\counter1_reg[0]_i_2_n_4 ),
         .Q(counter1_reg[3]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \counter1_reg[4] 
        (.C(clk),
         .CE(btn1),
         .D(\counter1_reg[4]_i_1_n_7 ),
         .Q(counter1_reg[4]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   CARRY4 \counter1_reg[4]_i_1 
        (.CI(\counter1_reg[0]_i_2_n_0 ),
         .CO({\counter1_reg[4]_i_1_n_0 ,\counter1_reg[4]_i_1_n_1 ,\counter1_reg[4]_i_1_n_2 ,\counter1_reg[4]_i_1_n_3 }),
@@ -782,25 +756,25 @@ module design_1_sost_0_0_sost
         .CE(btn1),
         .D(\counter1_reg[4]_i_1_n_6 ),
         .Q(counter1_reg[5]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \counter1_reg[6] 
        (.C(clk),
         .CE(btn1),
         .D(\counter1_reg[4]_i_1_n_5 ),
         .Q(counter1_reg[6]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \counter1_reg[7] 
        (.C(clk),
         .CE(btn1),
         .D(\counter1_reg[4]_i_1_n_4 ),
         .Q(counter1_reg[7]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \counter1_reg[8] 
        (.C(clk),
         .CE(btn1),
         .D(\counter1_reg[8]_i_1_n_7 ),
         .Q(counter1_reg[8]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   CARRY4 \counter1_reg[8]_i_1 
        (.CI(\counter1_reg[4]_i_1_n_0 ),
         .CO({\counter1_reg[8]_i_1_n_0 ,\counter1_reg[8]_i_1_n_1 ,\counter1_reg[8]_i_1_n_2 ,\counter1_reg[8]_i_1_n_3 }),
@@ -813,7 +787,7 @@ module design_1_sost_0_0_sost
         .CE(btn1),
         .D(\counter1_reg[8]_i_1_n_6 ),
         .Q(counter1_reg[9]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   LUT2 #(
     .INIT(4'hB)) 
     \counter2[0]_i_1 
@@ -1322,7 +1296,7 @@ module design_1_sost_0_0_sost
         .CE(btn1),
         .D(\dopCounter_reg[0]_i_1_n_7 ),
         .Q(dopCounter_reg[0]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   CARRY4 \dopCounter_reg[0]_i_1 
        (.CI(1'b0),
         .CO({\dopCounter_reg[0]_i_1_n_0 ,\dopCounter_reg[0]_i_1_n_1 ,\dopCounter_reg[0]_i_1_n_2 ,\dopCounter_reg[0]_i_1_n_3 }),
@@ -1335,19 +1309,19 @@ module design_1_sost_0_0_sost
         .CE(btn1),
         .D(\dopCounter_reg[8]_i_1_n_5 ),
         .Q(dopCounter_reg[10]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \dopCounter_reg[11] 
        (.C(clk),
         .CE(btn1),
         .D(\dopCounter_reg[8]_i_1_n_4 ),
         .Q(dopCounter_reg[11]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \dopCounter_reg[12] 
        (.C(clk),
         .CE(btn1),
         .D(\dopCounter_reg[12]_i_1_n_7 ),
         .Q(dopCounter_reg[12]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   CARRY4 \dopCounter_reg[12]_i_1 
        (.CI(\dopCounter_reg[8]_i_1_n_0 ),
         .CO({\dopCounter_reg[12]_i_1_n_0 ,\dopCounter_reg[12]_i_1_n_1 ,\dopCounter_reg[12]_i_1_n_2 ,\dopCounter_reg[12]_i_1_n_3 }),
@@ -1360,25 +1334,25 @@ module design_1_sost_0_0_sost
         .CE(btn1),
         .D(\dopCounter_reg[12]_i_1_n_6 ),
         .Q(dopCounter_reg[13]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \dopCounter_reg[14] 
        (.C(clk),
         .CE(btn1),
         .D(\dopCounter_reg[12]_i_1_n_5 ),
         .Q(dopCounter_reg[14]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \dopCounter_reg[15] 
        (.C(clk),
         .CE(btn1),
         .D(\dopCounter_reg[12]_i_1_n_4 ),
         .Q(dopCounter_reg[15]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \dopCounter_reg[16] 
        (.C(clk),
         .CE(btn1),
         .D(\dopCounter_reg[16]_i_1_n_7 ),
         .Q(dopCounter_reg[16]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   CARRY4 \dopCounter_reg[16]_i_1 
        (.CI(\dopCounter_reg[12]_i_1_n_0 ),
         .CO({\dopCounter_reg[16]_i_1_n_0 ,\dopCounter_reg[16]_i_1_n_1 ,\dopCounter_reg[16]_i_1_n_2 ,\dopCounter_reg[16]_i_1_n_3 }),
@@ -1391,31 +1365,31 @@ module design_1_sost_0_0_sost
         .CE(btn1),
         .D(\dopCounter_reg[16]_i_1_n_6 ),
         .Q(dopCounter_reg[17]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \dopCounter_reg[18] 
        (.C(clk),
         .CE(btn1),
         .D(\dopCounter_reg[16]_i_1_n_5 ),
         .Q(dopCounter_reg[18]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \dopCounter_reg[19] 
        (.C(clk),
         .CE(btn1),
         .D(\dopCounter_reg[16]_i_1_n_4 ),
         .Q(dopCounter_reg[19]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \dopCounter_reg[1] 
        (.C(clk),
         .CE(btn1),
         .D(\dopCounter_reg[0]_i_1_n_6 ),
         .Q(dopCounter_reg[1]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \dopCounter_reg[20] 
        (.C(clk),
         .CE(btn1),
         .D(\dopCounter_reg[20]_i_1_n_7 ),
         .Q(dopCounter_reg[20]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   CARRY4 \dopCounter_reg[20]_i_1 
        (.CI(\dopCounter_reg[16]_i_1_n_0 ),
         .CO({\dopCounter_reg[20]_i_1_n_0 ,\dopCounter_reg[20]_i_1_n_1 ,\dopCounter_reg[20]_i_1_n_2 ,\dopCounter_reg[20]_i_1_n_3 }),
@@ -1428,25 +1402,25 @@ module design_1_sost_0_0_sost
         .CE(btn1),
         .D(\dopCounter_reg[20]_i_1_n_6 ),
         .Q(dopCounter_reg[21]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \dopCounter_reg[22] 
        (.C(clk),
         .CE(btn1),
         .D(\dopCounter_reg[20]_i_1_n_5 ),
         .Q(dopCounter_reg[22]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \dopCounter_reg[23] 
        (.C(clk),
         .CE(btn1),
         .D(\dopCounter_reg[20]_i_1_n_4 ),
         .Q(dopCounter_reg[23]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \dopCounter_reg[24] 
        (.C(clk),
         .CE(btn1),
         .D(\dopCounter_reg[24]_i_1_n_7 ),
         .Q(dopCounter_reg[24]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   CARRY4 \dopCounter_reg[24]_i_1 
        (.CI(\dopCounter_reg[20]_i_1_n_0 ),
         .CO({\NLW_dopCounter_reg[24]_i_1_CO_UNCONNECTED [3],\dopCounter_reg[24]_i_1_n_1 ,\dopCounter_reg[24]_i_1_n_2 ,\dopCounter_reg[24]_i_1_n_3 }),
@@ -1459,37 +1433,37 @@ module design_1_sost_0_0_sost
         .CE(btn1),
         .D(\dopCounter_reg[24]_i_1_n_6 ),
         .Q(dopCounter_reg[25]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \dopCounter_reg[26] 
        (.C(clk),
         .CE(btn1),
         .D(\dopCounter_reg[24]_i_1_n_5 ),
         .Q(dopCounter_reg[26]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \dopCounter_reg[27] 
        (.C(clk),
         .CE(btn1),
         .D(\dopCounter_reg[24]_i_1_n_4 ),
         .Q(dopCounter_reg[27]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \dopCounter_reg[2] 
        (.C(clk),
         .CE(btn1),
         .D(\dopCounter_reg[0]_i_1_n_5 ),
         .Q(dopCounter_reg[2]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \dopCounter_reg[3] 
        (.C(clk),
         .CE(btn1),
         .D(\dopCounter_reg[0]_i_1_n_4 ),
         .Q(dopCounter_reg[3]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \dopCounter_reg[4] 
        (.C(clk),
         .CE(btn1),
         .D(\dopCounter_reg[4]_i_1_n_7 ),
         .Q(dopCounter_reg[4]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   CARRY4 \dopCounter_reg[4]_i_1 
        (.CI(\dopCounter_reg[0]_i_1_n_0 ),
         .CO({\dopCounter_reg[4]_i_1_n_0 ,\dopCounter_reg[4]_i_1_n_1 ,\dopCounter_reg[4]_i_1_n_2 ,\dopCounter_reg[4]_i_1_n_3 }),
@@ -1502,25 +1476,25 @@ module design_1_sost_0_0_sost
         .CE(btn1),
         .D(\dopCounter_reg[4]_i_1_n_6 ),
         .Q(dopCounter_reg[5]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \dopCounter_reg[6] 
        (.C(clk),
         .CE(btn1),
         .D(\dopCounter_reg[4]_i_1_n_5 ),
         .Q(dopCounter_reg[6]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \dopCounter_reg[7] 
        (.C(clk),
         .CE(btn1),
         .D(\dopCounter_reg[4]_i_1_n_4 ),
         .Q(dopCounter_reg[7]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \dopCounter_reg[8] 
        (.C(clk),
         .CE(btn1),
         .D(\dopCounter_reg[8]_i_1_n_7 ),
         .Q(dopCounter_reg[8]),
-        .R(\counter1[0]_i_1_n_0 ));
+        .R(dopCounter));
   CARRY4 \dopCounter_reg[8]_i_1 
        (.CI(\dopCounter_reg[4]_i_1_n_0 ),
         .CO({\dopCounter_reg[8]_i_1_n_0 ,\dopCounter_reg[8]_i_1_n_1 ,\dopCounter_reg[8]_i_1_n_2 ,\dopCounter_reg[8]_i_1_n_3 }),
@@ -1533,62 +1507,32 @@ module design_1_sost_0_0_sost
         .CE(btn1),
         .D(\dopCounter_reg[8]_i_1_n_6 ),
         .Q(dopCounter_reg[9]),
-        .R(\counter1[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT1 #(
-    .INIT(2'h1)) 
-    \leds[0]_i_1 
-       (.I0(Q[0]),
-        .O(\leds[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
-    \leds[1]_i_1 
-       (.I0(Q[0]),
-        .I1(Q[1]),
-        .O(\leds[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT3 #(
-    .INIT(8'h78)) 
-    \leds[2]_i_1 
-       (.I0(Q[0]),
-        .I1(Q[1]),
-        .I2(Q[2]),
-        .O(\leds[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT4 #(
-    .INIT(16'h7F80)) 
-    \leds[3]_i_1 
-       (.I0(Q[1]),
-        .I1(Q[0]),
-        .I2(Q[2]),
-        .I3(Q[3]),
-        .O(\leds[3]_i_1_n_0 ));
+        .R(dopCounter));
   FDRE \leds_reg[0] 
        (.C(clk),
         .CE(1'b1),
-        .D(\leds[0]_i_1_n_0 ),
+        .D(Q[0]),
         .Q(leds[0]),
         .R(reset));
   FDRE \leds_reg[1] 
        (.C(clk),
         .CE(1'b1),
-        .D(\leds[1]_i_1_n_0 ),
+        .D(Q[1]),
         .Q(leds[1]),
         .R(reset));
   FDRE \leds_reg[2] 
        (.C(clk),
         .CE(1'b1),
-        .D(\leds[2]_i_1_n_0 ),
+        .D(Q[2]),
         .Q(leds[2]),
         .R(reset));
   FDRE \leds_reg[3] 
        (.C(clk),
         .CE(1'b1),
-        .D(\leds[3]_i_1_n_0 ),
+        .D(Q[3]),
         .Q(leds[3]),
         .R(reset));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'h00BF)) 
     \sost[0]_i_1 
@@ -1597,7 +1541,7 @@ module design_1_sost_0_0_sost
         .I2(Q[1]),
         .I3(Q[0]),
         .O(\sost[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'h23CC)) 
     \sost[1]_i_1 
@@ -1606,7 +1550,7 @@ module design_1_sost_0_0_sost
         .I2(Q[2]),
         .I3(Q[1]),
         .O(\sost[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
     .INIT(16'h2CF0)) 
     \sost[2]_i_1 
@@ -1615,65 +1559,64 @@ module design_1_sost_0_0_sost
         .I2(Q[2]),
         .I3(Q[1]),
         .O(\sost[2]_i_1_n_0 ));
-  LUT3 #(
-    .INIT(8'h2F)) 
+  LUT5 #(
+    .INIT(32'h0008FFFF)) 
     \sost[3]_i_1 
-       (.I0(btnSost),
-        .I1(\sost[3]_i_3_n_0 ),
-        .I2(\sost[3]_i_4_n_0 ),
+       (.I0(\sost[3]_i_3_n_0 ),
+        .I1(btnSost),
+        .I2(btn1),
+        .I3(counter2_reg[14]),
+        .I4(\sost[3]_i_4_n_0 ),
         .O(\sost[3]_i_1_n_0 ));
   LUT4 #(
-    .INIT(16'h0004)) 
+    .INIT(16'hFFFE)) 
     \sost[3]_i_10 
-       (.I0(counter2_reg[4]),
-        .I1(counter2_reg[22]),
-        .I2(counter2_reg[5]),
-        .I3(counter2_reg[6]),
+       (.I0(\sost[3]_i_12_n_0 ),
+        .I1(\sost[3]_i_13_n_0 ),
+        .I2(\sost[3]_i_14_n_0 ),
+        .I3(\sost[3]_i_15_n_0 ),
         .O(\sost[3]_i_10_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFB)) 
+  LUT4 #(
+    .INIT(16'hFFFD)) 
     \sost[3]_i_11 
-       (.I0(counter1_reg[4]),
-        .I1(counter1_reg[22]),
-        .I2(counter1_reg[8]),
-        .I3(counter1_reg[5]),
-        .I4(\sost[3]_i_13_n_0 ),
-        .I5(\sost[3]_i_14_n_0 ),
+       (.I0(counter1_reg[21]),
+        .I1(counter1_reg[13]),
+        .I2(counter1_reg[15]),
+        .I3(counter1_reg[18]),
         .O(\sost[3]_i_11_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFF7FFF)) 
+  LUT4 #(
+    .INIT(16'hFFF7)) 
     \sost[3]_i_12 
-       (.I0(counter1_reg[19]),
+       (.I0(counter1_reg[12]),
         .I1(counter1_reg[17]),
-        .I2(counter1_reg[20]),
-        .I3(counter1_reg[12]),
-        .I4(\sost[3]_i_15_n_0 ),
+        .I2(counter1_reg[9]),
+        .I3(counter1_reg[10]),
         .O(\sost[3]_i_12_n_0 ));
   LUT4 #(
-    .INIT(16'hFFFE)) 
+    .INIT(16'h7FFF)) 
     \sost[3]_i_13 
-       (.I0(counter1_reg[13]),
-        .I1(counter1_reg[16]),
-        .I2(counter1_reg[10]),
-        .I3(counter1_reg[11]),
+       (.I0(counter1_reg[3]),
+        .I1(counter1_reg[1]),
+        .I2(counter1_reg[2]),
+        .I3(counter1_reg[0]),
         .O(\sost[3]_i_13_n_0 ));
   LUT4 #(
-    .INIT(16'hFFFE)) 
+    .INIT(16'hFFDF)) 
     \sost[3]_i_14 
-       (.I0(counter1_reg[0]),
-        .I1(counter1_reg[15]),
-        .I2(counter1_reg[6]),
-        .I3(counter1_reg[14]),
+       (.I0(counter1_reg[20]),
+        .I1(counter1_reg[11]),
+        .I2(counter1_reg[19]),
+        .I3(counter1_reg[16]),
         .O(\sost[3]_i_14_n_0 ));
   LUT4 #(
-    .INIT(16'hFFFE)) 
+    .INIT(16'h7FFF)) 
     \sost[3]_i_15 
-       (.I0(counter1_reg[1]),
-        .I1(counter1_reg[18]),
-        .I2(counter1_reg[2]),
-        .I3(counter1_reg[3]),
+       (.I0(counter1_reg[7]),
+        .I1(counter1_reg[4]),
+        .I2(counter1_reg[6]),
+        .I3(counter1_reg[5]),
         .O(\sost[3]_i_15_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
     .INIT(16'h6AAA)) 
     \sost[3]_i_2 
@@ -1682,65 +1625,66 @@ module design_1_sost_0_0_sost
         .I2(Q[2]),
         .I3(Q[1]),
         .O(\sost[3]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFEFFFFFFFF)) 
+  LUT5 #(
+    .INIT(32'h00000002)) 
     \sost[3]_i_3 
        (.I0(\sost[3]_i_5_n_0 ),
         .I1(\sost[3]_i_6_n_0 ),
         .I2(\sost[3]_i_7_n_0 ),
         .I3(\sost[3]_i_8_n_0 ),
         .I4(\sost[3]_i_9_n_0 ),
-        .I5(\sost[3]_i_10_n_0 ),
         .O(\sost[3]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFBFFFFFF)) 
+    .INIT(64'hFFFFFFFFFFFFBFFF)) 
     \sost[3]_i_4 
-       (.I0(\sost[3]_i_11_n_0 ),
-        .I1(counter1_reg[9]),
-        .I2(counter1_reg[7]),
-        .I3(counter1_reg[21]),
-        .I4(btn1),
-        .I5(\sost[3]_i_12_n_0 ),
+       (.I0(\sost[3]_i_10_n_0 ),
+        .I1(counter1_reg[8]),
+        .I2(btn1),
+        .I3(counter1_reg[22]),
+        .I4(counter1_reg[14]),
+        .I5(\sost[3]_i_11_n_0 ),
         .O(\sost[3]_i_4_n_0 ));
-  LUT4 #(
-    .INIT(16'hFF7F)) 
+  LUT6 #(
+    .INIT(64'h0800000000000000)) 
     \sost[3]_i_5 
-       (.I0(counter2_reg[19]),
-        .I1(counter2_reg[20]),
-        .I2(counter2_reg[12]),
-        .I3(counter2_reg[14]),
+       (.I0(counter2_reg[22]),
+        .I1(counter2_reg[19]),
+        .I2(counter2_reg[9]),
+        .I3(counter2_reg[12]),
+        .I4(counter2_reg[7]),
+        .I5(counter2_reg[17]),
         .O(\sost[3]_i_5_n_0 ));
   LUT4 #(
-    .INIT(16'hFFEF)) 
+    .INIT(16'hDFFF)) 
     \sost[3]_i_6 
-       (.I0(counter2_reg[1]),
-        .I1(counter2_reg[2]),
-        .I2(counter2_reg[17]),
-        .I3(counter2_reg[11]),
+       (.I0(counter2_reg[21]),
+        .I1(counter2_reg[16]),
+        .I2(counter2_reg[20]),
+        .I3(counter2_reg[8]),
         .O(\sost[3]_i_6_n_0 ));
   LUT4 #(
-    .INIT(16'hFFEF)) 
+    .INIT(16'hFF7F)) 
     \sost[3]_i_7 
-       (.I0(counter2_reg[3]),
-        .I1(counter2_reg[8]),
-        .I2(counter2_reg[21]),
+       (.I0(counter2_reg[0]),
+        .I1(counter2_reg[1]),
+        .I2(counter2_reg[6]),
         .I3(counter2_reg[10]),
         .O(\sost[3]_i_7_n_0 ));
   LUT4 #(
-    .INIT(16'hFFFE)) 
+    .INIT(16'h7FFF)) 
     \sost[3]_i_8 
-       (.I0(counter2_reg[0]),
-        .I1(counter2_reg[15]),
-        .I2(counter2_reg[13]),
-        .I3(counter2_reg[16]),
+       (.I0(counter2_reg[3]),
+        .I1(counter2_reg[2]),
+        .I2(counter2_reg[5]),
+        .I3(counter2_reg[4]),
         .O(\sost[3]_i_8_n_0 ));
   LUT4 #(
-    .INIT(16'hFFEF)) 
+    .INIT(16'hFFFE)) 
     \sost[3]_i_9 
-       (.I0(counter2_reg[18]),
-        .I1(btn1),
-        .I2(counter2_reg[9]),
-        .I3(counter2_reg[7]),
+       (.I0(counter2_reg[11]),
+        .I1(counter2_reg[15]),
+        .I2(counter2_reg[13]),
+        .I3(counter2_reg[18]),
         .O(\sost[3]_i_9_n_0 ));
   FDRE \sost_reg[0] 
        (.C(clk),

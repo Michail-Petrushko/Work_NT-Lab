@@ -32,12 +32,15 @@ module sost(
     reg [22:0] counter2;
     reg [27:0] dopCounter;                       //using for auto changing sost
     
+    localparam delay_800ms = 7999999;
+    localparam delay_3s = 29999999;
+    
     //sost0     Hue = 120;
     //sost1     Hue = Hue + 60;
     //sost2     Hue = Hue + 1; 
     //sost3     Hue = h; 
-    //sost4     Saturation = s;
-    //sost5     Value = v;
+    //sost4     Value = v;
+    //sost5     Saturation = s;
     //sost6     Saturation = 50; Value = 50;
     
     always@(posedge clk)begin
@@ -52,21 +55,21 @@ module sost(
             if (btn1==1) begin                  
                 counter1 <= counter1+1;
                 dopCounter<=dopCounter + 1;
-                if (counter1 == 23'h7a1200) begin                           //0.8s
+                if (counter1 == delay_800ms) begin                           //0.8s
                     if (sost == 6) sost = 0;
                     else sost = sost+1;
                     if (dopCounter < 24'hffffff) btnSost = 0;               //stop auto change
                     counter1=0;
                     counter2=0;
                 end
-                if (dopCounter == 28'h1c9c380) begin                        //3s
+                if (dopCounter == delay_3s) begin                        //3s
                     dopCounter = 0;
                     btnSost=1;
                 end
             end
             else begin
                 counter2<= counter2+1;
-                if (counter2 ==  23'h7a1200) begin                          //0.8s
+                if (counter2 ==  delay_800ms) begin                          //0.8s
                     counter1 = 0;
                     counter2 = 0;                       
                     dopCounter = 0;
@@ -81,7 +84,7 @@ module sost(
     
     always@(posedge clk) begin
     if (reset==1) leds<=0;
-    else leds = sost+1;
+    else leds = sost;
     end
     
 endmodule

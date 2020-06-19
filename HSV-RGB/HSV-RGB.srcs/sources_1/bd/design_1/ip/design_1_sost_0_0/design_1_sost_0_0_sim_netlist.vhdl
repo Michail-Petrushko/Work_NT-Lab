@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Thu Jun  4 17:08:45 2020
+-- Date        : Wed Jun 17 12:55:38 2020
 -- Host        : DESKTOP-TM8D8VH running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sources_1/bd/design_1/ip/design_1_sost_0_0/design_1_sost_0_0_sim_netlist.vhdl
@@ -35,9 +35,6 @@ architecture STRUCTURE of design_1_sost_0_0_sost is
   signal btnSost_i_12_n_0 : STD_LOGIC;
   signal btnSost_i_13_n_0 : STD_LOGIC;
   signal btnSost_i_14_n_0 : STD_LOGIC;
-  signal btnSost_i_15_n_0 : STD_LOGIC;
-  signal btnSost_i_16_n_0 : STD_LOGIC;
-  signal btnSost_i_17_n_0 : STD_LOGIC;
   signal btnSost_i_1_n_0 : STD_LOGIC;
   signal btnSost_i_2_n_0 : STD_LOGIC;
   signal btnSost_i_3_n_0 : STD_LOGIC;
@@ -47,7 +44,6 @@ architecture STRUCTURE of design_1_sost_0_0_sost is
   signal btnSost_i_7_n_0 : STD_LOGIC;
   signal btnSost_i_8_n_0 : STD_LOGIC;
   signal btnSost_i_9_n_0 : STD_LOGIC;
-  signal \counter1[0]_i_1_n_0\ : STD_LOGIC;
   signal \counter1[0]_i_3_n_0\ : STD_LOGIC;
   signal \counter1[0]_i_4_n_0\ : STD_LOGIC;
   signal \counter1[0]_i_5_n_0\ : STD_LOGIC;
@@ -189,6 +185,7 @@ architecture STRUCTURE of design_1_sost_0_0_sost is
   signal \counter2_reg[8]_i_1_n_5\ : STD_LOGIC;
   signal \counter2_reg[8]_i_1_n_6\ : STD_LOGIC;
   signal \counter2_reg[8]_i_1_n_7\ : STD_LOGIC;
+  signal dopCounter : STD_LOGIC;
   signal \dopCounter[0]_i_2_n_0\ : STD_LOGIC;
   signal \dopCounter[0]_i_3_n_0\ : STD_LOGIC;
   signal \dopCounter[0]_i_4_n_0\ : STD_LOGIC;
@@ -273,10 +270,6 @@ architecture STRUCTURE of design_1_sost_0_0_sost is
   signal \dopCounter_reg[8]_i_1_n_5\ : STD_LOGIC;
   signal \dopCounter_reg[8]_i_1_n_6\ : STD_LOGIC;
   signal \dopCounter_reg[8]_i_1_n_7\ : STD_LOGIC;
-  signal \leds[0]_i_1_n_0\ : STD_LOGIC;
-  signal \leds[1]_i_1_n_0\ : STD_LOGIC;
-  signal \leds[2]_i_1_n_0\ : STD_LOGIC;
-  signal \leds[3]_i_1_n_0\ : STD_LOGIC;
   signal \sost[0]_i_1_n_0\ : STD_LOGIC;
   signal \sost[1]_i_1_n_0\ : STD_LOGIC;
   signal \sost[2]_i_1_n_0\ : STD_LOGIC;
@@ -301,65 +294,59 @@ architecture STRUCTURE of design_1_sost_0_0_sost is
   signal \NLW_counter2_reg[20]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   signal \NLW_dopCounter_reg[24]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of btnSost_i_16 : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of btnSost_i_7 : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \leds[0]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \leds[1]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \leds[2]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \leds[3]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \sost[0]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \sost[1]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \sost[2]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \sost[3]_i_2\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \sost[0]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \sost[1]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \sost[2]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \sost[3]_i_2\ : label is "soft_lutpair1";
 begin
   Q(3 downto 0) <= \^q\(3 downto 0);
   btnSost <= \^btnsost\;
-btnSost_i_1: unisim.vcomponents.LUT5
+btnSost_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000E2EA"
+      INIT => X"00000000EAE2EAEA"
     )
         port map (
       I0 => \^btnsost\,
       I1 => btn1,
       I2 => btnSost_i_2_n_0,
       I3 => btnSost_i_3_n_0,
-      I4 => reset,
+      I4 => btnSost_i_4_n_0,
+      I5 => reset,
       O => btnSost_i_1_n_0
     );
-btnSost_i_10: unisim.vcomponents.LUT5
+btnSost_i_10: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFF7FFF"
+      INIT => X"7FFFFFFFFFFFFFFF"
     )
         port map (
-      I0 => dopCounter_reg(19),
-      I1 => dopCounter_reg(10),
-      I2 => dopCounter_reg(5),
-      I3 => dopCounter_reg(0),
-      I4 => btnSost_i_16_n_0,
+      I0 => dopCounter_reg(8),
+      I1 => dopCounter_reg(6),
+      I2 => dopCounter_reg(18),
+      I3 => dopCounter_reg(12),
+      I4 => dopCounter_reg(23),
+      I5 => dopCounter_reg(20),
       O => btnSost_i_10_n_0
     );
-btnSost_i_11: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFBFFFFFFFF"
-    )
-        port map (
-      I0 => dopCounter_reg(25),
-      I1 => counter1_reg(21),
-      I2 => dopCounter_reg(24),
-      I3 => btnSost_i_17_n_0,
-      I4 => counter1_reg(7),
-      I5 => counter1_reg(9),
-      O => btnSost_i_11_n_0
-    );
-btnSost_i_12: unisim.vcomponents.LUT4
+btnSost_i_11: unisim.vcomponents.LUT4
     generic map(
       INIT => X"FFFE"
     )
         port map (
-      I0 => dopCounter_reg(0),
-      I1 => dopCounter_reg(3),
-      I2 => dopCounter_reg(25),
-      I3 => dopCounter_reg(6),
+      I0 => dopCounter_reg(11),
+      I1 => dopCounter_reg(21),
+      I2 => dopCounter_reg(10),
+      I3 => dopCounter_reg(17),
+      O => btnSost_i_11_n_0
+    );
+btnSost_i_12: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"7FFF"
+    )
+        port map (
+      I0 => dopCounter_reg(14),
+      I1 => dopCounter_reg(1),
+      I2 => dopCounter_reg(9),
+      I3 => dopCounter_reg(0),
       O => btnSost_i_12_n_0
     );
 btnSost_i_13: unisim.vcomponents.LUT4
@@ -368,146 +355,118 @@ btnSost_i_13: unisim.vcomponents.LUT4
     )
         port map (
       I0 => dopCounter_reg(15),
-      I1 => dopCounter_reg(16),
-      I2 => dopCounter_reg(22),
-      I3 => dopCounter_reg(23),
+      I1 => dopCounter_reg(22),
+      I2 => dopCounter_reg(16),
+      I3 => dopCounter_reg(5),
       O => btnSost_i_13_n_0
     );
-btnSost_i_14: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFDF"
-    )
-        port map (
-      I0 => dopCounter_reg(8),
-      I1 => dopCounter_reg(18),
-      I2 => dopCounter_reg(24),
-      I3 => dopCounter_reg(17),
-      O => btnSost_i_14_n_0
-    );
-btnSost_i_15: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"7FFF"
-    )
-        port map (
-      I0 => dopCounter_reg(1),
-      I1 => dopCounter_reg(17),
-      I2 => dopCounter_reg(7),
-      I3 => dopCounter_reg(12),
-      O => btnSost_i_15_n_0
-    );
-btnSost_i_16: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"7FFF"
-    )
-        port map (
-      I0 => dopCounter_reg(9),
-      I1 => dopCounter_reg(14),
-      I2 => dopCounter_reg(8),
-      I3 => dopCounter_reg(13),
-      O => btnSost_i_16_n_0
-    );
-btnSost_i_17: unisim.vcomponents.LUT2
+btnSost_i_14: unisim.vcomponents.LUT2
     generic map(
       INIT => X"E"
     )
         port map (
       I0 => dopCounter_reg(27),
       I1 => dopCounter_reg(26),
-      O => btnSost_i_17_n_0
+      O => btnSost_i_14_n_0
     );
 btnSost_i_2: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000000000002"
+      INIT => X"0000000000000004"
     )
         port map (
-      I0 => btnSost_i_4_n_0,
-      I1 => btnSost_i_5_n_0,
-      I2 => btnSost_i_6_n_0,
-      I3 => btnSost_i_7_n_0,
-      I4 => dopCounter_reg(27),
-      I5 => dopCounter_reg(26),
+      I0 => dopCounter_reg(13),
+      I1 => dopCounter_reg(24),
+      I2 => dopCounter_reg(7),
+      I3 => btnSost_i_5_n_0,
+      I4 => btnSost_i_6_n_0,
+      I5 => btnSost_i_7_n_0,
       O => btnSost_i_2_n_0
     );
 btnSost_i_3: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00000000000000FE"
+      INIT => X"FFFFFFFFFFFFFFEF"
     )
         port map (
-      I0 => btnSost_i_8_n_0,
-      I1 => btnSost_i_9_n_0,
-      I2 => btnSost_i_10_n_0,
-      I3 => \sost[3]_i_12_n_0\,
-      I4 => btnSost_i_11_n_0,
-      I5 => \sost[3]_i_11_n_0\,
+      I0 => \sost[3]_i_10_n_0\,
+      I1 => btnSost_i_8_n_0,
+      I2 => counter1_reg(21),
+      I3 => counter1_reg(13),
+      I4 => counter1_reg(15),
+      I5 => counter1_reg(18),
       O => btnSost_i_3_n_0
     );
 btnSost_i_4: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000000000001"
+      INIT => X"FFFFFFFFFFFFBFFF"
     )
         port map (
-      I0 => btnSost_i_12_n_0,
-      I1 => dopCounter_reg(12),
-      I2 => dopCounter_reg(20),
-      I3 => dopCounter_reg(2),
-      I4 => dopCounter_reg(21),
-      I5 => btnSost_i_13_n_0,
+      I0 => btnSost_i_7_n_0,
+      I1 => dopCounter_reg(17),
+      I2 => dopCounter_reg(7),
+      I3 => dopCounter_reg(21),
+      I4 => btnSost_i_9_n_0,
+      I5 => btnSost_i_10_n_0,
       O => btnSost_i_4_n_0
     );
 btnSost_i_5: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFFFFFB"
+      INIT => X"FFFFFFFE"
     )
         port map (
-      I0 => dopCounter_reg(13),
-      I1 => dopCounter_reg(19),
-      I2 => dopCounter_reg(11),
-      I3 => dopCounter_reg(5),
-      I4 => btnSost_i_14_n_0,
+      I0 => dopCounter_reg(18),
+      I1 => dopCounter_reg(12),
+      I2 => dopCounter_reg(20),
+      I3 => dopCounter_reg(25),
+      I4 => btnSost_i_11_n_0,
       O => btnSost_i_5_n_0
     );
-btnSost_i_6: unisim.vcomponents.LUT4
+btnSost_i_6: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFEF"
+      INIT => X"EFFFFFFFFFFFFFFF"
     )
         port map (
-      I0 => dopCounter_reg(1),
-      I1 => dopCounter_reg(10),
-      I2 => dopCounter_reg(7),
-      I3 => dopCounter_reg(4),
+      I0 => dopCounter_reg(26),
+      I1 => dopCounter_reg(27),
+      I2 => dopCounter_reg(3),
+      I3 => dopCounter_reg(23),
+      I4 => dopCounter_reg(6),
+      I5 => dopCounter_reg(8),
       O => btnSost_i_6_n_0
     );
-btnSost_i_7: unisim.vcomponents.LUT2
+btnSost_i_7: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"7"
+      INIT => X"EFFFFFFF"
     )
         port map (
-      I0 => dopCounter_reg(14),
-      I1 => dopCounter_reg(9),
+      I0 => btnSost_i_12_n_0,
+      I1 => btnSost_i_13_n_0,
+      I2 => dopCounter_reg(2),
+      I3 => dopCounter_reg(19),
+      I4 => dopCounter_reg(4),
       O => btnSost_i_7_n_0
     );
-btnSost_i_8: unisim.vcomponents.LUT5
+btnSost_i_8: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFF7FFF"
+      INIT => X"FFFFFFFFFFEFFFFF"
     )
         port map (
-      I0 => dopCounter_reg(21),
-      I1 => dopCounter_reg(3),
-      I2 => dopCounter_reg(20),
-      I3 => dopCounter_reg(11),
-      I4 => btnSost_i_15_n_0,
+      I0 => counter1_reg(14),
+      I1 => dopCounter_reg(25),
+      I2 => counter1_reg(8),
+      I3 => dopCounter_reg(24),
+      I4 => counter1_reg(22),
+      I5 => btnSost_i_14_n_0,
       O => btnSost_i_8_n_0
     );
-btnSost_i_9: unisim.vcomponents.LUT5
+btnSost_i_9: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BFFFFFFF"
+      INIT => X"7FFF"
     )
         port map (
-      I0 => btnSost_i_13_n_0,
-      I1 => dopCounter_reg(4),
-      I2 => dopCounter_reg(2),
-      I3 => dopCounter_reg(18),
-      I4 => dopCounter_reg(6),
+      I0 => dopCounter_reg(11),
+      I1 => dopCounter_reg(3),
+      I2 => dopCounter_reg(10),
+      I3 => dopCounter_reg(13),
       O => btnSost_i_9_n_0
     );
 btnSost_reg: unisim.vcomponents.FDRE
@@ -518,14 +477,16 @@ btnSost_reg: unisim.vcomponents.FDRE
       Q => \^btnsost\,
       R => '0'
     );
-\counter1[0]_i_1\: unisim.vcomponents.LUT2
+\counter1[0]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"B"
+      INIT => X"ABAA"
     )
         port map (
       I0 => reset,
-      I1 => \sost[3]_i_3_n_0\,
-      O => \counter1[0]_i_1_n_0\
+      I1 => btn1,
+      I2 => counter2_reg(14),
+      I3 => \sost[3]_i_3_n_0\,
+      O => dopCounter
     );
 \counter1[0]_i_3\: unisim.vcomponents.LUT2
     generic map(
@@ -649,8 +610,8 @@ btnSost_reg: unisim.vcomponents.FDRE
       INIT => X"8"
     )
         port map (
-      I0 => counter1_reg(21),
-      I1 => btn1,
+      I0 => btn1,
+      I1 => counter1_reg(21),
       O => \counter1[20]_i_3_n_0\
     );
 \counter1[20]_i_4\: unisim.vcomponents.LUT2
@@ -730,8 +691,8 @@ btnSost_reg: unisim.vcomponents.FDRE
       INIT => X"8"
     )
         port map (
-      I0 => btn1,
-      I1 => counter1_reg(8),
+      I0 => counter1_reg(8),
+      I1 => btn1,
       O => \counter1[8]_i_5_n_0\
     );
 \counter1_reg[0]\: unisim.vcomponents.FDRE
@@ -740,7 +701,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \counter1_reg[0]_i_2_n_7\,
       Q => counter1_reg(0),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \counter1_reg[0]_i_2\: unisim.vcomponents.CARRY4
      port map (
@@ -767,7 +728,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \counter1_reg[8]_i_1_n_5\,
       Q => counter1_reg(10),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \counter1_reg[11]\: unisim.vcomponents.FDRE
      port map (
@@ -775,7 +736,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \counter1_reg[8]_i_1_n_4\,
       Q => counter1_reg(11),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \counter1_reg[12]\: unisim.vcomponents.FDRE
      port map (
@@ -783,7 +744,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \counter1_reg[12]_i_1_n_7\,
       Q => counter1_reg(12),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \counter1_reg[12]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -809,7 +770,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \counter1_reg[12]_i_1_n_6\,
       Q => counter1_reg(13),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \counter1_reg[14]\: unisim.vcomponents.FDRE
      port map (
@@ -817,7 +778,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \counter1_reg[12]_i_1_n_5\,
       Q => counter1_reg(14),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \counter1_reg[15]\: unisim.vcomponents.FDRE
      port map (
@@ -825,7 +786,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \counter1_reg[12]_i_1_n_4\,
       Q => counter1_reg(15),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \counter1_reg[16]\: unisim.vcomponents.FDRE
      port map (
@@ -833,7 +794,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \counter1_reg[16]_i_1_n_7\,
       Q => counter1_reg(16),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \counter1_reg[16]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -859,7 +820,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \counter1_reg[16]_i_1_n_6\,
       Q => counter1_reg(17),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \counter1_reg[18]\: unisim.vcomponents.FDRE
      port map (
@@ -867,7 +828,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \counter1_reg[16]_i_1_n_5\,
       Q => counter1_reg(18),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \counter1_reg[19]\: unisim.vcomponents.FDRE
      port map (
@@ -875,7 +836,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \counter1_reg[16]_i_1_n_4\,
       Q => counter1_reg(19),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \counter1_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -883,7 +844,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \counter1_reg[0]_i_2_n_6\,
       Q => counter1_reg(1),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \counter1_reg[20]\: unisim.vcomponents.FDRE
      port map (
@@ -891,7 +852,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \counter1_reg[20]_i_1_n_7\,
       Q => counter1_reg(20),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \counter1_reg[20]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -916,7 +877,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \counter1_reg[20]_i_1_n_6\,
       Q => counter1_reg(21),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \counter1_reg[22]\: unisim.vcomponents.FDRE
      port map (
@@ -924,7 +885,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \counter1_reg[20]_i_1_n_5\,
       Q => counter1_reg(22),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \counter1_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -932,7 +893,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \counter1_reg[0]_i_2_n_5\,
       Q => counter1_reg(2),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \counter1_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -940,7 +901,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \counter1_reg[0]_i_2_n_4\,
       Q => counter1_reg(3),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \counter1_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -948,7 +909,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \counter1_reg[4]_i_1_n_7\,
       Q => counter1_reg(4),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \counter1_reg[4]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -974,7 +935,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \counter1_reg[4]_i_1_n_6\,
       Q => counter1_reg(5),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \counter1_reg[6]\: unisim.vcomponents.FDRE
      port map (
@@ -982,7 +943,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \counter1_reg[4]_i_1_n_5\,
       Q => counter1_reg(6),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \counter1_reg[7]\: unisim.vcomponents.FDRE
      port map (
@@ -990,7 +951,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \counter1_reg[4]_i_1_n_4\,
       Q => counter1_reg(7),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \counter1_reg[8]\: unisim.vcomponents.FDRE
      port map (
@@ -998,7 +959,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \counter1_reg[8]_i_1_n_7\,
       Q => counter1_reg(8),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \counter1_reg[8]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -1024,7 +985,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \counter1_reg[8]_i_1_n_6\,
       Q => counter1_reg(9),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \counter2[0]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -1809,7 +1770,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[0]_i_1_n_7\,
       Q => dopCounter_reg(0),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[0]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -1836,7 +1797,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[8]_i_1_n_5\,
       Q => dopCounter_reg(10),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[11]\: unisim.vcomponents.FDRE
      port map (
@@ -1844,7 +1805,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[8]_i_1_n_4\,
       Q => dopCounter_reg(11),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[12]\: unisim.vcomponents.FDRE
      port map (
@@ -1852,7 +1813,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[12]_i_1_n_7\,
       Q => dopCounter_reg(12),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[12]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -1878,7 +1839,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[12]_i_1_n_6\,
       Q => dopCounter_reg(13),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[14]\: unisim.vcomponents.FDRE
      port map (
@@ -1886,7 +1847,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[12]_i_1_n_5\,
       Q => dopCounter_reg(14),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[15]\: unisim.vcomponents.FDRE
      port map (
@@ -1894,7 +1855,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[12]_i_1_n_4\,
       Q => dopCounter_reg(15),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[16]\: unisim.vcomponents.FDRE
      port map (
@@ -1902,7 +1863,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[16]_i_1_n_7\,
       Q => dopCounter_reg(16),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[16]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -1928,7 +1889,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[16]_i_1_n_6\,
       Q => dopCounter_reg(17),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[18]\: unisim.vcomponents.FDRE
      port map (
@@ -1936,7 +1897,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[16]_i_1_n_5\,
       Q => dopCounter_reg(18),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[19]\: unisim.vcomponents.FDRE
      port map (
@@ -1944,7 +1905,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[16]_i_1_n_4\,
       Q => dopCounter_reg(19),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -1952,7 +1913,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[0]_i_1_n_6\,
       Q => dopCounter_reg(1),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[20]\: unisim.vcomponents.FDRE
      port map (
@@ -1960,7 +1921,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[20]_i_1_n_7\,
       Q => dopCounter_reg(20),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[20]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -1986,7 +1947,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[20]_i_1_n_6\,
       Q => dopCounter_reg(21),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[22]\: unisim.vcomponents.FDRE
      port map (
@@ -1994,7 +1955,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[20]_i_1_n_5\,
       Q => dopCounter_reg(22),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[23]\: unisim.vcomponents.FDRE
      port map (
@@ -2002,7 +1963,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[20]_i_1_n_4\,
       Q => dopCounter_reg(23),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[24]\: unisim.vcomponents.FDRE
      port map (
@@ -2010,7 +1971,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[24]_i_1_n_7\,
       Q => dopCounter_reg(24),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[24]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -2036,7 +1997,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[24]_i_1_n_6\,
       Q => dopCounter_reg(25),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[26]\: unisim.vcomponents.FDRE
      port map (
@@ -2044,7 +2005,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[24]_i_1_n_5\,
       Q => dopCounter_reg(26),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[27]\: unisim.vcomponents.FDRE
      port map (
@@ -2052,7 +2013,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[24]_i_1_n_4\,
       Q => dopCounter_reg(27),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -2060,7 +2021,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[0]_i_1_n_5\,
       Q => dopCounter_reg(2),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -2068,7 +2029,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[0]_i_1_n_4\,
       Q => dopCounter_reg(3),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -2076,7 +2037,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[4]_i_1_n_7\,
       Q => dopCounter_reg(4),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[4]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -2102,7 +2063,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[4]_i_1_n_6\,
       Q => dopCounter_reg(5),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[6]\: unisim.vcomponents.FDRE
      port map (
@@ -2110,7 +2071,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[4]_i_1_n_5\,
       Q => dopCounter_reg(6),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[7]\: unisim.vcomponents.FDRE
      port map (
@@ -2118,7 +2079,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[4]_i_1_n_4\,
       Q => dopCounter_reg(7),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[8]\: unisim.vcomponents.FDRE
      port map (
@@ -2126,7 +2087,7 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[8]_i_1_n_7\,
       Q => dopCounter_reg(8),
-      R => \counter1[0]_i_1_n_0\
+      R => dopCounter
     );
 \dopCounter_reg[8]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -2152,51 +2113,13 @@ btnSost_reg: unisim.vcomponents.FDRE
       CE => btn1,
       D => \dopCounter_reg[8]_i_1_n_6\,
       Q => dopCounter_reg(9),
-      R => \counter1[0]_i_1_n_0\
-    );
-\leds[0]_i_1\: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => \^q\(0),
-      O => \leds[0]_i_1_n_0\
-    );
-\leds[1]_i_1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"6"
-    )
-        port map (
-      I0 => \^q\(0),
-      I1 => \^q\(1),
-      O => \leds[1]_i_1_n_0\
-    );
-\leds[2]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"78"
-    )
-        port map (
-      I0 => \^q\(0),
-      I1 => \^q\(1),
-      I2 => \^q\(2),
-      O => \leds[2]_i_1_n_0\
-    );
-\leds[3]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"7F80"
-    )
-        port map (
-      I0 => \^q\(1),
-      I1 => \^q\(0),
-      I2 => \^q\(2),
-      I3 => \^q\(3),
-      O => \leds[3]_i_1_n_0\
+      R => dopCounter
     );
 \leds_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      D => \leds[0]_i_1_n_0\,
+      D => \^q\(0),
       Q => leds(0),
       R => reset
     );
@@ -2204,7 +2127,7 @@ btnSost_reg: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      D => \leds[1]_i_1_n_0\,
+      D => \^q\(1),
       Q => leds(1),
       R => reset
     );
@@ -2212,7 +2135,7 @@ btnSost_reg: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      D => \leds[2]_i_1_n_0\,
+      D => \^q\(2),
       Q => leds(2),
       R => reset
     );
@@ -2220,7 +2143,7 @@ btnSost_reg: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      D => \leds[3]_i_1_n_0\,
+      D => \^q\(3),
       Q => leds(3),
       R => reset
     );
@@ -2257,83 +2180,82 @@ btnSost_reg: unisim.vcomponents.FDRE
       I3 => \^q\(1),
       O => \sost[2]_i_1_n_0\
     );
-\sost[3]_i_1\: unisim.vcomponents.LUT3
+\sost[3]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"2F"
+      INIT => X"0008FFFF"
     )
         port map (
-      I0 => \^btnsost\,
-      I1 => \sost[3]_i_3_n_0\,
-      I2 => \sost[3]_i_4_n_0\,
+      I0 => \sost[3]_i_3_n_0\,
+      I1 => \^btnsost\,
+      I2 => btn1,
+      I3 => counter2_reg(14),
+      I4 => \sost[3]_i_4_n_0\,
       O => \sost[3]_i_1_n_0\
     );
 \sost[3]_i_10\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0004"
+      INIT => X"FFFE"
     )
         port map (
-      I0 => counter2_reg(4),
-      I1 => counter2_reg(22),
-      I2 => counter2_reg(5),
-      I3 => counter2_reg(6),
+      I0 => \sost[3]_i_12_n_0\,
+      I1 => \sost[3]_i_13_n_0\,
+      I2 => \sost[3]_i_14_n_0\,
+      I3 => \sost[3]_i_15_n_0\,
       O => \sost[3]_i_10_n_0\
     );
-\sost[3]_i_11\: unisim.vcomponents.LUT6
+\sost[3]_i_11\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFFFFFFFFFFFFFB"
+      INIT => X"FFFD"
     )
         port map (
-      I0 => counter1_reg(4),
-      I1 => counter1_reg(22),
-      I2 => counter1_reg(8),
-      I3 => counter1_reg(5),
-      I4 => \sost[3]_i_13_n_0\,
-      I5 => \sost[3]_i_14_n_0\,
+      I0 => counter1_reg(21),
+      I1 => counter1_reg(13),
+      I2 => counter1_reg(15),
+      I3 => counter1_reg(18),
       O => \sost[3]_i_11_n_0\
     );
-\sost[3]_i_12\: unisim.vcomponents.LUT5
+\sost[3]_i_12\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFF7FFF"
+      INIT => X"FFF7"
     )
         port map (
-      I0 => counter1_reg(19),
+      I0 => counter1_reg(12),
       I1 => counter1_reg(17),
-      I2 => counter1_reg(20),
-      I3 => counter1_reg(12),
-      I4 => \sost[3]_i_15_n_0\,
+      I2 => counter1_reg(9),
+      I3 => counter1_reg(10),
       O => \sost[3]_i_12_n_0\
     );
 \sost[3]_i_13\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFE"
+      INIT => X"7FFF"
     )
         port map (
-      I0 => counter1_reg(13),
-      I1 => counter1_reg(16),
-      I2 => counter1_reg(10),
-      I3 => counter1_reg(11),
+      I0 => counter1_reg(3),
+      I1 => counter1_reg(1),
+      I2 => counter1_reg(2),
+      I3 => counter1_reg(0),
       O => \sost[3]_i_13_n_0\
     );
 \sost[3]_i_14\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFE"
+      INIT => X"FFDF"
     )
         port map (
-      I0 => counter1_reg(0),
-      I1 => counter1_reg(15),
-      I2 => counter1_reg(6),
-      I3 => counter1_reg(14),
+      I0 => counter1_reg(20),
+      I1 => counter1_reg(11),
+      I2 => counter1_reg(19),
+      I3 => counter1_reg(16),
       O => \sost[3]_i_14_n_0\
     );
 \sost[3]_i_15\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFE"
+      INIT => X"7FFF"
     )
         port map (
-      I0 => counter1_reg(1),
-      I1 => counter1_reg(18),
-      I2 => counter1_reg(2),
-      I3 => counter1_reg(3),
+      I0 => counter1_reg(7),
+      I1 => counter1_reg(4),
+      I2 => counter1_reg(6),
+      I3 => counter1_reg(5),
       O => \sost[3]_i_15_n_0\
     );
 \sost[3]_i_2\: unisim.vcomponents.LUT4
@@ -2347,9 +2269,9 @@ btnSost_reg: unisim.vcomponents.FDRE
       I3 => \^q\(1),
       O => \sost[3]_i_2_n_0\
     );
-\sost[3]_i_3\: unisim.vcomponents.LUT6
+\sost[3]_i_3\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFFFFFEFFFFFFFF"
+      INIT => X"00000002"
     )
         port map (
       I0 => \sost[3]_i_5_n_0\,
@@ -2357,75 +2279,76 @@ btnSost_reg: unisim.vcomponents.FDRE
       I2 => \sost[3]_i_7_n_0\,
       I3 => \sost[3]_i_8_n_0\,
       I4 => \sost[3]_i_9_n_0\,
-      I5 => \sost[3]_i_10_n_0\,
       O => \sost[3]_i_3_n_0\
     );
 \sost[3]_i_4\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFFBFFFFFF"
+      INIT => X"FFFFFFFFFFFFBFFF"
     )
         port map (
-      I0 => \sost[3]_i_11_n_0\,
-      I1 => counter1_reg(9),
-      I2 => counter1_reg(7),
-      I3 => counter1_reg(21),
-      I4 => btn1,
-      I5 => \sost[3]_i_12_n_0\,
+      I0 => \sost[3]_i_10_n_0\,
+      I1 => counter1_reg(8),
+      I2 => btn1,
+      I3 => counter1_reg(22),
+      I4 => counter1_reg(14),
+      I5 => \sost[3]_i_11_n_0\,
       O => \sost[3]_i_4_n_0\
     );
-\sost[3]_i_5\: unisim.vcomponents.LUT4
+\sost[3]_i_5\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF7F"
+      INIT => X"0800000000000000"
     )
         port map (
-      I0 => counter2_reg(19),
-      I1 => counter2_reg(20),
-      I2 => counter2_reg(12),
-      I3 => counter2_reg(14),
+      I0 => counter2_reg(22),
+      I1 => counter2_reg(19),
+      I2 => counter2_reg(9),
+      I3 => counter2_reg(12),
+      I4 => counter2_reg(7),
+      I5 => counter2_reg(17),
       O => \sost[3]_i_5_n_0\
     );
 \sost[3]_i_6\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFEF"
+      INIT => X"DFFF"
     )
         port map (
-      I0 => counter2_reg(1),
-      I1 => counter2_reg(2),
-      I2 => counter2_reg(17),
-      I3 => counter2_reg(11),
+      I0 => counter2_reg(21),
+      I1 => counter2_reg(16),
+      I2 => counter2_reg(20),
+      I3 => counter2_reg(8),
       O => \sost[3]_i_6_n_0\
     );
 \sost[3]_i_7\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFEF"
+      INIT => X"FF7F"
     )
         port map (
-      I0 => counter2_reg(3),
-      I1 => counter2_reg(8),
-      I2 => counter2_reg(21),
+      I0 => counter2_reg(0),
+      I1 => counter2_reg(1),
+      I2 => counter2_reg(6),
       I3 => counter2_reg(10),
       O => \sost[3]_i_7_n_0\
     );
 \sost[3]_i_8\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFE"
+      INIT => X"7FFF"
     )
         port map (
-      I0 => counter2_reg(0),
-      I1 => counter2_reg(15),
-      I2 => counter2_reg(13),
-      I3 => counter2_reg(16),
+      I0 => counter2_reg(3),
+      I1 => counter2_reg(2),
+      I2 => counter2_reg(5),
+      I3 => counter2_reg(4),
       O => \sost[3]_i_8_n_0\
     );
 \sost[3]_i_9\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFEF"
+      INIT => X"FFFE"
     )
         port map (
-      I0 => counter2_reg(18),
-      I1 => btn1,
-      I2 => counter2_reg(9),
-      I3 => counter2_reg(7),
+      I0 => counter2_reg(11),
+      I1 => counter2_reg(15),
+      I2 => counter2_reg(13),
+      I3 => counter2_reg(18),
       O => \sost[3]_i_9_n_0\
     );
 \sost_reg[0]\: unisim.vcomponents.FDRE
