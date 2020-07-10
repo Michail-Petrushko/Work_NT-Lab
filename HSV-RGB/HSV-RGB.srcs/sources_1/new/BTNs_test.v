@@ -36,8 +36,8 @@ module BTNs_test(
     reg [3:0] predSost;
 
     localparam delay_1s=     24'd9999999;
-    //localparam delay_10ms =  24'd99999;
-    localparam delay_10ms =  24'd1;          //for simulation
+    localparam delay_50ms =  24'd499999;
+    //localparam delay_10ms =  24'd1;          //for simulation
     localparam delay_100ms = 24'd999999;
     //main
     always@(posedge clk) begin   
@@ -56,19 +56,19 @@ module BTNs_test(
             if (sost!=predSost) counterSost1=0;
             predSost<=sost;
             case (sost)
-                2: begin    h=120;  Hue = h; Value=v; Saturation=s;  end
+                0: begin    h=120;  Hue = h; Value=v; Saturation=s;  end
                 1: begin 
                     if (counterSost1 == delay_1s) begin           //1s
                         Value=v; Saturation=s;   
                         h = h + 60;
-                        if(h >359) h = h-360;
+                        if(h >360) h = h-360;
                         Hue = h;  
                         counterSost1 = 0;
                     end
                     else counterSost1 <= counterSost1 + 1;
                 end
-                0: begin  
-                    if (counterSost1 == delay_10ms) begin            //0.01s
+                2: begin  
+                    if (counterSost1 == delay_50ms) begin            //0.01s
                         Value=v; Saturation=s;  
                         h = h+1;                
                         if (h>359) h = h - 360;
@@ -79,7 +79,7 @@ module BTNs_test(
                 end
                 3: begin
                     if (btn2==1) begin
-                        if (counterSost1 == delay_10ms) begin        //0.01s
+                        if (counterSost1 == delay_50ms) begin        //0.01s
                             Value=v; Saturation=s;
                             h = h-1 + 2 * (1-sw[0]);
                             if (h>360) h = h - 361;

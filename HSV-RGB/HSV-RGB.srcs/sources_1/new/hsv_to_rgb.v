@@ -49,7 +49,8 @@ module hsv_to_rgb(
              Vmin = (100-Saturation)*Value/100;
              a = (Value-Vmin)* (Hue%60)/60;
              Vinc = Vmin + a;
-             Vdec = Vmin - a; 
+             Vdec = Value - a; 
+             
              
              Vinc = Vinc + Vinc + Vinc/2;
              Vdec = Vdec + Vdec + Vdec/2;
