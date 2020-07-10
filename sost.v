@@ -33,6 +33,7 @@ module sost(
     reg [27:0] dopCounter;                       //using for auto changing sost
     
     localparam delay_800ms = 7999999;
+    localparam delay_1s = 9999999;
     localparam delay_3s = 29999999;
     
     //sost0     Hue = 120;
@@ -53,38 +54,43 @@ module sost(
         end
         else begin
             if (btn1==1) begin                  
-                counter1 <= counter1+1;
-                dopCounter<=dopCounter + 1;
+                
                 if (counter1 == delay_800ms) begin                           //0.8s
-                    if (sost == 6) sost = 0;
-                    else sost = sost+1;
-                    if (dopCounter < 24'hffffff) btnSost = 0;               //stop auto change
-                    counter1=0;
-                    counter2=0;
+                    if (sost == 6) sost <= 0;
+                    else sost <= sost+1;
+                    if (btnSost==1) begin  
+                        if (dopCounter > delay_1s) btnSost <= 0;               //stop auto change
+                    end
+                    counter1<=0;
+                    counter2<=0;
                 end
+                else counter1<=counter1 + 1;
+                
                 if (dopCounter == delay_3s) begin                        //3s
                     dopCounter = 0;
                     btnSost=1;
                 end
+                else dopCounter<=dopCounter + 1;
+                
             end
             else begin
-                counter2<= counter2+1;
                 if (counter2 ==  delay_800ms) begin                          //0.8s
-                    counter1 = 0;
-                    counter2 = 0;                       
-                    dopCounter = 0;
+                    counter1 <= 0;
+                    counter2 <= 0;                       
+                    dopCounter <= 0;
                     if (btnSost==1) begin                                       
-                        if (sost == 6) sost = 0;
-                        else sost = sost+1;
+                        if (sost == 6) sost <= 0;
+                        else sost <= sost+1;
                     end
                 end
+                else counter2<= counter2+1;
             end
         end
     end
     
     always@(posedge clk) begin
     if (reset==1) leds<=0;
-    else leds = sost;
+    else leds <= sost;
     end
     
 endmodule

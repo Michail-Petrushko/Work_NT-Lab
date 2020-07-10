@@ -27,10 +27,17 @@ set_property -dict { PACKAGE_PIN D18   IOSTANDARD LVCMOS33 } [get_ports { leds[3
 
 set_property -dict { PACKAGE_PIN J14   IOSTANDARD LVCMOS33 } [get_ports { btnSost }];
 
+set_property -dict { PACKAGE_PIN K14   IOSTANDARD LVCMOS33 } [get_ports { LED_0 }];
 
 #CLK_Wizard
-#set_property PACKAGE_PIN K17  [get_ports {clk_in}];			
-#set_property IOSTANDARD LVCMOS33 [get_ports {clk_in}];
+
+##Clock signal
+#set_property -dict {PACKAGE_PIN K17 IOSTANDARD LVCMOS33} [get_ports sysclk]
+#create_clock -period 8.000 -name sys_clk_pin -waveform {0.000 4.000} -add [get_ports sysclk]
+
+
+set_property PACKAGE_PIN K17  [get_ports {clk_in}];			
+set_property IOSTANDARD LVCMOS33 [get_ports {clk_in}];
 
 set_property PACKAGE_PIN Y16  [get_ports {reset_0}];			
 set_property IOSTANDARD LVCMOS33 [get_ports {reset_0}];
@@ -64,3 +71,6 @@ set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {sw_IBUF[3]}];
 #set_property -dict { PACKAGE_PIN B9   IOSTANDARD LVCMOS18 } [get_ports { btn5 }]; 
 #set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {btn_IBUF[4]}];
 #set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {btn_IBUF[5]}];
+
+
+

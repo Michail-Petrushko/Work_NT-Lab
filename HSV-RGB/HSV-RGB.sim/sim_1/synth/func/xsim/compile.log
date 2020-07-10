@@ -1,0 +1,16 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.sim/sim_1/synth/func/xsim/sim_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1
+INFO: [VRFC 10-311] analyzing module design_1_BTNs_test_0_2
+INFO: [VRFC 10-311] analyzing module design_1_BTNs_test_0_2_BTNs_test
+INFO: [VRFC 10-311] analyzing module design_1_PWM_0_0
+INFO: [VRFC 10-311] analyzing module design_1_PWM_0_0_PWM
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_1_0
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_1_0_design_1_clk_wiz_1_0_clk_wiz
+INFO: [VRFC 10-311] analyzing module design_1_hsv_to_rgb_0_0
+INFO: [VRFC 10-311] analyzing module design_1_hsv_to_rgb_0_0_hsv_to_rgb
+INFO: [VRFC 10-311] analyzing module design_1_sost_0_0
+INFO: [VRFC 10-311] analyzing module design_1_sost_0_0_sost
+INFO: [VRFC 10-311] analyzing module design_1_wrapper
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sim_1/new/sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim

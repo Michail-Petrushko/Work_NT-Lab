@@ -3,38 +3,39 @@
    guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
 #  -string -flagsOSRD
 preplace port btnSost -pg 1 -y -130 -defaultsOSRD
-preplace port btn1 -pg 1 -y -170 -defaultsOSRD
+preplace port btn1 -pg 1 -y -160 -defaultsOSRD
 preplace port btn2 -pg 1 -y -270 -defaultsOSRD
-preplace port sys_clock -pg 1 -y 0 -defaultsOSRD
+preplace port clk_in -pg 1 -y 0 -defaultsOSRD
+preplace port LED_0 -pg 1 -y -250 -defaultsOSRD
 preplace port reset_0 -pg 1 -y -100 -defaultsOSRD
 preplace port reset -pg 1 -y -140 -defaultsOSRD
 preplace portBus sw -pg 1 -y -240 -defaultsOSRD
-preplace portBus rgb_led_tri_o -pg 1 -y -60 -defaultsOSRD
+preplace portBus rgb_led_tri_o -pg 1 -y -220 -defaultsOSRD
 preplace portBus leds -pg 1 -y -160 -defaultsOSRD
-preplace inst sost_0 -pg 1 -lvl 1 -y -150 -defaultsOSRD
-preplace inst hsv_to_rgb_0 -pg 1 -lvl 3 -y -70 -defaultsOSRD
-preplace inst PWM_0 -pg 1 -lvl 4 -y -60 -defaultsOSRD
-preplace inst BTNs_test_0 -pg 1 -lvl 2 -y -220 -defaultsOSRD
-preplace inst clk_wiz_1 -pg 1 -lvl 2 -y -10 -defaultsOSRD
-preplace netloc sost_0_leds 1 1 4 150J -120 490J -170 NJ -170 1110J
-preplace netloc hsv_to_rgb_0_G 1 3 1 800
+preplace inst sost_0 -pg 1 -lvl 1 -y -140 -defaultsOSRD
+preplace inst hsv_to_rgb_0 -pg 1 -lvl 3 -y -290 -defaultsOSRD
+preplace inst PWM_0 -pg 1 -lvl 4 -y -270 -defaultsOSRD
+preplace inst BTNs_test_0 -pg 1 -lvl 2 -y -300 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 2 -y -10 -defaultsOSRD
+preplace netloc sost_0_leds 1 1 4 NJ -160 NJ -160 NJ -160 NJ
+preplace netloc hsv_to_rgb_0_G 1 3 1 N
 preplace netloc btn1_0_1 1 0 1 N
-preplace netloc BTNs_test_0_Hue 1 2 1 520
-preplace netloc sw_0_1 1 0 2 N -240 N
-preplace netloc sys_clock_1 1 0 2 NJ 0 NJ
-preplace netloc BTNs_test_0_Value 1 2 1 460
-preplace netloc BTNs_test_0_Saturation 1 2 1 500
-preplace netloc clk_wiz_1_clk_out1 1 0 3 -130 -70 160 -80 450
-preplace netloc sost_0_btnSost 1 1 4 120J -110 480J -180 NJ -180 1120J
-preplace netloc PWM_0_rgb_led_tri_o 1 4 1 N
-preplace netloc clk_wiz_1_clk_out2 1 2 2 470 -200 810J
-preplace netloc hsv_to_rgb_0_B 1 3 1 820
-preplace netloc sost_0_sost 1 1 1 140
-preplace netloc btn2_0_1 1 0 2 N -270 130
-preplace netloc reset_1_1 1 0 4 -140 -230 130 -100 510 -190 790
-preplace netloc reset_0_1 1 0 2 -140J -20 N
-preplace netloc hsv_to_rgb_0_R 1 3 1 780
-levelinfo -pg 1 -160 20 320 660 980 1150 -top -740 -bot 260
+preplace netloc BTNs_test_0_Hue 1 2 1 N
+preplace netloc sw_0_1 1 0 2 N -240 20
+preplace netloc BTNs_test_0_Value 1 2 1 N
+preplace netloc BTNs_test_0_Saturation 1 2 1 N
+preplace netloc BTNs_test_0_LED 1 2 3 310J -410 NJ -410 950J
+preplace netloc clk_wiz_0_clk_out1 1 0 4 -210 -230 10 -400 320 -400 640
+preplace netloc clk_in1_0_1 1 0 2 NJ 0 NJ
+preplace netloc sost_0_btnSost 1 1 4 NJ -120 NJ -120 NJ -120 950J
+preplace netloc PWM_0_rgb_led_tri_o 1 4 1 940
+preplace netloc hsv_to_rgb_0_B 1 3 1 N
+preplace netloc sost_0_sost 1 1 1 30
+preplace netloc btn2_0_1 1 0 2 N -270 -10
+preplace netloc reset_1_1 1 0 4 -220 -220 0 -410 300 -390 630
+preplace netloc reset_0_1 1 0 2 -210J -20 N
+preplace netloc hsv_to_rgb_0_R 1 3 1 N
+levelinfo -pg 1 -240 -110 170 510 810 1150 -top -740 -bot 260
 ",
 }
 {

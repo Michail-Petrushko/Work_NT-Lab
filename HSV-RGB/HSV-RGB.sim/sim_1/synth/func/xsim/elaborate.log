@@ -1,0 +1,10 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 90b3e6b0c50047ddb9c2941685525904 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot sim_func_synth xil_defaultlib.sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-426] cannot find port clk_in on this module [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.srcs/sim_1/new/sim.v:40]
+ERROR: [VRFC 10-2063] Module <IBUF> not found while processing module instance <btn1_IBUF_inst> [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.sim/sim_1/synth/func/xsim/sim_func_synth.v:24423]
+ERROR: [VRFC 10-2063] Module <OBUF> not found while processing module instance <btnSost_OBUF_inst> [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.sim/sim_1/synth/func/xsim/sim_func_synth.v:24429]
+ERROR: [VRFC 10-2063] Module <design_1> not found while processing module instance <design_1_i> [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB/HSV-RGB.sim/sim_1/synth/func/xsim/sim_func_synth.v:24432]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

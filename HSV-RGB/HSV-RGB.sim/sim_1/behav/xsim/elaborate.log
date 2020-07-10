@@ -12,12 +12,14 @@ Compiling module xil_defaultlib.design_1_BTNs_test_0_2
 Compiling module xil_defaultlib.PWM
 Compiling module xil_defaultlib.design_1_PWM_0_0
 Compiling module unisims_ver.IBUF
-Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=48.0,...
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=8.0,C...
 Compiling module unisims_ver.BUFG
 Compiling module xil_defaultlib.design_1_clk_wiz_0_0_clk_wiz
 Compiling module xil_defaultlib.design_1_clk_wiz_0_0
 Compiling module xil_defaultlib.hsv_to_rgb
 Compiling module xil_defaultlib.design_1_hsv_to_rgb_0_0
+Compiling module xil_defaultlib.sost
+Compiling module xil_defaultlib.design_1_sost_0_0
 Compiling module xil_defaultlib.design_1
 Compiling module xil_defaultlib.design_1_wrapper
 Compiling module xil_defaultlib.sim
