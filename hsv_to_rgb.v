@@ -29,6 +29,8 @@ module hsv_to_rgb(
     integer Hi, Vmin,a, Vinc, Vdec, v;
     reg [7:0] sostR, sostG, sostB;
     
+    (* mark_debug = "true" *) reg signal;
+    
     always@(posedge clk) begin
         if (reset==1) begin                     //reset values
             Hi <= 0;
@@ -72,6 +74,9 @@ module hsv_to_rgb(
              if ((sostG>10)&&(G==0)) G = 255;
              if ((sostB>10)&&(B==0)) B = 255;
              end
+             
+             if (sostR!=R | sostG!=G | sostB!=B) signal=1;
+             else signal=0;
      
         end
       
