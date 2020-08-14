@@ -1,0 +1,1 @@
+set_property -dict {PACKAGE_PIN J14 IOSTANDARD LVCMOS33} [get_ports btnSost]
