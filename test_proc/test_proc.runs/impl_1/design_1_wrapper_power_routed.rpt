@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Sat Aug  8 18:43:15 2020
+| Date             : Tue Aug 18 14:58:01 2020
 | Host             : DESKTOP-TM8D8VH running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.641        |
+| Total On-Chip Power (W)  | 1.637        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.518        |
+| Dynamic (W)              | 1.514        |
 | Device Static (W)        | 0.122        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 66.1         |
@@ -53,20 +53,20 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.005 |        6 |       --- |             --- |
-| Slice Logic             |     0.004 |     7917 |       --- |             --- |
-|   LUT as Logic          |     0.003 |     3472 |     17600 |           19.73 |
-|   CARRY4                |    <0.001 |      372 |      4400 |            8.45 |
-|   Register              |    <0.001 |     2837 |     35200 |            8.06 |
-|   F7/F8 Muxes           |    <0.001 |      151 |     17600 |            0.86 |
+| Slice Logic             |     0.002 |     7286 |       --- |             --- |
+|   LUT as Logic          |     0.001 |     3082 |     17600 |           17.51 |
+|   CARRY4                |    <0.001 |      269 |      4400 |            6.11 |
+|   Register              |    <0.001 |     2744 |     35200 |            7.80 |
+|   F7/F8 Muxes           |    <0.001 |      150 |     17600 |            0.85 |
 |   LUT as Shift Register |    <0.001 |       62 |      6000 |            1.03 |
-|   Others                |     0.000 |      254 |       --- |             --- |
-| Signals                 |     0.004 |     6379 |       --- |             --- |
+|   Others                |     0.000 |      247 |       --- |             --- |
+| Signals                 |     0.002 |     5776 |       --- |             --- |
 | MMCM                    |     0.106 |        1 |         2 |           50.00 |
 | DSPs                    |    <0.001 |        4 |        80 |            5.00 |
-| I/O                     |    <0.001 |       17 |       100 |           17.00 |
+| I/O                     |    <0.001 |       16 |       100 |           16.00 |
 | PS7                     |     1.399 |        1 |       --- |             --- |
 | Static Power            |     0.122 |          |           |                 |
-| Total                   |     1.641 |          |           |                 |
+| Total                   |     1.636 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.021 |       0.014 |      0.007 |
+| Vccint    |       1.000 |     0.016 |       0.009 |      0.007 |
 | Vccaux    |       1.800 |     0.067 |       0.059 |      0.008 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -155,13 +155,13 @@ Table of Contents
 +-----------------------------------------------------------------------------+-----------+
 | Name                                                                        | Power (W) |
 +-----------------------------------------------------------------------------+-----------+
-| design_1_wrapper                                                            |     1.518 |
-|   design_1_i                                                                |     1.518 |
-|     BTNs_test_0                                                             |     0.004 |
-|       inst                                                                  |     0.004 |
+| design_1_wrapper                                                            |     1.514 |
+|   design_1_i                                                                |     1.514 |
+|     FSM_0                                                                   |    <0.001 |
+|       inst                                                                  |    <0.001 |
 |     PWM_0                                                                   |    <0.001 |
 |       inst                                                                  |    <0.001 |
-|     axi_gpio_btns_in_out                                                    |    <0.001 |
+|     axi_gpio_btns                                                           |    <0.001 |
 |       U0                                                                    |    <0.001 |
 |         AXI_LITE_IPIF_I                                                     |    <0.001 |
 |           I_SLAVE_ATTACHMENT                                                |    <0.001 |
@@ -169,8 +169,8 @@ Table of Contents
 |               MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I |    <0.001 |
 |               MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I |    <0.001 |
 |         gpio_core_1                                                         |    <0.001 |
-|           Dual.INPUT_DOUBLE_REGS4                                           |    <0.001 |
-|     axi_gpio_leds_in_out                                                    |    <0.001 |
+|           Not_Dual.INPUT_DOUBLE_REGS3                                       |    <0.001 |
+|     axi_gpio_data                                                           |    <0.001 |
 |       U0                                                                    |    <0.001 |
 |         AXI_LITE_IPIF_I                                                     |    <0.001 |
 |           I_SLAVE_ATTACHMENT                                                |    <0.001 |
@@ -178,8 +178,7 @@ Table of Contents
 |               MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I |    <0.001 |
 |               MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I |    <0.001 |
 |         gpio_core_1                                                         |    <0.001 |
-|           Dual.INPUT_DOUBLE_REGS4                                           |    <0.001 |
-|     axi_gpio_rgb_in_out                                                     |    <0.001 |
+|     axi_gpio_leds                                                           |    <0.001 |
 |       U0                                                                    |    <0.001 |
 |         AXI_LITE_IPIF_I                                                     |    <0.001 |
 |           I_SLAVE_ATTACHMENT                                                |    <0.001 |
@@ -187,8 +186,7 @@ Table of Contents
 |               MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I |    <0.001 |
 |               MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I |    <0.001 |
 |         gpio_core_1                                                         |    <0.001 |
-|           Dual.INPUT_DOUBLE_REGS4                                           |    <0.001 |
-|     axi_gpio_sw_in_out                                                      |    <0.001 |
+|     axi_gpio_sws                                                            |    <0.001 |
 |       U0                                                                    |    <0.001 |
 |         AXI_LITE_IPIF_I                                                     |    <0.001 |
 |           I_SLAVE_ATTACHMENT                                                |    <0.001 |
@@ -196,7 +194,7 @@ Table of Contents
 |               MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I |    <0.001 |
 |               MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I |    <0.001 |
 |         gpio_core_1                                                         |    <0.001 |
-|           Dual.INPUT_DOUBLE_REGS4                                           |    <0.001 |
+|           Not_Dual.INPUT_DOUBLE_REGS3                                       |    <0.001 |
 |     clk_wiz_0                                                               |     0.109 |
 |       inst                                                                  |     0.109 |
 |         AXI_LITE_IPIF_I                                                     |    <0.001 |
@@ -206,8 +204,8 @@ Table of Contents
 |           clk_inst                                                          |     0.106 |
 |           mmcm_drp_inst                                                     |    <0.001 |
 |         SOFT_RESET_I                                                        |    <0.001 |
-|     hsv_to_rgb_0                                                            |     0.002 |
-|       inst                                                                  |     0.002 |
+|     hsv_to_rgb_0_1                                                          |     0.001 |
+|       inst                                                                  |     0.001 |
 |     processing_system7_0                                                    |     1.400 |
 |       inst                                                                  |     1.400 |
 |     ps7_0_axi_periph                                                        |     0.003 |
@@ -251,8 +249,6 @@ Table of Contents
 |           ACTIVE_LOW_EXT.ACT_LO_EXT                                         |    <0.001 |
 |         SEQ                                                                 |    <0.001 |
 |           SEQ_COUNTER                                                       |    <0.001 |
-|     sost_0                                                                  |    <0.001 |
-|       inst                                                                  |    <0.001 |
 +-----------------------------------------------------------------------------+-----------+
 
 

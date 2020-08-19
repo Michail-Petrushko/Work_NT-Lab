@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# BTNs_test, PWM, hsv_to_rgb, sost
+# FSM, PWM, hsv_to_rgb
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -167,24 +167,23 @@ proc create_root_design { parentCell } {
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
   set btns_4bits [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 btns_4bits ]
   set leds_4bits [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 leds_4bits ]
-  set rgb_led [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 rgb_led ]
   set sws_4bits [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 sws_4bits ]
 
   # Create ports
-  set btnSost [ create_bd_port -dir O btnSost ]
+  set rgb_led_tri_o [ create_bd_port -dir O -from 2 -to 0 rgb_led_tri_o ]
   set sys_clock [ create_bd_port -dir I -type clk sys_clock ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {125000000} \
    CONFIG.PHASE {0.000} \
  ] $sys_clock
 
-  # Create instance: BTNs_test_0, and set properties
-  set block_name BTNs_test
-  set block_cell_name BTNs_test_0
-  if { [catch {set BTNs_test_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+  # Create instance: FSM_0, and set properties
+  set block_name FSM
+  set block_cell_name FSM_0
+  if { [catch {set FSM_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
      catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
-   } elseif { $BTNs_test_0 eq "" } {
+   } elseif { $FSM_0 eq "" } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
@@ -200,52 +199,39 @@ proc create_root_design { parentCell } {
      return 1
    }
   
-  # Create instance: axi_gpio_btns_in_out, and set properties
-  set axi_gpio_btns_in_out [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_btns_in_out ]
+  # Create instance: axi_gpio_btns, and set properties
+  set axi_gpio_btns [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_btns ]
   set_property -dict [ list \
-   CONFIG.C_ALL_OUTPUTS_2 {1} \
-   CONFIG.C_GPIO2_WIDTH {4} \
-   CONFIG.C_IS_DUAL {1} \
    CONFIG.GPIO_BOARD_INTERFACE {btns_4bits} \
    CONFIG.USE_BOARD_FLOW {true} \
- ] $axi_gpio_btns_in_out
+ ] $axi_gpio_btns
 
-  # Create instance: axi_gpio_leds_in_out, and set properties
-  set axi_gpio_leds_in_out [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_leds_in_out ]
+  # Create instance: axi_gpio_data, and set properties
+  set axi_gpio_data [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_data ]
   set_property -dict [ list \
-   CONFIG.C_ALL_INPUTS {1} \
-   CONFIG.C_ALL_INPUTS_2 {0} \
-   CONFIG.C_ALL_OUTPUTS {0} \
-   CONFIG.C_GPIO2_WIDTH {4} \
+   CONFIG.C_ALL_INPUTS {0} \
+   CONFIG.C_ALL_OUTPUTS {1} \
+   CONFIG.C_ALL_OUTPUTS_2 {1} \
+   CONFIG.C_GPIO2_WIDTH {1} \
+   CONFIG.C_GPIO_WIDTH {27} \
    CONFIG.C_IS_DUAL {1} \
-   CONFIG.GPIO2_BOARD_INTERFACE {leds_4bits} \
    CONFIG.GPIO_BOARD_INTERFACE {Custom} \
    CONFIG.USE_BOARD_FLOW {true} \
- ] $axi_gpio_leds_in_out
+ ] $axi_gpio_data
 
-  # Create instance: axi_gpio_rgb_in_out, and set properties
-  set axi_gpio_rgb_in_out [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_rgb_in_out ]
+  # Create instance: axi_gpio_leds, and set properties
+  set axi_gpio_leds [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_leds ]
   set_property -dict [ list \
-   CONFIG.C_ALL_INPUTS {1} \
-   CONFIG.C_ALL_INPUTS_2 {0} \
-   CONFIG.C_ALL_OUTPUTS {0} \
-   CONFIG.C_ALL_OUTPUTS_2 {1} \
-   CONFIG.C_GPIO2_WIDTH {3} \
-   CONFIG.C_IS_DUAL {1} \
-   CONFIG.GPIO2_BOARD_INTERFACE {rgb_led} \
-   CONFIG.GPIO_BOARD_INTERFACE {Custom} \
+   CONFIG.GPIO_BOARD_INTERFACE {leds_4bits} \
    CONFIG.USE_BOARD_FLOW {true} \
- ] $axi_gpio_rgb_in_out
+ ] $axi_gpio_leds
 
-  # Create instance: axi_gpio_sw_in_out, and set properties
-  set axi_gpio_sw_in_out [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_sw_in_out ]
+  # Create instance: axi_gpio_sws, and set properties
+  set axi_gpio_sws [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_sws ]
   set_property -dict [ list \
-   CONFIG.C_ALL_OUTPUTS_2 {1} \
-   CONFIG.C_GPIO2_WIDTH {4} \
-   CONFIG.C_IS_DUAL {1} \
    CONFIG.GPIO_BOARD_INTERFACE {sws_4bits} \
    CONFIG.USE_BOARD_FLOW {true} \
- ] $axi_gpio_sw_in_out
+ ] $axi_gpio_sws
 
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
@@ -261,13 +247,13 @@ proc create_root_design { parentCell } {
    CONFIG.USE_DYN_RECONFIG {true} \
  ] $clk_wiz_0
 
-  # Create instance: hsv_to_rgb_0, and set properties
+  # Create instance: hsv_to_rgb_0_1, and set properties
   set block_name hsv_to_rgb
-  set block_cell_name hsv_to_rgb_0
-  if { [catch {set hsv_to_rgb_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+  set block_cell_name hsv_to_rgb_0_1
+  if { [catch {set hsv_to_rgb_0_1 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
      catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
-   } elseif { $hsv_to_rgb_0 eq "" } {
+   } elseif { $hsv_to_rgb_0_1 eq "" } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
@@ -754,56 +740,41 @@ proc create_root_design { parentCell } {
   # Create instance: rst_ps7_0_50M, and set properties
   set rst_ps7_0_50M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_50M ]
 
-  # Create instance: sost_0, and set properties
-  set block_name sost
-  set block_cell_name sost_0
-  if { [catch {set sost_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $sost_0 eq "" } {
-     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
   # Create interface connections
-  connect_bd_intf_net -intf_net axi_gpio_0_GPIO [get_bd_intf_ports btns_4bits] [get_bd_intf_pins axi_gpio_btns_in_out/GPIO]
-  connect_bd_intf_net -intf_net axi_gpio_leds_in_out_GPIO2 [get_bd_intf_ports leds_4bits] [get_bd_intf_pins axi_gpio_leds_in_out/GPIO2]
-  connect_bd_intf_net -intf_net axi_gpio_rgb_in_out_GPIO2 [get_bd_intf_ports rgb_led] [get_bd_intf_pins axi_gpio_rgb_in_out/GPIO2]
-  connect_bd_intf_net -intf_net axi_gpio_sw_in_out_GPIO [get_bd_intf_ports sws_4bits] [get_bd_intf_pins axi_gpio_sw_in_out/GPIO]
+  connect_bd_intf_net -intf_net axi_gpio_0_GPIO [get_bd_intf_ports btns_4bits] [get_bd_intf_pins axi_gpio_btns/GPIO]
+  connect_bd_intf_net -intf_net axi_gpio_1_GPIO [get_bd_intf_ports leds_4bits] [get_bd_intf_pins axi_gpio_leds/GPIO]
+  connect_bd_intf_net -intf_net axi_gpio_2_GPIO [get_bd_intf_ports sws_4bits] [get_bd_intf_pins axi_gpio_sws/GPIO]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins axi_gpio_btns_in_out/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins axi_gpio_sw_in_out/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M01_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins axi_gpio_btns/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins axi_gpio_leds/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M01_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M02_AXI [get_bd_intf_pins clk_wiz_0/s_axi_lite] [get_bd_intf_pins ps7_0_axi_periph/M02_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M03_AXI [get_bd_intf_pins axi_gpio_leds_in_out/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M03_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M04_AXI [get_bd_intf_pins axi_gpio_rgb_in_out/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M04_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M03_AXI [get_bd_intf_pins axi_gpio_sws/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M03_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M04_AXI [get_bd_intf_pins axi_gpio_data/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M04_AXI]
 
   # Create port connections
-  connect_bd_net -net BTNs_test_0_Hue [get_bd_pins BTNs_test_0/Hue] [get_bd_pins hsv_to_rgb_0/Hue]
-  connect_bd_net -net BTNs_test_0_Saturation [get_bd_pins BTNs_test_0/Saturation] [get_bd_pins hsv_to_rgb_0/Saturation]
-  connect_bd_net -net BTNs_test_0_Value [get_bd_pins BTNs_test_0/Value] [get_bd_pins hsv_to_rgb_0/Value]
-  connect_bd_net -net PWM_0_rgb_led_tri_o [get_bd_pins PWM_0/rgb_led_tri_o] [get_bd_pins axi_gpio_rgb_in_out/gpio_io_i]
-  connect_bd_net -net axi_gpio_btns_in_out_gpio2_io_o [get_bd_pins BTNs_test_0/btns] [get_bd_pins PWM_0/btns] [get_bd_pins axi_gpio_btns_in_out/gpio2_io_o] [get_bd_pins hsv_to_rgb_0/btns] [get_bd_pins sost_0/btns]
-  connect_bd_net -net axi_gpio_sw_in_out_gpio2_io_o [get_bd_pins BTNs_test_0/sw] [get_bd_pins axi_gpio_sw_in_out/gpio2_io_o]
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins BTNs_test_0/clk] [get_bd_pins PWM_0/clk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins hsv_to_rgb_0/clk] [get_bd_pins sost_0/clk]
-  connect_bd_net -net hsv_to_rgb_0_B [get_bd_pins PWM_0/B] [get_bd_pins hsv_to_rgb_0/B]
-  connect_bd_net -net hsv_to_rgb_0_G [get_bd_pins PWM_0/G] [get_bd_pins hsv_to_rgb_0/G]
-  connect_bd_net -net hsv_to_rgb_0_R [get_bd_pins PWM_0/R] [get_bd_pins hsv_to_rgb_0/R]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_gpio_btns_in_out/s_axi_aclk] [get_bd_pins axi_gpio_leds_in_out/s_axi_aclk] [get_bd_pins axi_gpio_rgb_in_out/s_axi_aclk] [get_bd_pins axi_gpio_sw_in_out/s_axi_aclk] [get_bd_pins clk_wiz_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/M03_ACLK] [get_bd_pins ps7_0_axi_periph/M04_ACLK] [get_bd_pins ps7_0_axi_periph/M05_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
+  connect_bd_net -net FSM_0_Hue [get_bd_pins FSM_0/Hue] [get_bd_pins hsv_to_rgb_0_1/Hue]
+  connect_bd_net -net FSM_0_Saturation [get_bd_pins FSM_0/Saturation] [get_bd_pins hsv_to_rgb_0_1/Saturation]
+  connect_bd_net -net FSM_0_Value [get_bd_pins FSM_0/Value] [get_bd_pins hsv_to_rgb_0_1/Value]
+  connect_bd_net -net Net [get_bd_pins FSM_0/clk] [get_bd_pins PWM_0/clk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins hsv_to_rgb_0_1/clk]
+  connect_bd_net -net PWM_0_rgb_led_tri_o [get_bd_ports rgb_led_tri_o] [get_bd_pins PWM_0/rgb_led_tri_o]
+  connect_bd_net -net axi_gpio_data_gpio2_io_o [get_bd_pins FSM_0/readBit] [get_bd_pins axi_gpio_data/gpio2_io_o]
+  connect_bd_net -net axi_gpio_data_gpio_io_o [get_bd_pins FSM_0/data] [get_bd_pins axi_gpio_data/gpio_io_o]
+  connect_bd_net -net hsv_to_rgb_0_B [get_bd_pins PWM_0/B] [get_bd_pins hsv_to_rgb_0_1/B]
+  connect_bd_net -net hsv_to_rgb_0_G [get_bd_pins PWM_0/G] [get_bd_pins hsv_to_rgb_0_1/G]
+  connect_bd_net -net hsv_to_rgb_0_R [get_bd_pins PWM_0/R] [get_bd_pins hsv_to_rgb_0_1/R]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_gpio_btns/s_axi_aclk] [get_bd_pins axi_gpio_data/s_axi_aclk] [get_bd_pins axi_gpio_leds/s_axi_aclk] [get_bd_pins axi_gpio_sws/s_axi_aclk] [get_bd_pins clk_wiz_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/M03_ACLK] [get_bd_pins ps7_0_axi_periph/M04_ACLK] [get_bd_pins ps7_0_axi_periph/M05_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
   connect_bd_net -net rst_ps7_0_50M_interconnect_aresetn [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins rst_ps7_0_50M/interconnect_aresetn]
-  connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins axi_gpio_btns_in_out/s_axi_aresetn] [get_bd_pins axi_gpio_leds_in_out/s_axi_aresetn] [get_bd_pins axi_gpio_rgb_in_out/s_axi_aresetn] [get_bd_pins axi_gpio_sw_in_out/s_axi_aresetn] [get_bd_pins clk_wiz_0/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/M03_ARESETN] [get_bd_pins ps7_0_axi_periph/M04_ARESETN] [get_bd_pins ps7_0_axi_periph/M05_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
-  connect_bd_net -net sost_0_btnSost [get_bd_ports btnSost] [get_bd_pins sost_0/btnSost]
-  connect_bd_net -net sost_0_leds [get_bd_pins axi_gpio_leds_in_out/gpio_io_i] [get_bd_pins sost_0/leds]
-  connect_bd_net -net sost_0_sost [get_bd_pins BTNs_test_0/sost] [get_bd_pins sost_0/sost]
+  connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins FSM_0/reset] [get_bd_pins PWM_0/reset] [get_bd_pins axi_gpio_btns/s_axi_aresetn] [get_bd_pins axi_gpio_data/s_axi_aresetn] [get_bd_pins axi_gpio_leds/s_axi_aresetn] [get_bd_pins axi_gpio_sws/s_axi_aresetn] [get_bd_pins clk_wiz_0/s_axi_aresetn] [get_bd_pins hsv_to_rgb_0_1/reset] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/M03_ARESETN] [get_bd_pins ps7_0_axi_periph/M04_ARESETN] [get_bd_pins ps7_0_axi_periph/M05_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
   connect_bd_net -net sys_clock_1 [get_bd_ports sys_clock] [get_bd_pins clk_wiz_0/clk_in1]
 
   # Create address segments
-  create_bd_addr_seg -range 0x00010000 -offset 0x41200000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_btns_in_out/S_AXI/Reg] SEG_axi_gpio_0_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x41220000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_leds_in_out/S_AXI/Reg] SEG_axi_gpio_leds_in_out_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x41230000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_rgb_in_out/S_AXI/Reg] SEG_axi_gpio_rgb_in_out_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x41210000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_sw_in_out/S_AXI/Reg] SEG_axi_gpio_sw_in_out_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x41200000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_btns/S_AXI/Reg] SEG_axi_gpio_0_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x41210000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_leds/S_AXI/Reg] SEG_axi_gpio_1_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x41220000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_sws/S_AXI/Reg] SEG_axi_gpio_2_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x41230000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_data/S_AXI/Reg] SEG_axi_gpio_3_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x43C00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs clk_wiz_0/s_axi_lite/Reg] SEG_clk_wiz_0_Reg
 
 

@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Sat Aug  8 18:36:09 2020
+//Date        : Tue Aug 18 14:50:36 2020
 //Host        : DESKTOP-TM8D8VH running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -31,7 +31,6 @@ module design_1_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    btnSost,
     btns_4bits_tri_i,
     leds_4bits_tri_o,
     rgb_led_tri_o,
@@ -58,7 +57,6 @@ module design_1_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  output btnSost;
   input [3:0]btns_4bits_tri_i;
   output [3:0]leds_4bits_tri_o;
   output [2:0]rgb_led_tri_o;
@@ -86,7 +84,6 @@ module design_1_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire btnSost;
   wire [3:0]btns_4bits_tri_i;
   wire [3:0]leds_4bits_tri_o;
   wire [2:0]rgb_led_tri_o;
@@ -115,7 +112,6 @@ module design_1_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .btnSost(btnSost),
         .btns_4bits_tri_i(btns_4bits_tri_i),
         .leds_4bits_tri_o(leds_4bits_tri_o),
         .rgb_led_tri_o(rgb_led_tri_o),

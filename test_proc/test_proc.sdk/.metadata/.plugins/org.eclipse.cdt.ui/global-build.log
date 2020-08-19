@@ -427,3 +427,2524 @@ arm-none-eabi-size proc_test.elf  |tee "proc_test.elf.size"
   20864	   1208	  22600	  44672	   ae80	proc_test.elf
 'Finished building: proc_test.elf.size'
 ' '
+14:03:45 **** Build of project proc_test_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/clk_wiz_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/clk_wiz_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/clk_wiz_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/clk_wiz_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling Clkocking Wizard"
+xclk_wiz_intr.c: In function 'XClk_Wiz_SetCallBack':
+xclk_wiz_intr.c:246:28: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    InstancePtr->ClkStopRef = CallBackRef;
+    ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+xclk_wiz_intr.c:247:3: note: here
+   case XCLK_WIZ_HANDLER_CLK_OTHER_ERROR:
+   ^~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from sleep.c:57:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from usleep.c:60:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:55:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:53:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+14:04:41 **** Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:17:
+../src/LED_test_new.c: In function 'LEDsInOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:47:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:36:6: note: declared here
+ void LEDsInOut()
+      ^~~~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:17:
+../src/LED_test_new.c: In function 'BTNsInOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:69:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:59:6: note: declared here
+ void BTNsInOut()
+      ^~~~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:17:
+../src/LED_test_new.c: In function 'SWInOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:94:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:84:6: note: declared here
+ void SWInOut()
+      ^~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:17:
+../src/LED_test_new.c: In function 'RGBInOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:118:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:108:6: note: declared here
+ void RGBInOut()
+      ^~~~~~~~
+'Finished building: ../src/LED_test_new.c'
+' '
+'Building target: proc_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../proc_test_bsp/ps7_cortexa9_0/lib -o "proc_test.elf"  ./src/LED_test_new.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: proc_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size proc_test.elf  |tee "proc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20864	   1208	  22600	  44672	   ae80	proc_test.elf
+'Finished building: proc_test.elf.size'
+' '
+18:10:16 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../src/LED_test_new.c:16:0:
+../../proc_test_bsp/ps7_cortexa9_0/include/xparameters.h:19:10: fatal error: xparameters_ps.h: No such file or directory
+ #include "xparameters_ps.h"
+          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/LED_test_new.o] Ошибка 1
+18:38:46 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../src/LED_test_new.c:16:0:
+../../proc_test_bsp/ps7_cortexa9_0/include/xparameters.h:19:10: fatal error: xparameters_ps.h: No such file or directory
+ #include "xparameters_ps.h"
+          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/LED_test_new.o] Ошибка 1
+18:41:32 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../src/LED_test_new.c:15:0:
+../../proc_test_bsp/ps7_cortexa9_0/include/xparameters.h:19:10: fatal error: xparameters_ps.h: No such file or directory
+ #include "xparameters_ps.h"
+          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/LED_test_new.o] Ошибка 1
+14:17:07 **** Auto Build of project proc_test_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/clk_wiz_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/clk_wiz_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/clk_wiz_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/clk_wiz_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling Clkocking Wizard"
+xclk_wiz_intr.c: In function 'XClk_Wiz_SetCallBack':
+xclk_wiz_intr.c:246:28: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    InstancePtr->ClkStopRef = CallBackRef;
+    ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+xclk_wiz_intr.c:247:3: note: here
+   case XCLK_WIZ_HANDLER_CLK_OTHER_ERROR:
+   ^~~~
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+14:18:07 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:48:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:73:11: error: subscripted value is neither array nor pointer nor vector
+   if (data[1]==1){
+           ^
+../src/LED_test_new.c:74:6: error: unknown type name 'XScuTimer'
+      XScuTimer time;
+      ^~~~~~~~~
+../src/LED_test_new.c:75:6: warning: implicit declaration of function 'XScuTimer_Start' [-Wimplicit-function-declaration]
+      XScuTimer_Start(time);
+      ^~~~~~~~~~~~~~~
+../src/LED_test_new.c:76:17: error: subscripted value is neither array nor pointer nor vector
+      while (data[1]==1) data = XGpio_DiscreteRead(&Gpio, 1);
+                 ^
+../src/LED_test_new.c:77:6: warning: implicit declaration of function 'XScuTimer_Stop' [-Wimplicit-function-declaration]
+      XScuTimer_Stop(time);
+      ^~~~~~~~~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:97:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:87:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:91:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:119:13: error: too few arguments to function 'BTNs'
+   btnData = BTNs();
+             ^~~~
+../src/LED_test_new.c:56:5: note: declared here
+ int BTNs(int sost)
+     ^~~~
+../src/LED_test_new.c:120:14: error: subscripted value is neither array nor pointer nor vector
+   if (btnData[1]==1) btnTimer();
+              ^
+../src/LED_test_new.c:120:22: warning: implicit declaration of function 'btnTimer'; did you mean 'ctime_r'? [-Wimplicit-function-declaration]
+   if (btnData[1]==1) btnTimer();
+                      ^~~~~~~~
+                      ctime_r
+../src/LED_test_new.c:121:3: error: too few arguments to function 'LEDs'
+   LEDs();
+   ^~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c:115:6: warning: variable 'btnData' set but not used [-Wunused-but-set-variable]
+  int btnData=0;
+      ^~~~~~~
+make: *** [src/LED_test_new.o] Ошибка 1
+14:26:29 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:48:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:74:6: error: unknown type name 'XScuTimer'
+      XScuTimer time;
+      ^~~~~~~~~
+../src/LED_test_new.c:75:6: warning: implicit declaration of function 'XScuTimer_Start' [-Wimplicit-function-declaration]
+      XScuTimer_Start(time);
+      ^~~~~~~~~~~~~~~
+../src/LED_test_new.c:76:17: error: subscripted value is neither array nor pointer nor vector
+      while (data[1]==1) data = XGpio_DiscreteRead(&Gpio, 1);
+                 ^
+../src/LED_test_new.c:77:6: warning: implicit declaration of function 'XScuTimer_Stop' [-Wimplicit-function-declaration]
+      XScuTimer_Stop(time);
+      ^~~~~~~~~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:97:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:87:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:91:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:119:13: error: too few arguments to function 'BTNs'
+   btnData = BTNs();
+             ^~~~
+../src/LED_test_new.c:56:5: note: declared here
+ int BTNs(int sost)
+     ^~~~
+../src/LED_test_new.c:120:14: error: subscripted value is neither array nor pointer nor vector
+   if (btnData[1]==1) btnTimer();
+              ^
+../src/LED_test_new.c:120:22: warning: implicit declaration of function 'btnTimer'; did you mean 'ctime_r'? [-Wimplicit-function-declaration]
+   if (btnData[1]==1) btnTimer();
+                      ^~~~~~~~
+                      ctime_r
+../src/LED_test_new.c:121:3: error: too few arguments to function 'LEDs'
+   LEDs();
+   ^~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c:115:6: warning: variable 'btnData' set but not used [-Wunused-but-set-variable]
+  int btnData=0;
+      ^~~~~~~
+make: *** [src/LED_test_new.o] Ошибка 1
+14:27:02 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:48:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:75:6: warning: implicit declaration of function 'XScuTimer_Start' [-Wimplicit-function-declaration]
+      XScuTimer_Start(time);
+      ^~~~~~~~~~~~~~~
+../src/LED_test_new.c:77:6: warning: implicit declaration of function 'XScuTimer_Stop' [-Wimplicit-function-declaration]
+      XScuTimer_Stop(time);
+      ^~~~~~~~~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:97:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:87:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:91:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:119:13: error: too few arguments to function 'BTNs'
+   btnData = BTNs();
+             ^~~~
+../src/LED_test_new.c:56:5: note: declared here
+ int BTNs(int sost)
+     ^~~~
+../src/LED_test_new.c:120:14: error: subscripted value is neither array nor pointer nor vector
+   if (btnData[1]==1) btnTimer();
+              ^
+../src/LED_test_new.c:120:22: warning: implicit declaration of function 'btnTimer'; did you mean 'ctime_r'? [-Wimplicit-function-declaration]
+   if (btnData[1]==1) btnTimer();
+                      ^~~~~~~~
+                      ctime_r
+../src/LED_test_new.c:121:3: error: too few arguments to function 'LEDs'
+   LEDs();
+   ^~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c:115:6: warning: variable 'btnData' set but not used [-Wunused-but-set-variable]
+  int btnData=0;
+      ^~~~~~~
+make: *** [src/LED_test_new.o] Ошибка 1
+14:28:51 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:48:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:74:6: error: unknown type name 'XScuTimer'
+      XScuTimer time;
+      ^~~~~~~~~
+../src/LED_test_new.c:75:6: warning: implicit declaration of function 'XScuTimer_Start' [-Wimplicit-function-declaration]
+      XScuTimer_Start(time);
+      ^~~~~~~~~~~~~~~
+../src/LED_test_new.c:78:6: warning: implicit declaration of function 'XScuTimer_Stop' [-Wimplicit-function-declaration]
+      XScuTimer_Stop(time);
+      ^~~~~~~~~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:98:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:88:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:92:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:120:13: error: too few arguments to function 'BTNs'
+   btnData = BTNs();
+             ^~~~
+../src/LED_test_new.c:56:5: note: declared here
+ int BTNs(int sost)
+     ^~~~
+../src/LED_test_new.c:121:14: error: subscripted value is neither array nor pointer nor vector
+   if (btnData[1]==1) btnTimer();
+              ^
+../src/LED_test_new.c:121:22: warning: implicit declaration of function 'btnTimer'; did you mean 'ctime_r'? [-Wimplicit-function-declaration]
+   if (btnData[1]==1) btnTimer();
+                      ^~~~~~~~
+                      ctime_r
+../src/LED_test_new.c:122:3: error: too few arguments to function 'LEDs'
+   LEDs();
+   ^~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c:116:6: warning: variable 'btnData' set but not used [-Wunused-but-set-variable]
+  int btnData=0;
+      ^~~~~~~
+make: *** [src/LED_test_new.o] Ошибка 1
+14:30:15 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:48:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:76:6: warning: implicit declaration of function 'XScuTimer_Start' [-Wimplicit-function-declaration]
+      XScuTimer_Start(time);
+      ^~~~~~~~~~~~~~~
+../src/LED_test_new.c:79:6: warning: implicit declaration of function 'XScuTimer_Stop' [-Wimplicit-function-declaration]
+      XScuTimer_Stop(time);
+      ^~~~~~~~~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:99:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:89:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:93:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:121:13: error: too few arguments to function 'BTNs'
+   btnData = BTNs();
+             ^~~~
+../src/LED_test_new.c:56:5: note: declared here
+ int BTNs(int sost)
+     ^~~~
+../src/LED_test_new.c:122:14: error: subscripted value is neither array nor pointer nor vector
+   if (btnData[1]==1) btnTimer();
+              ^
+../src/LED_test_new.c:122:22: warning: implicit declaration of function 'btnTimer'; did you mean 'ctime_r'? [-Wimplicit-function-declaration]
+   if (btnData[1]==1) btnTimer();
+                      ^~~~~~~~
+                      ctime_r
+../src/LED_test_new.c:123:3: error: too few arguments to function 'LEDs'
+   LEDs();
+   ^~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c:117:6: warning: variable 'btnData' set but not used [-Wunused-but-set-variable]
+  int btnData=0;
+      ^~~~~~~
+make: *** [src/LED_test_new.o] Ошибка 1
+14:40:38 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:48:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:60:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:84:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:74:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:78:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:102:2: error: unknown type name 'bool'; did you mean '_Bool'?
+  bool readBit = 0;
+  ^~~~
+  _Bool
+../src/LED_test_new.c:104:6: warning: unused variable 'H' [-Wunused-variable]
+  int H = 120;
+      ^
+../src/LED_test_new.c:103:6: warning: unused variable 'state' [-Wunused-variable]
+  int state = 0;
+      ^~~~~
+../src/LED_test_new.c:102:7: warning: unused variable 'readBit' [-Wunused-variable]
+  bool readBit = 0;
+       ^~~~~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:72:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/LED_test_new.o] Ошибка 1
+14:40:54 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:48:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:60:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:84:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:74:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:78:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:102:2: error: unknown type name 'boolean'
+  boolean a =1;
+  ^~~~~~~
+../src/LED_test_new.c:103:2: error: unknown type name 'bool'; did you mean '_Bool'?
+  bool readBit = 0;
+  ^~~~
+  _Bool
+../src/LED_test_new.c:105:6: warning: unused variable 'H' [-Wunused-variable]
+  int H = 120;
+      ^
+../src/LED_test_new.c:104:6: warning: unused variable 'state' [-Wunused-variable]
+  int state = 0;
+      ^~~~~
+../src/LED_test_new.c:103:7: warning: unused variable 'readBit' [-Wunused-variable]
+  bool readBit = 0;
+       ^~~~~~~
+../src/LED_test_new.c:102:10: warning: unused variable 'a' [-Wunused-variable]
+  boolean a =1;
+          ^
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:72:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/LED_test_new.o] Ошибка 1
+14:45:33 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:48:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:60:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:84:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:74:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:78:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'makeData':
+../src/LED_test_new.c:97:25: warning: suggest parentheses around arithmetic in operand of '^' [-Wparentheses]
+  int data = state + H*4 + S*2^11 + V*2^19;
+             ~~~~~~~~~~~~^~~~~
+../src/LED_test_new.c:97:6: warning: unused variable 'data' [-Wunused-variable]
+  int data = state + H*4 + S*2^11 + V*2^19;
+      ^~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:110:6: warning: unused variable 'prevData' [-Wunused-variable]
+  int prevData;
+      ^~~~~~~~
+../src/LED_test_new.c:109:6: warning: unused variable 'V' [-Wunused-variable]
+  int V = 120;
+      ^
+../src/LED_test_new.c:108:6: warning: unused variable 'S' [-Wunused-variable]
+  int S = 120;
+      ^
+../src/LED_test_new.c:107:6: warning: unused variable 'H' [-Wunused-variable]
+  int H = 120;
+      ^
+../src/LED_test_new.c:106:6: warning: unused variable 'state' [-Wunused-variable]
+  int state = 0;
+      ^~~~~
+../src/LED_test_new.c:105:6: warning: unused variable 'readBit' [-Wunused-variable]
+  int readBit = 0;
+      ^~~~~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:72:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/LED_test_new.c: In function 'makeData':
+../src/LED_test_new.c:98:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/LED_test_new.c'
+' '
+'Building target: proc_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../proc_test_bsp/ps7_cortexa9_0/lib -o "proc_test.elf"  ./src/LED_test_new.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: proc_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size proc_test.elf  |tee "proc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20708	   1208	  22600	  44516	   ade4	proc_test.elf
+'Finished building: proc_test.elf.size'
+' '
+14:46:25 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:48:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:60:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:84:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:74:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:78:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'makeData':
+../src/LED_test_new.c:97:25: warning: suggest parentheses around arithmetic in operand of '^' [-Wparentheses]
+  int data = state + H*4 + S*2^11 + V*2^19;
+             ~~~~~~~~~~~~^~~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:111:6: warning: unused variable 'prevData' [-Wunused-variable]
+  int prevData;
+      ^~~~~~~~
+../src/LED_test_new.c:106:6: warning: unused variable 'readBit' [-Wunused-variable]
+  int readBit = 0;
+      ^~~~~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:72:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/LED_test_new.c'
+' '
+'Building target: proc_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../proc_test_bsp/ps7_cortexa9_0/lib -o "proc_test.elf"  ./src/LED_test_new.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: proc_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size proc_test.elf  |tee "proc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20740	   1208	  22600	  44548	   ae04	proc_test.elf
+'Finished building: proc_test.elf.size'
+' '
+14:58:36 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:48:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:60:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:84:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:74:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:78:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'makeData':
+../src/LED_test_new.c:97:27: warning: implicit declaration of function 'pow2' [-Wimplicit-function-declaration]
+  int data = state + H*4 + pow2(S, 11) + pow2(V, 19);
+                           ^~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:115:6: warning: unused variable 'prevData' [-Wunused-variable]
+  int prevData;
+      ^~~~~~~~
+../src/LED_test_new.c:110:6: warning: unused variable 'readBit' [-Wunused-variable]
+  int readBit = 0;
+      ^~~~~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:72:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/LED_test_new.c'
+' '
+'Building target: proc_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../proc_test_bsp/ps7_cortexa9_0/lib -o "proc_test.elf"  ./src/LED_test_new.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: proc_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size proc_test.elf  |tee "proc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20824	   1208	  22600	  44632	   ae58	proc_test.elf
+'Finished building: proc_test.elf.size'
+' '
+14:59:10 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:48:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:60:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:84:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:74:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:78:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:117:6: warning: unused variable 'prevData' [-Wunused-variable]
+  int prevData;
+      ^~~~~~~~
+../src/LED_test_new.c:112:6: warning: unused variable 'readBit' [-Wunused-variable]
+  int readBit = 0;
+      ^~~~~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:72:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/LED_test_new.c'
+' '
+'Building target: proc_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../proc_test_bsp/ps7_cortexa9_0/lib -o "proc_test.elf"  ./src/LED_test_new.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: proc_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size proc_test.elf  |tee "proc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20824	   1208	  22600	  44632	   ae58	proc_test.elf
+'Finished building: proc_test.elf.size'
+' '
+15:07:23 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:48:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:60:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:85:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:74:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:79:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:121:2: warning: implicit declaration of function 'XGpioPs_ResetHw'; did you mean 'XGpio_ReadReg'? [-Wimplicit-function-declaration]
+  XGpioPs_ResetHw();
+  ^~~~~~~~~~~~~~~
+  XGpio_ReadReg
+../src/LED_test_new.c:113:6: warning: variable 'readBit' set but not used [-Wunused-but-set-variable]
+  int readBit = 0;
+      ^~~~~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:72:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/LED_test_new.c'
+' '
+'Building target: proc_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../proc_test_bsp/ps7_cortexa9_0/lib -o "proc_test.elf"  ./src/LED_test_new.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: proc_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size proc_test.elf  |tee "proc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21072	   1208	  22600	  44880	   af50	proc_test.elf
+'Finished building: proc_test.elf.size'
+' '
+15:11:28 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../src/LED_test_new.c:15:0:
+../../proc_test_bsp/ps7_cortexa9_0/include/xparameters.h:19:10: fatal error: xparameters_ps.h: No such file or directory
+ #include "xparameters_ps.h"
+          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/LED_test_new.o] Ошибка 1
+15:12:33 **** Auto Build of project proc_test_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/clk_wiz_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/clk_wiz_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/clk_wiz_v1_2/src"
+make -C ps7_cortexa9_0/libsrc/clk_wiz_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling Clkocking Wizard"
+xclk_wiz_intr.c: In function 'XClk_Wiz_SetCallBack':
+xclk_wiz_intr.c:246:28: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    InstancePtr->ClkStopRef = CallBackRef;
+    ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+xclk_wiz_intr.c:247:3: note: here
+   case XCLK_WIZ_HANDLER_CLK_OTHER_ERROR:
+   ^~~~
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+15:13:33 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:48:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:60:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:85:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:74:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:79:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'makeData':
+../src/LED_test_new.c:103:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+             ~~~~~~^~~
+../src/LED_test_new.c:103:34: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+                               ~~~^~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:121:2: warning: implicit declaration of function 'XGpioPs_ResetHw'; did you mean 'XGpio_ReadReg'? [-Wimplicit-function-declaration]
+  XGpioPs_ResetHw();
+  ^~~~~~~~~~~~~~~
+  XGpio_ReadReg
+../src/LED_test_new.c:113:6: warning: variable 'readBit' set but not used [-Wunused-but-set-variable]
+  int readBit = 0;
+      ^~~~~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:72:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/LED_test_new.c'
+' '
+'Building target: proc_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../proc_test_bsp/ps7_cortexa9_0/lib -o "proc_test.elf"  ./src/LED_test_new.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: proc_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size proc_test.elf  |tee "proc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21060	   1208	  22600	  44868	   af44	proc_test.elf
+'Finished building: proc_test.elf.size'
+' '
+15:14:10 **** Incremental Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Цель `main-build' не требует выполнения команд.
+15:18:57 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:50:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:40:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:62:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:87:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:76:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:81:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'makeData':
+../src/LED_test_new.c:106:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+             ~~~~~~^~~
+../src/LED_test_new.c:106:34: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+                               ~~~^~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'dataOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:120:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:110:6: note: declared here
+ void dataOut(int data)
+      ^~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'readBitOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:138:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:128:6: note: declared here
+ void readBitOut(int data)
+      ^~~~~~~~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:158:2: warning: implicit declaration of function 'XGpioPs_ResetHw'; did you mean 'XGpio_ReadReg'? [-Wimplicit-function-declaration]
+  XGpioPs_ResetHw();
+  ^~~~~~~~~~~~~~~
+  XGpio_ReadReg
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:74:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/LED_test_new.c'
+' '
+'Building target: proc_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../proc_test_bsp/ps7_cortexa9_0/lib -o "proc_test.elf"  ./src/LED_test_new.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: proc_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size proc_test.elf  |tee "proc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21304	   1208	  22600	  45112	   b038	proc_test.elf
+'Finished building: proc_test.elf.size'
+' '
+15:19:07 **** Incremental Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Цель `main-build' не требует выполнения команд.
+15:20:46 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:50:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:40:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:62:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:87:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:76:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:81:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'makeData':
+../src/LED_test_new.c:106:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+             ~~~~~~^~~
+../src/LED_test_new.c:106:34: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+                               ~~~^~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'dataOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:120:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:110:6: note: declared here
+ void dataOut(int data)
+      ^~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'readBitOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:138:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:128:6: note: declared here
+ void readBitOut(int data)
+      ^~~~~~~~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:74:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/LED_test_new.c'
+' '
+'Building target: proc_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../proc_test_bsp/ps7_cortexa9_0/lib -o "proc_test.elf"  ./src/LED_test_new.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: proc_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size proc_test.elf  |tee "proc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21116	   1208	  22600	  44924	   af7c	proc_test.elf
+'Finished building: proc_test.elf.size'
+' '
+15:21:02 **** Incremental Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Цель `main-build' не требует выполнения команд.
+15:24:20 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:50:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:40:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:62:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:87:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:76:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:81:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'makeData':
+../src/LED_test_new.c:106:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+             ~~~~~~^~~
+../src/LED_test_new.c:106:34: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+                               ~~~^~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'dataOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:120:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:110:6: note: declared here
+ void dataOut(int data)
+      ^~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'readBitOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:138:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:128:6: note: declared here
+ void readBitOut(int data)
+      ^~~~~~~~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:160:6: warning: unused variable 'data' [-Wunused-variable]
+  int data = makeData(state, H, S, V);
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:74:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/LED_test_new.c'
+' '
+'Building target: proc_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../proc_test_bsp/ps7_cortexa9_0/lib -o "proc_test.elf"  ./src/LED_test_new.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: proc_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size proc_test.elf  |tee "proc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21120	   1208	  22600	  44928	   af80	proc_test.elf
+'Finished building: proc_test.elf.size'
+' '
+15:24:47 **** Incremental Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Цель `main-build' не требует выполнения команд.
+15:26:35 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:50:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:40:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:62:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:87:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:76:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:81:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'makeData':
+../src/LED_test_new.c:106:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+             ~~~~~~^~~
+../src/LED_test_new.c:106:34: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+                               ~~~^~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'dataOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:120:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:110:6: note: declared here
+ void dataOut(int data)
+      ^~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'readBitOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:138:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:128:6: note: declared here
+ void readBitOut(int data)
+      ^~~~~~~~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:154:10: error: invalid suffix "b" on integer constant
+  int V = 0b'101010;
+          ^~
+../src/LED_test_new.c:154:12: warning: missing terminating ' character
+  int V = 0b'101010;
+            ^
+../src/LED_test_new.c:154:12: error: missing terminating ' character
+  int V = 0b'101010;
+            ^~~~~~~~
+../src/LED_test_new.c:158:2: error: expected ',' or ';' before 'LEDs'
+  LEDs(5);
+  ^~~~
+../src/LED_test_new.c:160:6: warning: unused variable 'data' [-Wunused-variable]
+  int data = makeData(state, H, S, V);
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:74:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/LED_test_new.o] Ошибка 1
+15:26:46 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:50:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:40:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:62:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:87:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:76:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:81:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'makeData':
+../src/LED_test_new.c:106:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+             ~~~~~~^~~
+../src/LED_test_new.c:106:34: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+                               ~~~^~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'dataOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:120:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:110:6: note: declared here
+ void dataOut(int data)
+      ^~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'readBitOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:138:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:128:6: note: declared here
+ void readBitOut(int data)
+      ^~~~~~~~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:154:10: error: invalid suffix "b" on integer constant
+  int V = 32b'101010;
+          ^~~
+../src/LED_test_new.c:154:13: warning: missing terminating ' character
+  int V = 32b'101010;
+             ^
+../src/LED_test_new.c:154:13: error: missing terminating ' character
+  int V = 32b'101010;
+             ^~~~~~~~
+../src/LED_test_new.c:158:2: error: expected ',' or ';' before 'LEDs'
+  LEDs(5);
+  ^~~~
+../src/LED_test_new.c:160:6: warning: unused variable 'data' [-Wunused-variable]
+  int data = makeData(state, H, S, V);
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:74:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/LED_test_new.o] Ошибка 1
+15:28:19 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:50:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:40:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:62:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:87:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:76:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:81:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'makeData':
+../src/LED_test_new.c:106:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+             ~~~~~~^~~
+../src/LED_test_new.c:106:34: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+                               ~~~^~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'dataOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:120:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:110:6: note: declared here
+ void dataOut(int data)
+      ^~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'readBitOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:138:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:128:6: note: declared here
+ void readBitOut(int data)
+      ^~~~~~~~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:160:6: warning: unused variable 'data' [-Wunused-variable]
+  int data = makeData(state, H, S, V);
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:74:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/LED_test_new.c'
+' '
+'Building target: proc_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../proc_test_bsp/ps7_cortexa9_0/lib -o "proc_test.elf"  ./src/LED_test_new.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: proc_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size proc_test.elf  |tee "proc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21120	   1208	  22600	  44928	   af80	proc_test.elf
+'Finished building: proc_test.elf.size'
+' '
+15:29:04 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:50:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:40:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:62:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:87:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:76:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:81:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'makeData':
+../src/LED_test_new.c:106:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+             ~~~~~~^~~
+../src/LED_test_new.c:106:34: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+                               ~~~^~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'dataOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:120:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:110:6: note: declared here
+ void dataOut(int data)
+      ^~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'readBitOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:138:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:128:6: note: declared here
+ void readBitOut(int data)
+      ^~~~~~~~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:160:11: warning: unused variable 'data' [-Wunused-variable]
+  unsigned data = makeData(state, H, S, V);
+           ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:74:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/LED_test_new.c'
+' '
+'Building target: proc_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../proc_test_bsp/ps7_cortexa9_0/lib -o "proc_test.elf"  ./src/LED_test_new.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: proc_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size proc_test.elf  |tee "proc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21124	   1208	  22600	  44932	   af84	proc_test.elf
+'Finished building: proc_test.elf.size'
+' '
+15:30:53 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:48:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:60:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:85:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:74:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:79:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'makeData':
+../src/LED_test_new.c:104:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+             ~~~~~~^~~
+../src/LED_test_new.c:104:34: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+                               ~~~^~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'dataOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:118:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:108:6: note: declared here
+ void dataOut(int data)
+      ^~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'readBitOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:136:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:126:6: note: declared here
+ void readBitOut(int data)
+      ^~~~~~~~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:158:11: warning: unused variable 'data' [-Wunused-variable]
+  unsigned data = makeData(state, H, S, V);
+           ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:72:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/LED_test_new.c'
+' '
+'Building target: proc_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../proc_test_bsp/ps7_cortexa9_0/lib -o "proc_test.elf"  ./src/LED_test_new.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: proc_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size proc_test.elf  |tee "proc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21124	   1208	  22600	  44932	   af84	proc_test.elf
+'Finished building: proc_test.elf.size'
+' '
+16:19:37 **** Incremental Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Цель `main-build' не требует выполнения команд.
+16:20:16 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:48:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:60:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:85:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:74:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:79:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'makeData':
+../src/LED_test_new.c:104:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+             ~~~~~~^~~
+../src/LED_test_new.c:104:34: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+                               ~~~^~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'dataOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:118:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:108:6: note: declared here
+ void dataOut(int data)
+      ^~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'readBitOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:136:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:126:6: note: declared here
+ void readBitOut(int data)
+      ^~~~~~~~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:158:11: warning: unused variable 'data' [-Wunused-variable]
+  unsigned data = makeData(state, H, S, V);
+           ^~~~
+../src/LED_test_new.c:148:6: warning: variable 'readBit' set but not used [-Wunused-but-set-variable]
+  int readBit = 0;
+      ^~~~~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:72:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/LED_test_new.c'
+' '
+'Building target: proc_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../proc_test_bsp/ps7_cortexa9_0/lib -o "proc_test.elf"  ./src/LED_test_new.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: proc_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size proc_test.elf  |tee "proc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21072	   1208	  22600	  44880	   af50	proc_test.elf
+'Finished building: proc_test.elf.size'
+' '
+16:20:25 **** Incremental Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Цель `main-build' не требует выполнения команд.
+16:21:19 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:48:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:60:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:85:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:74:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:79:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'makeData':
+../src/LED_test_new.c:104:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+             ~~~~~~^~~
+../src/LED_test_new.c:104:34: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+                               ~~~^~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'dataOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:118:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:108:6: note: declared here
+ void dataOut(int data)
+      ^~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'readBitOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:136:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:126:6: note: declared here
+ void readBitOut(int data)
+      ^~~~~~~~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:148:6: warning: variable 'readBit' set but not used [-Wunused-but-set-variable]
+  int readBit = 0;
+      ^~~~~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:72:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/LED_test_new.c'
+' '
+'Building target: proc_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../proc_test_bsp/ps7_cortexa9_0/lib -o "proc_test.elf"  ./src/LED_test_new.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: proc_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size proc_test.elf  |tee "proc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21072	   1208	  22600	  44880	   af50	proc_test.elf
+'Finished building: proc_test.elf.size'
+' '
+16:21:43 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:48:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:60:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:85:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:74:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:79:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'makeData':
+../src/LED_test_new.c:104:19: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+             ~~~~~~^~~
+../src/LED_test_new.c:104:34: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = state + H<<2 + S<<11 + V<<19;
+                               ~~~^~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'dataOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:118:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:108:6: note: declared here
+ void dataOut(int data)
+      ^~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'readBitOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:136:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:126:6: note: declared here
+ void readBitOut(int data)
+      ^~~~~~~~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:148:6: warning: variable 'readBit' set but not used [-Wunused-but-set-variable]
+  int readBit = 0;
+      ^~~~~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:72:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/LED_test_new.c'
+' '
+'Building target: proc_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../proc_test_bsp/ps7_cortexa9_0/lib -o "proc_test.elf"  ./src/LED_test_new.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: proc_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size proc_test.elf  |tee "proc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21072	   1208	  22600	  44880	   af50	proc_test.elf
+'Finished building: proc_test.elf.size'
+' '
+16:21:52 **** Incremental Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Цель `main-build' не требует выполнения команд.
+16:23:51 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:48:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:60:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:85:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:74:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:79:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/LED_test_new.c: In function 'makeData':
+../src/LED_test_new.c:105:15: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = V + S<<8 + H<<16 + state<<25;
+             ~~^~~
+../src/LED_test_new.c:105:30: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+  int data = V + S<<8 + H<<16 + state<<25;
+                           ~~~^~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'dataOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:119:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:109:6: note: declared here
+ void dataOut(int data)
+      ^~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'readBitOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:137:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:127:6: note: declared here
+ void readBitOut(int data)
+      ^~~~~~~~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:149:6: warning: variable 'readBit' set but not used [-Wunused-but-set-variable]
+  int readBit = 0;
+      ^~~~~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:72:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/LED_test_new.c'
+' '
+'Building target: proc_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../proc_test_bsp/ps7_cortexa9_0/lib -o "proc_test.elf"  ./src/LED_test_new.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: proc_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size proc_test.elf  |tee "proc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21072	   1208	  22600	  44880	   af50	proc_test.elf
+'Finished building: proc_test.elf.size'
+' '
+16:24:18 **** Incremental Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Цель `main-build' не требует выполнения команд.
+16:25:25 **** Auto Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/LED_test_new.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/LED_test_new.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/LED_test_new.d" -MT"src/LED_test_new.o" -o "src/LED_test_new.o" "../src/LED_test_new.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:48:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:38:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:60:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:85:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:74:6: note: declared here
+ void SWs()
+      ^~~
+../src/LED_test_new.c:79:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'dataOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:120:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:110:6: note: declared here
+ void dataOut(int data)
+      ^~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/LED_test_new.c:16:
+../src/LED_test_new.c: In function 'readBitOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/LED_test_new.c:138:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/LED_test_new.c:128:6: note: declared here
+ void readBitOut(int data)
+      ^~~~~~~~~~
+../src/LED_test_new.c: In function 'main':
+../src/LED_test_new.c:150:6: warning: variable 'readBit' set but not used [-Wunused-but-set-variable]
+  int readBit = 0;
+      ^~~~~~~
+../src/LED_test_new.c: In function 'BTNs':
+../src/LED_test_new.c:72:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/LED_test_new.c'
+' '
+'Building target: proc_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../proc_test_bsp/ps7_cortexa9_0/lib -o "proc_test.elf"  ./src/LED_test_new.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: proc_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size proc_test.elf  |tee "proc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21092	   1208	  22600	  44900	   af64	proc_test.elf
+'Finished building: proc_test.elf.size'
+' '
+16:25:31 **** Incremental Build of configuration Debug for project proc_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Цель `main-build' не требует выполнения команд.

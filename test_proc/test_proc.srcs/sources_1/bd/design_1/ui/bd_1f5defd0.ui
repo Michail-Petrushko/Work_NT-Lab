@@ -2,62 +2,56 @@
    ExpandedHierarchyInLayout: "",
    guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
 #  -string -flagsOSRD
-preplace port btnSost -pg 1 -y 260 -defaultsOSRD
-preplace port btns_4bits -pg 1 -y 90 -defaultsOSRD
+preplace port btns_4bits -pg 1 -y -390 -defaultsOSRD
 preplace port DDR -pg 1 -y -150 -defaultsOSRD
-preplace port sws_4bits -pg 1 -y 70 -defaultsOSRD
-preplace port sys_clock -pg 1 -y 430 -defaultsOSRD
-preplace port leds_4bits -pg 1 -y 300 -defaultsOSRD
-preplace port rgb_led -pg 1 -y 400 -defaultsOSRD
+preplace port sws_4bits -pg 1 -y 90 -defaultsOSRD
+preplace port sys_clock -pg 1 -y 120 -defaultsOSRD
+preplace port leds_4bits -pg 1 -y 110 -defaultsOSRD
 preplace port FIXED_IO -pg 1 -y -130 -defaultsOSRD
-preplace inst rst_ps7_0_50M -pg 1 -lvl 4 -y -90 -defaultsOSRD
-preplace inst sost_0 -pg 1 -lvl 2 -y 170 -defaultsOSRD
-preplace inst axi_gpio_sw_in_out -pg 1 -lvl 1 -y 50 -defaultsOSRD
-preplace inst hsv_to_rgb_0 -pg 1 -lvl 4 -y 180 -defaultsOSRD
-preplace inst axi_gpio_btns_in_out -pg 1 -lvl 1 -y -110 -defaultsOSRD
-preplace inst PWM_0 -pg 1 -lvl 5 -y 200 -defaultsOSRD
-preplace inst axi_gpio_leds_in_out -pg 1 -lvl 1 -y 220 -defaultsOSRD
-preplace inst BTNs_test_0 -pg 1 -lvl 3 -y 180 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 5 -y -130 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 690 -defaultsOSRD
-preplace inst axi_gpio_rgb_in_out -pg 1 -lvl 1 -y 390 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 2 -y -100 -defaultsOSRD
-preplace netloc axi_gpio_sw_in_out_GPIO 1 1 5 NJ 20 NJ 20 NJ 20 1540J 90 1920J
-preplace netloc processing_system7_0_DDR 1 2 4 810J -360 N -360 N -360 1920
-preplace netloc ps7_0_axi_periph_M02_AXI 1 0 6 -50 -350 NJ -350 NJ -350 NJ -350 NJ -350 1890
-preplace netloc sost_0_leds 1 1 2 310 250 790
-preplace netloc hsv_to_rgb_0_G 1 4 1 N
-preplace netloc BTNs_test_0_Hue 1 3 1 1150
-preplace netloc processing_system7_0_M_AXI_GP0 1 2 3 820 -290 NJ -290 NJ
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 2 2 830 -110 N
-preplace netloc ps7_0_axi_periph_M03_AXI 1 0 6 -20 310 NJ 310 NJ 310 NJ 310 NJ 310 1900
-preplace netloc axi_gpio_sw_in_out_gpio2_io_o 1 1 2 NJ 80 820
+preplace portBus rgb_led_tri_o -pg 1 -y 160 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 3 -y -100 -defaultsOSRD
+preplace inst axi_gpio_data -pg 1 -lvl 1 -y 150 -defaultsOSRD
+preplace inst hsv_to_rgb_0_1 -pg 1 -lvl 3 -y 240 -defaultsOSRD
+preplace inst axi_gpio_leds -pg 1 -lvl 1 -y -160 -defaultsOSRD
+preplace inst PWM_0 -pg 1 -lvl 4 -y 160 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 4 -y -140 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 360 -defaultsOSRD
+preplace inst FSM_0 -pg 1 -lvl 2 -y 140 -defaultsOSRD
+preplace inst axi_gpio_sws -pg 1 -lvl 1 -y -20 -defaultsOSRD
+preplace inst axi_gpio_btns -pg 1 -lvl 1 -y -300 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -y -240 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 2 3 NJ -290 1320 -370 1770
+preplace netloc ps7_0_axi_periph_M02_AXI 1 0 5 -30 470 NJ 470 NJ 470 NJ 470 1720
+preplace netloc hsv_to_rgb_0_G 1 3 1 1350
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 2 880 -260 1340J
+preplace netloc FSM_0_Hue 1 2 1 900
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 2 1 910
+preplace netloc ps7_0_axi_periph_M03_AXI 1 0 5 -10 270 NJ 270 880J 340 NJ 340 1710
 preplace netloc sys_clock_1 1 0 1 -70
-preplace netloc ps7_0_axi_periph_M01_AXI 1 0 6 -20 -370 NJ -370 NJ -370 NJ -370 NJ -370 1900
-preplace netloc BTNs_test_0_Value 1 3 1 1180
-preplace netloc BTNs_test_0_Saturation 1 3 1 1170
-preplace netloc rst_ps7_0_50M_interconnect_aresetn 1 4 1 1540
-preplace netloc axi_gpio_leds_in_out_GPIO2 1 1 5 300J 300 NJ 300 NJ 300 NJ 300 NJ
-preplace netloc axi_gpio_btns_in_out_gpio2_io_o 1 1 4 300 90 830 90 1160 280 1570
-preplace netloc processing_system7_0_FIXED_IO 1 2 4 800J -390 N -390 N -390 1930
-preplace netloc PWM_0_rgb_led_tri_o 1 1 5 N 390 NJ 390 NJ 390 NJ 390 1890
-preplace netloc sost_0_btnSost 1 2 4 800J 320 NJ 320 NJ 320 1930J
-preplace netloc clk_wiz_0_clk_out1 1 1 4 320 260 820 270 1190 290 1550
-preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 0 5 -60 -220 NJ -220 NJ -220 N -220 1560
-preplace netloc axi_gpio_0_GPIO 1 1 5 300J -230 NJ -230 NJ -230 1550J 100 1930J
-preplace netloc hsv_to_rgb_0_B 1 4 1 N
-preplace netloc ps7_0_axi_periph_M04_AXI 1 0 6 -20 470 NJ 470 NJ 470 NJ 470 NJ 470 1910
-preplace netloc sost_0_sost 1 2 1 810
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 5 -40 -200 320 -210 790 -190 1160 -190 1570
-preplace netloc ps7_0_axi_periph_M00_AXI 1 0 6 -30 -380 NJ -380 NJ -380 NJ -380 NJ -380 1910
-preplace netloc axi_gpio_rgb_in_out_GPIO2 1 1 5 330J 400 NJ 400 NJ 400 NJ 400 NJ
-preplace netloc hsv_to_rgb_0_R 1 4 1 N
-levelinfo -pg 1 -90 160 590 1020 1370 1740 1950 -top -400 -bot 780
+preplace netloc ps7_0_axi_periph_M01_AXI 1 0 5 -10 -380 NJ -380 NJ -380 NJ -380 1720
+preplace netloc axi_gpio_data_gpio2_io_o 1 1 1 330
+preplace netloc rst_ps7_0_50M_interconnect_aresetn 1 3 1 1350
+preplace netloc FSM_0_Value 1 2 1 880
+preplace netloc processing_system7_0_FIXED_IO 1 2 3 NJ -270 1330 -360 1740
+preplace netloc PWM_0_rgb_led_tri_o 1 4 1 N
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 0 4 -40 60 320J 50 910J 50 1370
+preplace netloc axi_gpio_0_GPIO 1 1 4 300J -410 NJ -410 NJ -410 1770J
+preplace netloc hsv_to_rgb_0_B 1 3 1 1380
+preplace netloc axi_gpio_2_GPIO 1 1 4 330J -390 NJ -390 NJ -390 1750J
+preplace netloc ps7_0_axi_periph_M04_AXI 1 0 5 -20 450 NJ 450 NJ 450 NJ 450 1700
+preplace netloc axi_gpio_data_gpio_io_o 1 1 1 300
+preplace netloc Net 1 1 3 340 280 890 350 1390
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 -50 -390 320 -130 880 -200 1360
+preplace netloc axi_gpio_1_GPIO 1 1 4 310J -400 NJ -400 NJ -400 1760J
+preplace netloc ps7_0_axi_periph_M00_AXI 1 0 5 -60 460 NJ 460 NJ 460 NJ 460 1730
+preplace netloc FSM_0_Saturation 1 2 1 890
+preplace netloc hsv_to_rgb_0_R 1 3 1 1330
+levelinfo -pg 1 -90 160 680 1150 1550 1800 -top -420 -bot 780
 ",
 }
 {
-   da_axi4_cnt: "8",
-   da_board_cnt: "7",
+   da_axi4_cnt: "12",
+   da_board_cnt: "10",
    da_clkrst_cnt: "1",
    da_ps7_cnt: "1",
 }

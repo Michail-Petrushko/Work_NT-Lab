@@ -1,0 +1,128 @@
+/*
+ * LED_test.c
+ *
+ *  Created on: 	2020
+ *      Author:
+ *     Version:		1.2
+ */
+
+/********************************************************************************************
+* VERSION HISTORY
+********************************************************************************************
+*******************************************************************************************/
+
+/* Include Files */
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xstatus.h"
+#include "xil_printf.h"
+#include "time.h"
+
+
+
+/* Definitions */
+#define GPIO_BTNS  XPAR_AXI_GPIO_BTNS_DEVICE_ID
+#define GPIO_SWS  XPAR_AXI_GPIO_SWS_DEVICE_ID
+#define GPIO_LEDS  XPAR_AXI_GPIO_LEDS_DEVICE_ID
+
+#define LED_DELAY 1000								/* Software delay length */
+
+#define CHANNEL_INPUT 1								/* GPIO port INPUT */
+#define CHANNEL_OUTPUT 2							/* GPIO port OUTPUT */
+
+#define printf xil_printf							/* smaller, optimised printf */
+
+XGpio Gpio;											/* GPIO Device driver instance */
+
+
+void LEDs(int data)
+{
+
+	int Status;
+
+
+		/* GPIO driver initialisation for LEDs */
+		Status = XGpio_Initialize(&Gpio, GPIO_LEDS);
+
+		if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+		XGpio_SetDataDirection(&Gpio, 1, 0x0);			//set output channel
+
+		XGpio_DiscreteWrite(&Gpio, 1, data);			//write data
+}
+
+int BTNs(int sost)
+{
+
+	int Status;
+	int data = 0;
+
+		/* GPIO driver initialisation for Buttons */
+		Status = XGpio_Initialize(&Gpio, GPIO_BTNS);
+
+		if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+		XGpio_SetDataDirection(&Gpio, 1, 0x1);			//set input channel
+
+		data = XGpio_DiscreteRead(&Gpio, 1);			//read data
+
+		if (data%4==2 || data%4==3){
+					int time;
+					XScuTimer_Start(time);
+					while (data%4==2 || data%4==3) data = XGpio_DiscreteRead(&Gpio, 1);
+					XScuTimer_Stop(time);
+					if (time>=10000) sost++;
+				}
+
+		return data;
+
+}
+
+
+
+void SWs()
+{
+
+	int Status;
+	int data = 0;
+
+		/* GPIO driver initialisation for Switches */
+		Status = XGpio_Initialize(&Gpio, GPIO_SWS);
+
+		if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+
+
+		XGpio_SetDataDirection(&Gpio, 1, 0x1);			//set input channel
+
+		data = XGpio_DiscreteRead(&Gpio, 1);			//read data
+
+
+}
+
+
+
+/* Main function. */
+int main(void){
+
+	//volatile int Delay;
+	int btnData=0;
+	while (1) {
+
+		//SWs();
+		btnData = BTNs();
+		if (btnData[1]==1) btnTimer();
+		LEDs();
+
+		//for (Delay = 0; Delay < LED_DELAY; Delay++);		// on/off delay
+		}
+
+	return 0;
+}
+
