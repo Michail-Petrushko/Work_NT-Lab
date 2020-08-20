@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Mon Aug 17 15:31:55 2020
+-- Date        : Thu Aug 20 08:58:39 2020
 -- Host        : DESKTOP-TM8D8VH running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/ip/design_1_PWM_0_1/design_1_PWM_0_1_sim_netlist.vhdl
+--               C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/ip/design_1_PWM_0_1/design_1_PWM_0_1_sim_netlist.vhdl
 -- Design      : design_1_PWM_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -17,9 +17,9 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1_PWM_0_1_PWM is
   port (
     rgb_led_tri_o : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    reset : in STD_LOGIC;
     G : in STD_LOGIC_VECTOR ( 7 downto 0 );
     clk : in STD_LOGIC;
-    reset : in STD_LOGIC;
     B : in STD_LOGIC_VECTOR ( 7 downto 0 );
     R : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
@@ -103,7 +103,14 @@ architecture STRUCTURE of design_1_PWM_0_1_PWM is
   signal temp1 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal temp1_0 : STD_LOGIC;
   signal temp2 : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal temp3 : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \temp3_reg_n_0_[0]\ : STD_LOGIC;
+  signal \temp3_reg_n_0_[1]\ : STD_LOGIC;
+  signal \temp3_reg_n_0_[2]\ : STD_LOGIC;
+  signal \temp3_reg_n_0_[3]\ : STD_LOGIC;
+  signal \temp3_reg_n_0_[4]\ : STD_LOGIC;
+  signal \temp3_reg_n_0_[5]\ : STD_LOGIC;
+  signal \temp3_reg_n_0_[6]\ : STD_LOGIC;
+  signal \temp3_reg_n_0_[7]\ : STD_LOGIC;
   signal NLW_counter2_carry_CO_UNCONNECTED : STD_LOGIC_VECTOR ( 3 to 3 );
   signal NLW_counter2_carry_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_counter3_carry_CO_UNCONNECTED : STD_LOGIC_VECTOR ( 3 to 3 );
@@ -146,9 +153,9 @@ counter2_carry_i_1: unisim.vcomponents.LUT4
     )
         port map (
       I0 => B(7),
-      I1 => temp3(7),
+      I1 => \temp3_reg_n_0_[7]\,
       I2 => B(6),
-      I3 => temp3(6),
+      I3 => \temp3_reg_n_0_[6]\,
       O => counter2_carry_i_1_n_0
     );
 counter2_carry_i_2: unisim.vcomponents.LUT6
@@ -157,10 +164,10 @@ counter2_carry_i_2: unisim.vcomponents.LUT6
     )
         port map (
       I0 => B(5),
-      I1 => temp3(5),
+      I1 => \temp3_reg_n_0_[5]\,
       I2 => B(4),
-      I3 => temp3(4),
-      I4 => temp3(3),
+      I3 => \temp3_reg_n_0_[4]\,
+      I4 => \temp3_reg_n_0_[3]\,
       I5 => B(3),
       O => counter2_carry_i_2_n_0
     );
@@ -170,10 +177,10 @@ counter2_carry_i_3: unisim.vcomponents.LUT6
     )
         port map (
       I0 => B(2),
-      I1 => temp3(2),
+      I1 => \temp3_reg_n_0_[2]\,
       I2 => B(1),
-      I3 => temp3(1),
-      I4 => temp3(0),
+      I3 => \temp3_reg_n_0_[1]\,
+      I4 => \temp3_reg_n_0_[0]\,
       I5 => B(0),
       O => counter2_carry_i_3_n_0
     );
@@ -377,77 +384,77 @@ counter3_carry_i_3: unisim.vcomponents.LUT6
       I4 => \counter_reg_n_0_[4]\,
       O => \counter[8]_i_3_n_0\
     );
-\counter_reg[0]\: unisim.vcomponents.FDCE
+\counter_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      CLR => reset,
       D => p_0_in(0),
-      Q => \counter_reg_n_0_[0]\
+      Q => \counter_reg_n_0_[0]\,
+      R => reset
     );
-\counter_reg[1]\: unisim.vcomponents.FDCE
+\counter_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      CLR => reset,
       D => p_0_in(1),
-      Q => \counter_reg_n_0_[1]\
+      Q => \counter_reg_n_0_[1]\,
+      R => reset
     );
-\counter_reg[2]\: unisim.vcomponents.FDCE
+\counter_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      CLR => reset,
       D => p_0_in(2),
-      Q => \counter_reg_n_0_[2]\
+      Q => \counter_reg_n_0_[2]\,
+      R => reset
     );
-\counter_reg[3]\: unisim.vcomponents.FDCE
+\counter_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      CLR => reset,
       D => p_0_in(3),
-      Q => \counter_reg_n_0_[3]\
+      Q => \counter_reg_n_0_[3]\,
+      R => reset
     );
-\counter_reg[4]\: unisim.vcomponents.FDCE
+\counter_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      CLR => reset,
       D => p_0_in(4),
-      Q => \counter_reg_n_0_[4]\
+      Q => \counter_reg_n_0_[4]\,
+      R => reset
     );
-\counter_reg[5]\: unisim.vcomponents.FDCE
+\counter_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      CLR => reset,
       D => p_0_in(5),
-      Q => \counter_reg_n_0_[5]\
+      Q => \counter_reg_n_0_[5]\,
+      R => reset
     );
-\counter_reg[6]\: unisim.vcomponents.FDCE
+\counter_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      CLR => reset,
       D => p_0_in(6),
-      Q => \counter_reg_n_0_[6]\
+      Q => \counter_reg_n_0_[6]\,
+      R => reset
     );
-\counter_reg[7]\: unisim.vcomponents.FDCE
+\counter_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      CLR => reset,
       D => p_0_in(7),
-      Q => \counter_reg_n_0_[7]\
+      Q => \counter_reg_n_0_[7]\,
+      R => reset
     );
-\counter_reg[8]\: unisim.vcomponents.FDCE
+\counter_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      CLR => reset,
       D => p_0_in(8),
-      Q => \counter_reg_n_0_[8]\
+      Q => \counter_reg_n_0_[8]\,
+      R => reset
     );
 \i__carry__0_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -707,7 +714,7 @@ rgb_led_tri_o0_carry: unisim.vcomponents.CARRY4
       CO(2) => rgb_led_tri_o0_carry_n_1,
       CO(1) => rgb_led_tri_o0_carry_n_2,
       CO(0) => rgb_led_tri_o0_carry_n_3,
-      CYINIT => '0',
+      CYINIT => '1',
       DI(3) => rgb_led_tri_o0_carry_i_1_n_0,
       DI(2) => rgb_led_tri_o0_carry_i_2_n_0,
       DI(1) => rgb_led_tri_o0_carry_i_3_n_0,
@@ -843,7 +850,7 @@ rgb_led_tri_o0_carry_i_8: unisim.vcomponents.LUT5
       CO(2) => \rgb_led_tri_o0_inferred__0/i__carry_n_1\,
       CO(1) => \rgb_led_tri_o0_inferred__0/i__carry_n_2\,
       CO(0) => \rgb_led_tri_o0_inferred__0/i__carry_n_3\,
-      CYINIT => '0',
+      CYINIT => '1',
       DI(3) => \i__carry_i_1__0_n_0\,
       DI(2) => \i__carry_i_2__0_n_0\,
       DI(1) => \i__carry_i_3__0_n_0\,
@@ -872,7 +879,7 @@ rgb_led_tri_o0_carry_i_8: unisim.vcomponents.LUT5
       CO(2) => \rgb_led_tri_o0_inferred__1/i__carry_n_1\,
       CO(1) => \rgb_led_tri_o0_inferred__1/i__carry_n_2\,
       CO(0) => \rgb_led_tri_o0_inferred__1/i__carry_n_3\,
-      CYINIT => '0',
+      CYINIT => '1',
       DI(3) => \i__carry_i_1_n_0\,
       DI(2) => \i__carry_i_2_n_0\,
       DI(1) => \i__carry_i_3_n_0\,
@@ -894,232 +901,231 @@ rgb_led_tri_o0_carry_i_8: unisim.vcomponents.LUT5
       S(3 downto 1) => B"000",
       S(0) => \i__carry__0_i_1_n_0\
     );
-\rgb_led_tri_o_reg[0]\: unisim.vcomponents.FDCE
+\rgb_led_tri_o_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      CLR => reset,
       D => \rgb_led_tri_o0_carry__0_n_3\,
-      Q => rgb_led_tri_o(0)
+      Q => rgb_led_tri_o(0),
+      R => reset
     );
-\rgb_led_tri_o_reg[1]\: unisim.vcomponents.FDCE
+\rgb_led_tri_o_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      CLR => reset,
       D => \rgb_led_tri_o0_inferred__0/i__carry__0_n_3\,
-      Q => rgb_led_tri_o(1)
+      Q => rgb_led_tri_o(1),
+      R => reset
     );
-\rgb_led_tri_o_reg[2]\: unisim.vcomponents.FDCE
+\rgb_led_tri_o_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      CLR => reset,
       D => rgb_led_tri_o0,
-      Q => rgb_led_tri_o(2)
+      Q => rgb_led_tri_o(2),
+      R => reset
     );
-\temp1_reg[0]\: unisim.vcomponents.FDCE
+\temp1_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => R(0),
-      Q => temp1(0)
+      Q => temp1(0),
+      R => reset
     );
-\temp1_reg[1]\: unisim.vcomponents.FDCE
+\temp1_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => R(1),
-      Q => temp1(1)
+      Q => temp1(1),
+      R => reset
     );
-\temp1_reg[2]\: unisim.vcomponents.FDCE
+\temp1_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => R(2),
-      Q => temp1(2)
+      Q => temp1(2),
+      R => reset
     );
-\temp1_reg[3]\: unisim.vcomponents.FDCE
+\temp1_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => R(3),
-      Q => temp1(3)
+      Q => temp1(3),
+      R => reset
     );
-\temp1_reg[4]\: unisim.vcomponents.FDCE
+\temp1_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => R(4),
-      Q => temp1(4)
+      Q => temp1(4),
+      R => reset
     );
-\temp1_reg[5]\: unisim.vcomponents.FDCE
+\temp1_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => R(5),
-      Q => temp1(5)
+      Q => temp1(5),
+      R => reset
     );
-\temp1_reg[6]\: unisim.vcomponents.FDCE
+\temp1_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => R(6),
-      Q => temp1(6)
+      Q => temp1(6),
+      R => reset
     );
-\temp1_reg[7]\: unisim.vcomponents.FDCE
+\temp1_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => R(7),
-      Q => temp1(7)
+      Q => temp1(7),
+      R => reset
     );
-\temp2[7]_i_1\: unisim.vcomponents.LUT4
+\temp2[7]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"00FE"
+      INIT => X"FE"
     )
         port map (
       I0 => counter30_out,
       I1 => counter2,
       I2 => counter3,
-      I3 => reset,
       O => temp1_0
     );
-\temp2_reg[0]\: unisim.vcomponents.FDCE
+\temp2_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => G(0),
-      Q => temp2(0)
+      Q => temp2(0),
+      R => reset
     );
-\temp2_reg[1]\: unisim.vcomponents.FDCE
+\temp2_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => G(1),
-      Q => temp2(1)
+      Q => temp2(1),
+      R => reset
     );
-\temp2_reg[2]\: unisim.vcomponents.FDCE
+\temp2_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => G(2),
-      Q => temp2(2)
+      Q => temp2(2),
+      R => reset
     );
-\temp2_reg[3]\: unisim.vcomponents.FDCE
+\temp2_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => G(3),
-      Q => temp2(3)
+      Q => temp2(3),
+      R => reset
     );
-\temp2_reg[4]\: unisim.vcomponents.FDCE
+\temp2_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => G(4),
-      Q => temp2(4)
+      Q => temp2(4),
+      R => reset
     );
-\temp2_reg[5]\: unisim.vcomponents.FDCE
+\temp2_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => G(5),
-      Q => temp2(5)
+      Q => temp2(5),
+      R => reset
     );
-\temp2_reg[6]\: unisim.vcomponents.FDCE
+\temp2_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => G(6),
-      Q => temp2(6)
+      Q => temp2(6),
+      R => reset
     );
-\temp2_reg[7]\: unisim.vcomponents.FDCE
+\temp2_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => G(7),
-      Q => temp2(7)
+      Q => temp2(7),
+      R => reset
     );
-\temp3_reg[0]\: unisim.vcomponents.FDCE
+\temp3_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => B(0),
-      Q => temp3(0)
+      Q => \temp3_reg_n_0_[0]\,
+      R => reset
     );
-\temp3_reg[1]\: unisim.vcomponents.FDCE
+\temp3_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => B(1),
-      Q => temp3(1)
+      Q => \temp3_reg_n_0_[1]\,
+      R => reset
     );
-\temp3_reg[2]\: unisim.vcomponents.FDCE
+\temp3_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => B(2),
-      Q => temp3(2)
+      Q => \temp3_reg_n_0_[2]\,
+      R => reset
     );
-\temp3_reg[3]\: unisim.vcomponents.FDCE
+\temp3_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => B(3),
-      Q => temp3(3)
+      Q => \temp3_reg_n_0_[3]\,
+      R => reset
     );
-\temp3_reg[4]\: unisim.vcomponents.FDCE
+\temp3_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => B(4),
-      Q => temp3(4)
+      Q => \temp3_reg_n_0_[4]\,
+      R => reset
     );
-\temp3_reg[5]\: unisim.vcomponents.FDCE
+\temp3_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => B(5),
-      Q => temp3(5)
+      Q => \temp3_reg_n_0_[5]\,
+      R => reset
     );
-\temp3_reg[6]\: unisim.vcomponents.FDCE
+\temp3_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => B(6),
-      Q => temp3(6)
+      Q => \temp3_reg_n_0_[6]\,
+      R => reset
     );
-\temp3_reg[7]\: unisim.vcomponents.FDCE
+\temp3_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => temp1_0,
-      CLR => reset,
       D => B(7),
-      Q => temp3(7)
+      Q => \temp3_reg_n_0_[7]\,
+      R => reset
     );
 end STRUCTURE;
 library IEEE;

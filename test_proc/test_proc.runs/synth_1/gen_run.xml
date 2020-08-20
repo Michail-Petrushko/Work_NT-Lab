@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1597751447">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1597909416">
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="design_1_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
@@ -46,14 +46,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../HSV-RGB_proc/BTNs_test.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="design_1_wrapper"/>
@@ -76,15 +68,11 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_rst_ps7_0_50M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_4"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_PWM_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_5"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_hsv_to_rgb_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_PWM_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_FSM_0_0"/>
 </GenRun>

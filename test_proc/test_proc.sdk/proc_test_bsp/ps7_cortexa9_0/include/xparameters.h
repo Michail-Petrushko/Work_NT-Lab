@@ -30,33 +30,6 @@
  
  
 /******************************************************************/
-/* Definitions for driver CLK_WIZ */
-#define XPAR_XCLK_WIZ_NUM_INSTANCES 1
-
-/* Definitions for peripheral CLK_WIZ_0 */
-#define XPAR_CLK_WIZ_0_DEVICE_ID 0
-#define XPAR_CLK_WIZ_0_BASEADDR 0x43C00000
-#define XPAR_CLK_WIZ_0_HIGHADDR 0x43C0FFFF
-#define XPAR_CLK_WIZ_0_ENABLE_CLOCK_MONITOR 0
-#define XPAR_CLK_WIZ_0_ENABLE_USER_CLOCK0 0
-#define XPAR_CLK_WIZ_0_ENABLE_USER_CLOCK1 0
-#define XPAR_CLK_WIZ_0_ENABLE_USER_CLOCK2 0
-#define XPAR_CLK_WIZ_0_ENABLE_USER_CLOCK3 0
-#define XPAR_CLK_WIZ_0_REF_CLK_FREQ 100.0
-#define XPAR_CLK_WIZ_0_USER_CLK_FREQ0 100.0
-#define XPAR_CLK_WIZ_0_USER_CLK_FREQ1 100.0
-#define XPAR_CLK_WIZ_0_USER_CLK_FREQ2 100.0
-#define XPAR_CLK_WIZ_0_USER_CLK_FREQ3 100.0
-#define XPAR_CLK_WIZ_0_PRECISION 1
-#define XPAR_CLK_WIZ_0_ENABLE_PLL0 0
-#define XPAR_CLK_WIZ_0_ENABLE_PLL1 0
-
-
-/******************************************************************/
-
-
-/******************************************************************/
-
 
 /* Definitions for peripheral PS7_DDR_0 */
 #define XPAR_PS7_DDR_0_S_AXI_BASEADDR 0x00100000

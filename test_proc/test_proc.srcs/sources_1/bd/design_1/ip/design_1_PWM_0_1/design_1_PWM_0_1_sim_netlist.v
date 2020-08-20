@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Mon Aug 17 15:31:55 2020
+// Date        : Thu Aug 20 08:58:39 2020
 // Host        : DESKTOP-TM8D8VH running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/ip/design_1_PWM_0_1/design_1_PWM_0_1_sim_netlist.v
+//               C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/ip/design_1_PWM_0_1/design_1_PWM_0_1_sim_netlist.v
 // Design      : design_1_PWM_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -48,15 +48,15 @@ endmodule
 (* ORIG_REF_NAME = "PWM" *) 
 module design_1_PWM_0_1_PWM
    (rgb_led_tri_o,
+    reset,
     G,
     clk,
-    reset,
     B,
     R);
   output [2:0]rgb_led_tri_o;
+  input reset;
   input [7:0]G;
   input clk;
-  input reset;
   input [7:0]B;
   input [7:0]R;
 
@@ -141,7 +141,14 @@ module design_1_PWM_0_1_PWM
   wire [7:0]temp1;
   wire temp1_0;
   wire [7:0]temp2;
-  wire [7:0]temp3;
+  wire \temp3_reg_n_0_[0] ;
+  wire \temp3_reg_n_0_[1] ;
+  wire \temp3_reg_n_0_[2] ;
+  wire \temp3_reg_n_0_[3] ;
+  wire \temp3_reg_n_0_[4] ;
+  wire \temp3_reg_n_0_[5] ;
+  wire \temp3_reg_n_0_[6] ;
+  wire \temp3_reg_n_0_[7] ;
   wire [3:3]NLW_counter2_carry_CO_UNCONNECTED;
   wire [3:0]NLW_counter2_carry_O_UNCONNECTED;
   wire [3:3]NLW_counter3_carry_CO_UNCONNECTED;
@@ -169,28 +176,28 @@ module design_1_PWM_0_1_PWM
     .INIT(16'h9009)) 
     counter2_carry_i_1
        (.I0(B[7]),
-        .I1(temp3[7]),
+        .I1(\temp3_reg_n_0_[7] ),
         .I2(B[6]),
-        .I3(temp3[6]),
+        .I3(\temp3_reg_n_0_[6] ),
         .O(counter2_carry_i_1_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     counter2_carry_i_2
        (.I0(B[5]),
-        .I1(temp3[5]),
+        .I1(\temp3_reg_n_0_[5] ),
         .I2(B[4]),
-        .I3(temp3[4]),
-        .I4(temp3[3]),
+        .I3(\temp3_reg_n_0_[4] ),
+        .I4(\temp3_reg_n_0_[3] ),
         .I5(B[3]),
         .O(counter2_carry_i_2_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     counter2_carry_i_3
        (.I0(B[2]),
-        .I1(temp3[2]),
+        .I1(\temp3_reg_n_0_[2] ),
         .I2(B[1]),
-        .I3(temp3[1]),
-        .I4(temp3[0]),
+        .I3(\temp3_reg_n_0_[1] ),
+        .I4(\temp3_reg_n_0_[0] ),
         .I5(B[0]),
         .O(counter2_carry_i_3_n_0));
   CARRY4 counter3_carry
@@ -339,60 +346,60 @@ module design_1_PWM_0_1_PWM
         .I3(\counter_reg_n_0_[2] ),
         .I4(\counter_reg_n_0_[4] ),
         .O(\counter[8]_i_3_n_0 ));
-  FDCE \counter_reg[0] 
+  FDRE \counter_reg[0] 
        (.C(clk),
         .CE(1'b1),
-        .CLR(reset),
         .D(p_0_in[0]),
-        .Q(\counter_reg_n_0_[0] ));
-  FDCE \counter_reg[1] 
+        .Q(\counter_reg_n_0_[0] ),
+        .R(reset));
+  FDRE \counter_reg[1] 
        (.C(clk),
         .CE(1'b1),
-        .CLR(reset),
         .D(p_0_in[1]),
-        .Q(\counter_reg_n_0_[1] ));
-  FDCE \counter_reg[2] 
+        .Q(\counter_reg_n_0_[1] ),
+        .R(reset));
+  FDRE \counter_reg[2] 
        (.C(clk),
         .CE(1'b1),
-        .CLR(reset),
         .D(p_0_in[2]),
-        .Q(\counter_reg_n_0_[2] ));
-  FDCE \counter_reg[3] 
+        .Q(\counter_reg_n_0_[2] ),
+        .R(reset));
+  FDRE \counter_reg[3] 
        (.C(clk),
         .CE(1'b1),
-        .CLR(reset),
         .D(p_0_in[3]),
-        .Q(\counter_reg_n_0_[3] ));
-  FDCE \counter_reg[4] 
+        .Q(\counter_reg_n_0_[3] ),
+        .R(reset));
+  FDRE \counter_reg[4] 
        (.C(clk),
         .CE(1'b1),
-        .CLR(reset),
         .D(p_0_in[4]),
-        .Q(\counter_reg_n_0_[4] ));
-  FDCE \counter_reg[5] 
+        .Q(\counter_reg_n_0_[4] ),
+        .R(reset));
+  FDRE \counter_reg[5] 
        (.C(clk),
         .CE(1'b1),
-        .CLR(reset),
         .D(p_0_in[5]),
-        .Q(\counter_reg_n_0_[5] ));
-  FDCE \counter_reg[6] 
+        .Q(\counter_reg_n_0_[5] ),
+        .R(reset));
+  FDRE \counter_reg[6] 
        (.C(clk),
         .CE(1'b1),
-        .CLR(reset),
         .D(p_0_in[6]),
-        .Q(\counter_reg_n_0_[6] ));
-  FDCE \counter_reg[7] 
+        .Q(\counter_reg_n_0_[6] ),
+        .R(reset));
+  FDRE \counter_reg[7] 
        (.C(clk),
         .CE(1'b1),
-        .CLR(reset),
         .D(p_0_in[7]),
-        .Q(\counter_reg_n_0_[7] ));
-  FDCE \counter_reg[8] 
+        .Q(\counter_reg_n_0_[7] ),
+        .R(reset));
+  FDRE \counter_reg[8] 
        (.C(clk),
         .CE(1'b1),
-        .CLR(reset),
         .D(p_0_in[8]),
-        .Q(\counter_reg_n_0_[8] ));
+        .Q(\counter_reg_n_0_[8] ),
+        .R(reset));
   LUT4 #(
     .INIT(16'hFEFF)) 
     i__carry__0_i_1
@@ -584,7 +591,7 @@ module design_1_PWM_0_1_PWM
   CARRY4 rgb_led_tri_o0_carry
        (.CI(1'b0),
         .CO({rgb_led_tri_o0_carry_n_0,rgb_led_tri_o0_carry_n_1,rgb_led_tri_o0_carry_n_2,rgb_led_tri_o0_carry_n_3}),
-        .CYINIT(1'b0),
+        .CYINIT(1'b1),
         .DI({rgb_led_tri_o0_carry_i_1_n_0,rgb_led_tri_o0_carry_i_2_n_0,rgb_led_tri_o0_carry_i_3_n_0,rgb_led_tri_o0_carry_i_4_n_0}),
         .O(NLW_rgb_led_tri_o0_carry_O_UNCONNECTED[3:0]),
         .S({rgb_led_tri_o0_carry_i_5_n_0,rgb_led_tri_o0_carry_i_6_n_0,rgb_led_tri_o0_carry_i_7_n_0,rgb_led_tri_o0_carry_i_8_n_0}));
@@ -678,7 +685,7 @@ module design_1_PWM_0_1_PWM
   CARRY4 \rgb_led_tri_o0_inferred__0/i__carry 
        (.CI(1'b0),
         .CO({\rgb_led_tri_o0_inferred__0/i__carry_n_0 ,\rgb_led_tri_o0_inferred__0/i__carry_n_1 ,\rgb_led_tri_o0_inferred__0/i__carry_n_2 ,\rgb_led_tri_o0_inferred__0/i__carry_n_3 }),
-        .CYINIT(1'b0),
+        .CYINIT(1'b1),
         .DI({i__carry_i_1__0_n_0,i__carry_i_2__0_n_0,i__carry_i_3__0_n_0,i__carry_i_4__0_n_0}),
         .O(\NLW_rgb_led_tri_o0_inferred__0/i__carry_O_UNCONNECTED [3:0]),
         .S({i__carry_i_5__0_n_0,i__carry_i_6__0_n_0,i__carry_i_7__0_n_0,i__carry_i_8__0_n_0}));
@@ -692,7 +699,7 @@ module design_1_PWM_0_1_PWM
   CARRY4 \rgb_led_tri_o0_inferred__1/i__carry 
        (.CI(1'b0),
         .CO({\rgb_led_tri_o0_inferred__1/i__carry_n_0 ,\rgb_led_tri_o0_inferred__1/i__carry_n_1 ,\rgb_led_tri_o0_inferred__1/i__carry_n_2 ,\rgb_led_tri_o0_inferred__1/i__carry_n_3 }),
-        .CYINIT(1'b0),
+        .CYINIT(1'b1),
         .DI({i__carry_i_1_n_0,i__carry_i_2_n_0,i__carry_i_3_n_0,i__carry_i_4_n_0}),
         .O(\NLW_rgb_led_tri_o0_inferred__1/i__carry_O_UNCONNECTED [3:0]),
         .S({i__carry_i_5_n_0,i__carry_i_6_n_0,i__carry_i_7_n_0,i__carry_i_8_n_0}));
@@ -703,176 +710,175 @@ module design_1_PWM_0_1_PWM
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(\NLW_rgb_led_tri_o0_inferred__1/i__carry__0_O_UNCONNECTED [3:0]),
         .S({1'b0,1'b0,1'b0,i__carry__0_i_1_n_0}));
-  FDCE \rgb_led_tri_o_reg[0] 
+  FDRE \rgb_led_tri_o_reg[0] 
        (.C(clk),
         .CE(1'b1),
-        .CLR(reset),
         .D(rgb_led_tri_o0_carry__0_n_3),
-        .Q(rgb_led_tri_o[0]));
-  FDCE \rgb_led_tri_o_reg[1] 
+        .Q(rgb_led_tri_o[0]),
+        .R(reset));
+  FDRE \rgb_led_tri_o_reg[1] 
        (.C(clk),
         .CE(1'b1),
-        .CLR(reset),
         .D(\rgb_led_tri_o0_inferred__0/i__carry__0_n_3 ),
-        .Q(rgb_led_tri_o[1]));
-  FDCE \rgb_led_tri_o_reg[2] 
+        .Q(rgb_led_tri_o[1]),
+        .R(reset));
+  FDRE \rgb_led_tri_o_reg[2] 
        (.C(clk),
         .CE(1'b1),
-        .CLR(reset),
         .D(rgb_led_tri_o0),
-        .Q(rgb_led_tri_o[2]));
-  FDCE \temp1_reg[0] 
+        .Q(rgb_led_tri_o[2]),
+        .R(reset));
+  FDRE \temp1_reg[0] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(R[0]),
-        .Q(temp1[0]));
-  FDCE \temp1_reg[1] 
+        .Q(temp1[0]),
+        .R(reset));
+  FDRE \temp1_reg[1] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(R[1]),
-        .Q(temp1[1]));
-  FDCE \temp1_reg[2] 
+        .Q(temp1[1]),
+        .R(reset));
+  FDRE \temp1_reg[2] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(R[2]),
-        .Q(temp1[2]));
-  FDCE \temp1_reg[3] 
+        .Q(temp1[2]),
+        .R(reset));
+  FDRE \temp1_reg[3] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(R[3]),
-        .Q(temp1[3]));
-  FDCE \temp1_reg[4] 
+        .Q(temp1[3]),
+        .R(reset));
+  FDRE \temp1_reg[4] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(R[4]),
-        .Q(temp1[4]));
-  FDCE \temp1_reg[5] 
+        .Q(temp1[4]),
+        .R(reset));
+  FDRE \temp1_reg[5] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(R[5]),
-        .Q(temp1[5]));
-  FDCE \temp1_reg[6] 
+        .Q(temp1[5]),
+        .R(reset));
+  FDRE \temp1_reg[6] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(R[6]),
-        .Q(temp1[6]));
-  FDCE \temp1_reg[7] 
+        .Q(temp1[6]),
+        .R(reset));
+  FDRE \temp1_reg[7] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(R[7]),
-        .Q(temp1[7]));
-  LUT4 #(
-    .INIT(16'h00FE)) 
+        .Q(temp1[7]),
+        .R(reset));
+  LUT3 #(
+    .INIT(8'hFE)) 
     \temp2[7]_i_1 
        (.I0(counter30_out),
         .I1(counter2),
         .I2(counter3),
-        .I3(reset),
         .O(temp1_0));
-  FDCE \temp2_reg[0] 
+  FDRE \temp2_reg[0] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(G[0]),
-        .Q(temp2[0]));
-  FDCE \temp2_reg[1] 
+        .Q(temp2[0]),
+        .R(reset));
+  FDRE \temp2_reg[1] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(G[1]),
-        .Q(temp2[1]));
-  FDCE \temp2_reg[2] 
+        .Q(temp2[1]),
+        .R(reset));
+  FDRE \temp2_reg[2] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(G[2]),
-        .Q(temp2[2]));
-  FDCE \temp2_reg[3] 
+        .Q(temp2[2]),
+        .R(reset));
+  FDRE \temp2_reg[3] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(G[3]),
-        .Q(temp2[3]));
-  FDCE \temp2_reg[4] 
+        .Q(temp2[3]),
+        .R(reset));
+  FDRE \temp2_reg[4] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(G[4]),
-        .Q(temp2[4]));
-  FDCE \temp2_reg[5] 
+        .Q(temp2[4]),
+        .R(reset));
+  FDRE \temp2_reg[5] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(G[5]),
-        .Q(temp2[5]));
-  FDCE \temp2_reg[6] 
+        .Q(temp2[5]),
+        .R(reset));
+  FDRE \temp2_reg[6] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(G[6]),
-        .Q(temp2[6]));
-  FDCE \temp2_reg[7] 
+        .Q(temp2[6]),
+        .R(reset));
+  FDRE \temp2_reg[7] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(G[7]),
-        .Q(temp2[7]));
-  FDCE \temp3_reg[0] 
+        .Q(temp2[7]),
+        .R(reset));
+  FDRE \temp3_reg[0] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(B[0]),
-        .Q(temp3[0]));
-  FDCE \temp3_reg[1] 
+        .Q(\temp3_reg_n_0_[0] ),
+        .R(reset));
+  FDRE \temp3_reg[1] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(B[1]),
-        .Q(temp3[1]));
-  FDCE \temp3_reg[2] 
+        .Q(\temp3_reg_n_0_[1] ),
+        .R(reset));
+  FDRE \temp3_reg[2] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(B[2]),
-        .Q(temp3[2]));
-  FDCE \temp3_reg[3] 
+        .Q(\temp3_reg_n_0_[2] ),
+        .R(reset));
+  FDRE \temp3_reg[3] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(B[3]),
-        .Q(temp3[3]));
-  FDCE \temp3_reg[4] 
+        .Q(\temp3_reg_n_0_[3] ),
+        .R(reset));
+  FDRE \temp3_reg[4] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(B[4]),
-        .Q(temp3[4]));
-  FDCE \temp3_reg[5] 
+        .Q(\temp3_reg_n_0_[4] ),
+        .R(reset));
+  FDRE \temp3_reg[5] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(B[5]),
-        .Q(temp3[5]));
-  FDCE \temp3_reg[6] 
+        .Q(\temp3_reg_n_0_[5] ),
+        .R(reset));
+  FDRE \temp3_reg[6] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(B[6]),
-        .Q(temp3[6]));
-  FDCE \temp3_reg[7] 
+        .Q(\temp3_reg_n_0_[6] ),
+        .R(reset));
+  FDRE \temp3_reg[7] 
        (.C(clk),
         .CE(temp1_0),
-        .CLR(reset),
         .D(B[7]),
-        .Q(temp3[7]));
+        .Q(\temp3_reg_n_0_[7] ),
+        .R(reset));
 endmodule
 `ifndef GLBL
 `define GLBL

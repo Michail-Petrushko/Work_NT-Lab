@@ -149,9 +149,9 @@ int main(void){
 	//volatile int Delay;
 	int readBit = 0;
 	int state = 2;
-	int H = 120;
-	int S = 100;
-	int V = 100;
+	int H = 30;
+	int S = 90;
+	int V = 50;
 	//int prevData;
 
 
@@ -162,7 +162,9 @@ int main(void){
 
 	readBit=1;
 	readBitOut(1);
-
+	//for (int i=0;i<100000;i++);
+	readBitOut(0);
+	while(1) readBitOut(0);
 	return 0;
 }
 
