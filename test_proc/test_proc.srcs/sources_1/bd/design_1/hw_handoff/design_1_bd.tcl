@@ -165,6 +165,7 @@ proc create_root_design { parentCell } {
   # Create interface ports
   set DDR_0 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:ddrx_rtl:1.0 DDR_0 ]
   set FIXED_IO_0 [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO_0 ]
+  set GPIO_0 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 GPIO_0 ]
   set leds_4bits [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 leds_4bits ]
   set sws_4bits [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 sws_4bits ]
 
@@ -175,6 +176,7 @@ proc create_root_design { parentCell } {
    CONFIG.FREQ_HZ {125000000} \
    CONFIG.PHASE {0.000} \
  ] $clk_in
+  set gpio [ create_bd_port -dir O -from 26 -to 0 gpio ]
   set reset [ create_bd_port -dir I -type rst reset ]
   set reset_0 [ create_bd_port -dir I -type rst reset_0 ]
   set_property -dict [ list \
@@ -745,6 +747,7 @@ proc create_root_design { parentCell } {
   # Create interface connections
   connect_bd_intf_net -intf_net axi_gpio_1_GPIO [get_bd_intf_ports leds_4bits] [get_bd_intf_pins axi_gpio_leds/GPIO]
   connect_bd_intf_net -intf_net axi_gpio_2_GPIO [get_bd_intf_ports sws_4bits] [get_bd_intf_pins axi_gpio_sws/GPIO]
+  connect_bd_intf_net -intf_net axi_gpio_data_GPIO [get_bd_intf_ports GPIO_0] [get_bd_intf_pins axi_gpio_data/GPIO]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR_0] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO_0] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]
@@ -761,7 +764,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net Net [get_bd_pins FSM_0/clk] [get_bd_pins PWM_0/clk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins hsv_to_rgb_0_1/clk]
   connect_bd_net -net PWM_0_rgb_led_tri_o [get_bd_ports rgb_led_tri_o] [get_bd_pins PWM_0/rgb_led_tri_o]
   connect_bd_net -net axi_gpio_data_gpio2_io_o [get_bd_pins FSM_0/readBit] [get_bd_pins axi_gpio_data/gpio2_io_o]
-  connect_bd_net -net axi_gpio_data_gpio_io_o [get_bd_pins FSM_0/data] [get_bd_pins axi_gpio_data/gpio_io_o]
+  connect_bd_net -net axi_gpio_data_gpio_io_o [get_bd_ports gpio] [get_bd_pins FSM_0/data] [get_bd_pins axi_gpio_data/gpio_io_o]
   connect_bd_net -net hsv_to_rgb_0_B [get_bd_pins PWM_0/B] [get_bd_pins hsv_to_rgb_0_1/B]
   connect_bd_net -net hsv_to_rgb_0_G [get_bd_pins PWM_0/G] [get_bd_pins hsv_to_rgb_0_1/G]
   connect_bd_net -net hsv_to_rgb_0_R [get_bd_pins PWM_0/R] [get_bd_pins hsv_to_rgb_0_1/R]

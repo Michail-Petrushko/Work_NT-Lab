@@ -14,22 +14,21 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 14332 
+INFO: Helper process launched with PID 3444 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 452.230 ; gain = 103.590
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 454.008 ; gain = 103.789
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_FSM_0_0' [c:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/ip/design_1_FSM_0_0/synth/design_1_FSM_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'FSM' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB_proc/FSM.v:2]
 	Parameter delay_1s bound to: 24'b100110001001011001111111 
 	Parameter delay_50ms bound to: 24'b000001111010000100011111 
-INFO: [Synth 8-226] default block is never used [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB_proc/FSM.v:46]
-WARNING: [Synth 8-6090] variable 'counter' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB_proc/FSM.v:64]
-WARNING: [Synth 8-6090] variable 'counter' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB_proc/FSM.v:78]
-WARNING: [Synth 8-5788] Register prevState_reg in module FSM is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB_proc/FSM.v:27]
+INFO: [Synth 8-226] default block is never used [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB_proc/FSM.v:56]
+WARNING: [Synth 8-6090] variable 'counter' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB_proc/FSM.v:74]
+WARNING: [Synth 8-6090] variable 'counter' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB_proc/FSM.v:88]
 INFO: [Synth 8-6155] done synthesizing module 'FSM' (1#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB_proc/FSM.v:2]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_FSM_0_0' (2#1) [c:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/ip/design_1_FSM_0_0/synth/design_1_FSM_0_0.v:58]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 506.691 ; gain = 158.051
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 508.848 ; gain = 158.629
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -42,10 +41,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 506.691 ; gain = 158.051
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 508.848 ; gain = 158.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 506.691 ; gain = 158.051
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 508.848 ; gain = 158.629
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -58,27 +57,27 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 WARNING: [Constraints 18-5210] No constraint will be written out.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.157 . Memory (MB): peak = 830.902 ; gain = 2.520
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.240 . Memory (MB): peak = 825.879 ; gain = 2.656
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 830.902 ; gain = 482.262
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:57 . Memory (MB): peak = 825.879 ; gain = 475.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 830.902 ; gain = 482.262
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:57 . Memory (MB): peak = 825.879 ; gain = 475.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 830.902 ; gain = 482.262
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:57 . Memory (MB): peak = 825.879 ; gain = 475.660
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "Hue" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "Hue" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 830.902 ; gain = 482.262
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:59 . Memory (MB): peak = 825.879 ; gain = 475.660
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -91,21 +90,22 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 4     
 	   2 Input     24 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 4     
 +---Registers : 
-	               32 Bit    Registers := 3     
 	               24 Bit    Registers := 1     
-	                9 Bit    Registers := 3     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 4     
 	                2 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 7     
-	   4 Input     32 Bit        Muxes := 1     
-	   2 Input     24 Bit        Muxes := 5     
-	   4 Input     24 Bit        Muxes := 5     
-	   4 Input      9 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 3     
+	   4 Input     24 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 14    
+	   4 Input      9 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 4     
+	   4 Input      8 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 4     
-	   2 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 3     
 	   4 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
@@ -118,21 +118,22 @@ Hierarchical RTL Component report
 Module FSM 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 4     
 	   2 Input     24 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 4     
 +---Registers : 
-	               32 Bit    Registers := 3     
 	               24 Bit    Registers := 1     
-	                9 Bit    Registers := 3     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 4     
 	                2 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 7     
-	   4 Input     32 Bit        Muxes := 1     
-	   2 Input     24 Bit        Muxes := 5     
-	   4 Input     24 Bit        Muxes := 5     
-	   4 Input      9 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 3     
+	   4 Input     24 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 14    
+	   4 Input      9 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 4     
+	   4 Input      8 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 4     
-	   2 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 3     
 	   4 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
@@ -152,63 +153,10 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-5546] ROM "inst/Hue" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-115] binding instance 'i_9' in module 'partition' to reference 'logic__88' which has no pins
-WARNING: [Synth 8-115] binding instance 'i_10' in module 'partition' to reference 'logic__89' which has no pins
-WARNING: [Synth 8-115] binding instance 'i_11' in module 'partition' to reference 'logic__90' which has no pins
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[31]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[30]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[29]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[28]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[27]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[26]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[25]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[24]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[23]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[22]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[21]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[20]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[19]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[18]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[17]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[16]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[15]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[14]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[13]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[12]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[11]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[10]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[9]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/S_reg[8]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/Saturation_reg[8]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[31]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[30]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[29]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[28]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[27]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[26]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[25]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[24]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[23]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[22]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[21]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[20]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[19]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[18]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[17]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[16]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[15]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[14]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[13]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[12]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[11]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[10]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[9]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/V_reg[8]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3332] Sequential element (inst/Value_reg[8]) is unused and will be removed from module design_1_FSM_0_0.
-INFO: [Synth 8-3886] merging instance 'inst/prevState_reg[0]' (FDC) to 'inst/state_reg[0]'
-INFO: [Synth 8-3886] merging instance 'inst/prevState_reg[1]' (FDC) to 'inst/state_reg[1]'
+INFO: [Synth 8-3917] design design_1_FSM_0_0 has port Saturation[8] driven by constant 0
+INFO: [Synth 8-3917] design design_1_FSM_0_0 has port Value[8] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 830.902 ; gain = 482.262
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:01:08 . Memory (MB): peak = 825.879 ; gain = 475.660
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -220,13 +168,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:54 . Memory (MB): peak = 837.918 ; gain = 489.277
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:56 ; elapsed = 00:01:30 . Memory (MB): peak = 833.270 ; gain = 483.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:54 . Memory (MB): peak = 838.289 ; gain = 489.648
+Finished Timing Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:01:30 . Memory (MB): peak = 833.492 ; gain = 483.273
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -238,7 +186,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:54 . Memory (MB): peak = 869.020 ; gain = 520.379
+Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:01:31 . Memory (MB): peak = 847.297 ; gain = 497.078
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -262,7 +210,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:56 . Memory (MB): peak = 869.020 ; gain = 520.379
+Finished IO Insertion : Time (s): cpu = 00:00:59 ; elapsed = 00:01:33 . Memory (MB): peak = 847.297 ; gain = 497.078
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -275,7 +223,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:56 . Memory (MB): peak = 869.020 ; gain = 520.379
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:59 ; elapsed = 00:01:33 . Memory (MB): peak = 847.297 ; gain = 497.078
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -287,25 +235,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:56 . Memory (MB): peak = 869.020 ; gain = 520.379
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:59 ; elapsed = 00:01:33 . Memory (MB): peak = 847.297 ; gain = 497.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:56 . Memory (MB): peak = 869.020 ; gain = 520.379
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:59 ; elapsed = 00:01:33 . Memory (MB): peak = 847.297 ; gain = 497.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:56 . Memory (MB): peak = 869.020 ; gain = 520.379
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:59 ; elapsed = 00:01:33 . Memory (MB): peak = 847.297 ; gain = 497.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:56 . Memory (MB): peak = 869.020 ; gain = 520.379
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:59 ; elapsed = 00:01:33 . Memory (MB): peak = 847.297 ; gain = 497.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -321,32 +269,32 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |CARRY4 |    46|
+|1     |CARRY4 |     6|
 |2     |LUT1   |     1|
-|3     |LUT2   |   191|
-|4     |LUT3   |    85|
-|5     |LUT4   |     5|
-|6     |LUT5   |    19|
-|7     |LUT6   |   171|
-|8     |FDCE   |    95|
-|9     |FDPE   |     4|
+|3     |LUT2   |    12|
+|4     |LUT3   |    25|
+|5     |LUT4   |    16|
+|6     |LUT5   |    57|
+|7     |LUT6   |    65|
+|8     |FDRE   |    74|
+|9     |FDSE   |     4|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+---------+-------+------+
 |      |Instance |Module |Cells |
 +------+---------+-------+------+
-|1     |top      |       |   617|
-|2     |  inst   |FSM    |   617|
+|1     |top      |       |   260|
+|2     |  inst   |FSM    |   260|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:56 . Memory (MB): peak = 869.020 ; gain = 520.379
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:59 ; elapsed = 00:01:33 . Memory (MB): peak = 847.297 ; gain = 497.078
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 869.020 ; gain = 196.168
-Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:56 . Memory (MB): peak = 869.020 ; gain = 520.379
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:01:04 . Memory (MB): peak = 847.297 ; gain = 180.047
+Synthesis Optimization Complete : Time (s): cpu = 00:00:59 ; elapsed = 00:01:34 . Memory (MB): peak = 847.297 ; gain = 497.078
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 46 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -354,13 +302,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-71 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+21 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:01:00 . Memory (MB): peak = 869.020 ; gain = 533.434
+synth_design: Time (s): cpu = 00:01:02 ; elapsed = 00:01:41 . Memory (MB): peak = 854.906 ; gain = 517.371
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/design_1_FSM_0_0_synth_1/design_1_FSM_0_0.dcp' has been generated.
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/design_1_FSM_0_0_synth_1/design_1_FSM_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_FSM_0_0_utilization_synth.rpt -pb design_1_FSM_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 869.020 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Aug 18 14:52:23 2020...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.117 . Memory (MB): peak = 854.906 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Aug 25 18:19:47 2020...

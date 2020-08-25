@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Thu Aug 20 10:43:26 2020
+//Date        : Tue Aug 25 18:16:20 2020
 //Host        : DESKTOP-TM8D8VH running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -33,6 +33,7 @@ module design_1_wrapper
     FIXED_IO_0_ps_srstb,
     checkBit_0,
     clk_in,
+    gpio,
     leds_4bits_tri_o,
     reset,
     reset_0,
@@ -61,6 +62,7 @@ module design_1_wrapper
   inout FIXED_IO_0_ps_srstb;
   output checkBit_0;
   input clk_in;
+  output [26:0]gpio;
   output [3:0]leds_4bits_tri_o;
   input reset;
   input reset_0;
@@ -90,6 +92,7 @@ module design_1_wrapper
   wire FIXED_IO_0_ps_srstb;
   wire checkBit_0;
   wire clk_in;
+  wire [26:0]gpio;
   wire [3:0]leds_4bits_tri_o;
   wire reset;
   wire reset_0;
@@ -120,6 +123,7 @@ module design_1_wrapper
         .FIXED_IO_0_ps_srstb(FIXED_IO_0_ps_srstb),
         .checkBit_0(checkBit_0),
         .clk_in(clk_in),
+        .gpio(gpio),
         .leds_4bits_tri_o(leds_4bits_tri_o),
         .reset(reset),
         .reset_0(reset_0),

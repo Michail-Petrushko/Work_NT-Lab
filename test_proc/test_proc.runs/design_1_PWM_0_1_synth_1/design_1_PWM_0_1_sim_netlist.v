@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Thu Aug 20 08:58:38 2020
+// Date        : Fri Aug 21 12:42:11 2020
 // Host        : DESKTOP-TM8D8VH running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_PWM_0_1_sim_netlist.v
@@ -557,7 +557,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
   CARRY4 rgb_led_tri_o0_carry
        (.CI(1'b0),
         .CO({rgb_led_tri_o0_carry_n_0,rgb_led_tri_o0_carry_n_1,rgb_led_tri_o0_carry_n_2,rgb_led_tri_o0_carry_n_3}),
-        .CYINIT(1'b1),
+        .CYINIT(1'b0),
         .DI({rgb_led_tri_o0_carry_i_1_n_0,rgb_led_tri_o0_carry_i_2_n_0,rgb_led_tri_o0_carry_i_3_n_0,rgb_led_tri_o0_carry_i_4_n_0}),
         .O(NLW_rgb_led_tri_o0_carry_O_UNCONNECTED[3:0]),
         .S({rgb_led_tri_o0_carry_i_5_n_0,rgb_led_tri_o0_carry_i_6_n_0,rgb_led_tri_o0_carry_i_7_n_0,rgb_led_tri_o0_carry_i_8_n_0}));
@@ -651,7 +651,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
   CARRY4 \rgb_led_tri_o0_inferred__0/i__carry 
        (.CI(1'b0),
         .CO({\rgb_led_tri_o0_inferred__0/i__carry_n_0 ,\rgb_led_tri_o0_inferred__0/i__carry_n_1 ,\rgb_led_tri_o0_inferred__0/i__carry_n_2 ,\rgb_led_tri_o0_inferred__0/i__carry_n_3 }),
-        .CYINIT(1'b1),
+        .CYINIT(1'b0),
         .DI({i__carry_i_1__0_n_0,i__carry_i_2__0_n_0,i__carry_i_3__0_n_0,i__carry_i_4__0_n_0}),
         .O(\NLW_rgb_led_tri_o0_inferred__0/i__carry_O_UNCONNECTED [3:0]),
         .S({i__carry_i_5__0_n_0,i__carry_i_6__0_n_0,i__carry_i_7__0_n_0,i__carry_i_8__0_n_0}));
@@ -665,7 +665,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PWM
   CARRY4 \rgb_led_tri_o0_inferred__1/i__carry 
        (.CI(1'b0),
         .CO({\rgb_led_tri_o0_inferred__1/i__carry_n_0 ,\rgb_led_tri_o0_inferred__1/i__carry_n_1 ,\rgb_led_tri_o0_inferred__1/i__carry_n_2 ,\rgb_led_tri_o0_inferred__1/i__carry_n_3 }),
-        .CYINIT(1'b1),
+        .CYINIT(1'b0),
         .DI({i__carry_i_1_n_0,i__carry_i_2_n_0,i__carry_i_3_n_0,i__carry_i_4_n_0}),
         .O(\NLW_rgb_led_tri_o0_inferred__1/i__carry_O_UNCONNECTED [3:0]),
         .S({i__carry_i_5_n_0,i__carry_i_6_n_0,i__carry_i_7_n_0,i__carry_i_8_n_0}));

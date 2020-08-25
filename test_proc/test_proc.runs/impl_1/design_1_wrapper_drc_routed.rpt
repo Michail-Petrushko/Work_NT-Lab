@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Thu Aug 20 10:48:41 2020
+| Date         : Tue Aug 25 18:38:18 2020
 | Host         : DESKTOP-TM8D8VH running 64-bit major release  (build 9200)
 | Command      : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -24,15 +24,14 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 16
-+-----------+----------+------------------------+------------+
-| Rule      | Severity | Description            | Violations |
-+-----------+----------+------------------------+------------+
-| DPIP-1    | Warning  | Input pipelining       | 7          |
-| DPOP-1    | Warning  | PREG Output pipelining | 4          |
-| DPOP-2    | Warning  | MREG Output pipelining | 4          |
-| RTSTAT-10 | Warning  | No routable loads      | 1          |
-+-----------+----------+------------------------+------------+
+             Violations found: 15
++--------+----------+------------------------+------------+
+| Rule   | Severity | Description            | Violations |
++--------+----------+------------------------+------------+
+| DPIP-1 | Warning  | Input pipelining       | 7          |
+| DPOP-1 | Warning  | PREG Output pipelining | 4          |
+| DPOP-2 | Warning  | MREG Output pipelining | 4          |
++--------+----------+------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -109,11 +108,6 @@ Related violations: <none>
 DPOP-2#4 Warning
 MREG Output pipelining  
 DSP design_1_i/hsv_to_rgb_0_1/inst/R7__0 multiplier stage design_1_i/hsv_to_rgb_0_1/inst/R7__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-RTSTAT-10#1 Warning
-No routable loads  
-1 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/hsv_to_rgb_0_1/inst/signal.
 Related violations: <none>
 
 

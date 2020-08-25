@@ -96,15 +96,16 @@ void SWs()
 
 
 int pow2(int num, int power){
-	if (power==1) return num;
+	if (power==1) return num*2;
 	else return 2*pow2(num,power-1);
 }
 
 int makeData (int state, int H, int S, int V){
-	//int data = state + H<<2 + S<<11 + V<<19;
+	//int data1 = state + H<<2 + S<<11 + V<<19;
 	//int data = V + S<<8 + H<<16 + state<<25;
-	int data = state + pow2(H,2) + pow2(S,11) + pow2(V,19);
-	return data;
+	int data2 = state + pow2(H,2) + pow2(S,11) + pow2(V,19);
+	//if (data2%2==1) LEDs(1);
+	return data2;
 }
 
 void dataOut(int data)
@@ -149,22 +150,24 @@ int main(void){
 	//volatile int Delay;
 	int readBit = 0;
 	int state = 2;
-	int H = 30;
-	int S = 90;
-	int V = 50;
+	int H = 240;
+	int S = 99;
+	int V = 100;			// 8 = 1
 	//int prevData;
 
+	//printf("Hello ARM World!" "\n");
+	//readBitOut(1);
+	//for (int i=0;i<10000000;i++);
 
-	LEDs(5);
-
-	unsigned data = makeData(state, H, S, V);
+	readBitOut(0);
+	int data = makeData(state, H, S, V);
 	dataOut(data);
-
+	//for (int i=0;i<10000000;i++);
 	readBit=1;
 	readBitOut(1);
-	//for (int i=0;i<100000;i++);
+	for (int i=0;i<10000000;i++);
 	readBitOut(0);
-	while(1) readBitOut(0);
+	//while(1) readBitOut(0);
 	return 0;
 }
 

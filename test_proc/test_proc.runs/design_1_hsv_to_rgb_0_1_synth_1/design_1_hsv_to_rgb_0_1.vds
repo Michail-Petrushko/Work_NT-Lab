@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Mon Aug 17 16:57:52 2020
-# Process ID: 1544
+# Start of session at: Mon Aug 24 16:45:55 2020
+# Process ID: 11308
 # Current directory: C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/design_1_hsv_to_rgb_0_1_synth_1
 # Command line: vivado.exe -log design_1_hsv_to_rgb_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_hsv_to_rgb_0_1.tcl
 # Log file: C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/design_1_hsv_to_rgb_0_1_synth_1/design_1_hsv_to_rgb_0_1.vds
@@ -15,13 +15,12 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13636 
+INFO: Helper process launched with PID 6000 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 451.797 ; gain = 103.633
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 452.887 ; gain = 102.855
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_hsv_to_rgb_0_1' [c:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/ip/design_1_hsv_to_rgb_0_1/synth/design_1_hsv_to_rgb_0_1.v:58]
 INFO: [Synth 8-6157] synthesizing module 'hsv_to_rgb' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB_proc/hsv_to_rgb.v:23]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB_proc/hsv_to_rgb.v:33]
 WARNING: [Synth 8-6090] variable 'R' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB_proc/hsv_to_rgb.v:74]
 WARNING: [Synth 8-6090] variable 'G' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB_proc/hsv_to_rgb.v:75]
 WARNING: [Synth 8-6090] variable 'B' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB_proc/hsv_to_rgb.v:76]
@@ -31,10 +30,13 @@ WARNING: [Synth 8-6014] Unused sequential element a_reg was removed.  [C:/Users/
 WARNING: [Synth 8-6014] Unused sequential element Vinc_reg was removed.  [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB_proc/hsv_to_rgb.v:40]
 WARNING: [Synth 8-6014] Unused sequential element Vdec_reg was removed.  [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB_proc/hsv_to_rgb.v:41]
 WARNING: [Synth 8-6014] Unused sequential element v_reg was removed.  [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB_proc/hsv_to_rgb.v:42]
+WARNING: [Synth 8-6014] Unused sequential element sostR_reg was removed.  [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB_proc/hsv_to_rgb.v:46]
+WARNING: [Synth 8-6014] Unused sequential element sostG_reg was removed.  [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB_proc/hsv_to_rgb.v:47]
+WARNING: [Synth 8-6014] Unused sequential element sostB_reg was removed.  [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB_proc/hsv_to_rgb.v:48]
 INFO: [Synth 8-6155] done synthesizing module 'hsv_to_rgb' (1#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/HSV-RGB_proc/hsv_to_rgb.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_hsv_to_rgb_0_1' (2#1) [c:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/ip/design_1_hsv_to_rgb_0_1/synth/design_1_hsv_to_rgb_0_1.v:58]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 507.004 ; gain = 158.840
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 507.844 ; gain = 157.813
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -47,10 +49,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 507.004 ; gain = 158.840
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 507.844 ; gain = 157.813
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 507.004 ; gain = 158.840
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 507.844 ; gain = 157.813
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -63,25 +65,25 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 WARNING: [Constraints 18-5210] No constraint will be written out.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.095 . Memory (MB): peak = 831.434 ; gain = 2.410
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.149 . Memory (MB): peak = 824.672 ; gain = 2.227
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 831.434 ; gain = 483.270
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:41 . Memory (MB): peak = 824.672 ; gain = 474.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 831.434 ; gain = 483.270
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:41 . Memory (MB): peak = 824.672 ; gain = 474.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 831.434 ; gain = 483.270
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:41 . Memory (MB): peak = 824.672 ; gain = 474.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 831.434 ; gain = 483.270
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:42 . Memory (MB): peak = 824.672 ; gain = 474.641
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -99,15 +101,16 @@ Detailed RTL Component Info :
 	   2 Input     29 Bit       Adders := 1     
 	   3 Input      8 Bit       Adders := 4     
 +---Registers : 
-	                8 Bit    Registers := 6     
-	                1 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
 +---Multipliers : 
 	                 9x32  Multipliers := 1     
 	                 6x32  Multipliers := 1     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 27    
+	   2 Input      8 Bit        Muxes := 9     
 	   7 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -123,15 +126,16 @@ Detailed RTL Component Info :
 	   2 Input     29 Bit       Adders := 1     
 	   3 Input      8 Bit       Adders := 4     
 +---Registers : 
-	                8 Bit    Registers := 6     
-	                1 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
 +---Multipliers : 
 	                 9x32  Multipliers := 1     
 	                 6x32  Multipliers := 1     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 27    
+	   2 Input      8 Bit        Muxes := 9     
 	   7 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -163,7 +167,7 @@ DSP Report: Generating DSP inst/R4, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator inst/R4 is absorbed into DSP inst/R4.
 DSP Report: operator inst/R4 is absorbed into DSP inst/R4.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 831.434 ; gain = 483.270
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:57 . Memory (MB): peak = 824.672 ; gain = 474.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -193,13 +197,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:01:05 . Memory (MB): peak = 883.211 ; gain = 535.047
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:10 ; elapsed = 00:01:34 . Memory (MB): peak = 882.629 ; gain = 532.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:01:05 . Memory (MB): peak = 884.105 ; gain = 535.941
+Finished Timing Optimization : Time (s): cpu = 00:01:10 ; elapsed = 00:01:34 . Memory (MB): peak = 883.574 ; gain = 533.543
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -211,7 +215,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:55 ; elapsed = 00:01:05 . Memory (MB): peak = 900.777 ; gain = 552.613
+Finished Technology Mapping : Time (s): cpu = 00:01:11 ; elapsed = 00:01:35 . Memory (MB): peak = 891.438 ; gain = 541.406
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -235,7 +239,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:01:07 . Memory (MB): peak = 900.777 ; gain = 552.613
+Finished IO Insertion : Time (s): cpu = 00:01:13 ; elapsed = 00:01:37 . Memory (MB): peak = 892.488 ; gain = 542.457
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -248,7 +252,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:01:07 . Memory (MB): peak = 900.777 ; gain = 552.613
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:13 ; elapsed = 00:01:37 . Memory (MB): peak = 892.488 ; gain = 542.457
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -260,25 +264,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:01:07 . Memory (MB): peak = 900.777 ; gain = 552.613
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:13 ; elapsed = 00:01:37 . Memory (MB): peak = 892.488 ; gain = 542.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:01:07 . Memory (MB): peak = 900.777 ; gain = 552.613
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:13 ; elapsed = 00:01:37 . Memory (MB): peak = 892.488 ; gain = 542.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:01:07 . Memory (MB): peak = 900.777 ; gain = 552.613
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:13 ; elapsed = 00:01:37 . Memory (MB): peak = 892.488 ; gain = 542.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:57 ; elapsed = 00:01:07 . Memory (MB): peak = 900.777 ; gain = 552.613
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:13 ; elapsed = 00:01:37 . Memory (MB): peak = 892.488 ; gain = 542.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -297,27 +301,27 @@ Report Cell Usage:
 |1     |CARRY4  |   162|
 |2     |DSP48E1 |     4|
 |3     |LUT1    |    18|
-|4     |LUT2    |   200|
-|5     |LUT3    |   212|
-|6     |LUT4    |   273|
-|7     |LUT5    |   163|
-|8     |LUT6    |   134|
-|9     |FDRE    |    49|
+|4     |LUT2    |   201|
+|5     |LUT3    |   201|
+|6     |LUT4    |   260|
+|7     |LUT5    |   147|
+|8     |LUT6    |   138|
+|9     |FDRE    |    24|
 +------+--------+------+
 
 Report Instance Areas: 
 +------+---------+-----------+------+
 |      |Instance |Module     |Cells |
 +------+---------+-----------+------+
-|1     |top      |           |  1215|
-|2     |  inst   |hsv_to_rgb |  1215|
+|1     |top      |           |  1155|
+|2     |  inst   |hsv_to_rgb |  1155|
 +------+---------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:01:07 . Memory (MB): peak = 900.777 ; gain = 552.613
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:13 ; elapsed = 00:01:37 . Memory (MB): peak = 892.488 ; gain = 542.457
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:00:52 . Memory (MB): peak = 900.777 ; gain = 228.184
-Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:01:08 . Memory (MB): peak = 900.777 ; gain = 552.613
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:51 ; elapsed = 00:01:17 . Memory (MB): peak = 892.488 ; gain = 225.629
+Synthesis Optimization Complete : Time (s): cpu = 00:01:13 ; elapsed = 00:01:38 . Memory (MB): peak = 892.488 ; gain = 542.457
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 166 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -328,13 +332,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-18 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+17 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:01:12 . Memory (MB): peak = 900.777 ; gain = 565.762
+synth_design: Time (s): cpu = 00:01:17 ; elapsed = 00:01:42 . Memory (MB): peak = 892.488 ; gain = 555.582
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/design_1_hsv_to_rgb_0_1_synth_1/design_1_hsv_to_rgb_0_1.dcp' has been generated.
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/design_1_hsv_to_rgb_0_1_synth_1/design_1_hsv_to_rgb_0_1.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_hsv_to_rgb_0_1_utilization_synth.rpt -pb design_1_hsv_to_rgb_0_1_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 900.777 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Aug 17 16:59:27 2020...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.224 . Memory (MB): peak = 892.488 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 24 16:48:11 2020...

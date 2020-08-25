@@ -62,7 +62,8 @@ module design_1_FSM_0_0 (
   reset,
   Hue,
   Saturation,
-  Value
+  Value,
+  checkBit
 );
 
 input wire [26 : 0] data;
@@ -76,6 +77,7 @@ input wire reset;
 output wire [8 : 0] Hue;
 output wire [8 : 0] Saturation;
 output wire [8 : 0] Value;
+output wire checkBit;
 
   FSM inst (
     .data(data),
@@ -84,6 +86,7 @@ output wire [8 : 0] Value;
     .reset(reset),
     .Hue(Hue),
     .Saturation(Saturation),
-    .Value(Value)
+    .Value(Value),
+    .checkBit(checkBit)
   );
 endmodule

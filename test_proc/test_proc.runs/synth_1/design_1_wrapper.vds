@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Aug 20 10:44:54 2020
-# Process ID: 13716
+# Start of session at: Tue Aug 25 18:32:12 2020
+# Process ID: 11812
 # Current directory: C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/design_1_wrapper.vds
@@ -13,62 +13,62 @@ source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 365.844 ; gain = 59.828
+add_files: Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 365.488 ; gain = 60.504
 Command: synth_design -top design_1_wrapper -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2800 
+INFO: Helper process launched with PID 13692 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 474.129 ; gain = 101.375
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 474.574 ; gain = 102.172
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_FSM_0_0' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_FSM_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_FSM_0_0' (1#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_FSM_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_PWM_0_1' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_PWM_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_PWM_0_1' (2#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_PWM_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_1' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_1' (3#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_5' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_axi_gpio_0_5_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_5' (4#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_axi_gpio_0_5_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_3' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_axi_gpio_0_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_3' (5#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_axi_gpio_0_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_4' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_axi_gpio_0_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_4' (6#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_axi_gpio_0_4_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_1' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_clk_wiz_0_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_1' (7#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_clk_wiz_0_1_stub.v:5]
-WARNING: [Synth 8-350] instance 'clk_wiz_0' of module 'design_1_clk_wiz_0_1' requires 4 connections, but only 3 given [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:327]
-INFO: [Synth 8-6157] synthesizing module 'design_1_hsv_to_rgb_0_1' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_hsv_to_rgb_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_hsv_to_rgb_0_1' (8#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_hsv_to_rgb_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_1' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_processing_system7_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_1' (9#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_processing_system7_0_1_stub.v:6]
-WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'design_1_processing_system7_0_1' requires 65 connections, but only 63 given [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:340]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ps7_0_axi_periph_1' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:543]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_15SPJYW' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:1512]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_15SPJYW' (10#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:1512]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_XU9C55' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:1658]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_XU9C55' (11#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:1658]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_14WQB4R' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:1790]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_14WQB4R' (12#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:1790]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_YFYJ3U' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:1922]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_YFYJ3U' (13#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:1922]
-INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_17KQ732' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:2054]
-INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_17KQ732' (14#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:2054]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_UYSKKA' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:2186]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (15#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_UYSKKA' (16#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:2186]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_1' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_xbar_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_1' (17#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_xbar_1_stub.v:6]
-WARNING: [Synth 8-689] width (3) of port connection 'm_axi_arprot' does not match port width (15) of module 'design_1_xbar_1' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:1473]
-WARNING: [Synth 8-689] width (3) of port connection 'm_axi_awprot' does not match port width (15) of module 'design_1_xbar_1' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:1477]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ps7_0_axi_periph_1' (18#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:543]
-WARNING: [Synth 8-350] instance 'ps7_0_axi_periph' of module 'design_1_ps7_0_axi_periph_1' requires 139 connections, but only 128 given [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:404]
-INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_50M_1' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_rst_ps7_0_50M_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_50M_1' (19#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-13716-DESKTOP-TM8D8VH/realtime/design_1_rst_ps7_0_50M_1_stub.v:6]
-WARNING: [Synth 8-350] instance 'rst_ps7_0_50M' of module 'design_1_rst_ps7_0_50M_1' requires 10 connections, but only 7 given [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:533]
+INFO: [Synth 8-6157] synthesizing module 'design_1_FSM_0_0' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_FSM_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_FSM_0_0' (1#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_FSM_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_PWM_0_1' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_PWM_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_PWM_0_1' (2#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_PWM_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_1' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_1' (3#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_5' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_axi_gpio_0_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_5' (4#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_axi_gpio_0_5_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_3' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_axi_gpio_0_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_3' (5#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_axi_gpio_0_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_4' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_axi_gpio_0_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_4' (6#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_axi_gpio_0_4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_1' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_clk_wiz_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_1' (7#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_clk_wiz_0_1_stub.v:5]
+WARNING: [Synth 8-350] instance 'clk_wiz_0' of module 'design_1_clk_wiz_0_1' requires 4 connections, but only 3 given [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:330]
+INFO: [Synth 8-6157] synthesizing module 'design_1_hsv_to_rgb_0_1' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_hsv_to_rgb_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_hsv_to_rgb_0_1' (8#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_hsv_to_rgb_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_1' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_processing_system7_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_1' (9#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_processing_system7_0_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'design_1_processing_system7_0_1' requires 65 connections, but only 63 given [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:343]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ps7_0_axi_periph_1' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:546]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_15SPJYW' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:1515]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_15SPJYW' (10#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:1515]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_XU9C55' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:1661]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_XU9C55' (11#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:1661]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_14WQB4R' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:1793]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_14WQB4R' (12#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:1793]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_YFYJ3U' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:1925]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_YFYJ3U' (13#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:1925]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_17KQ732' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:2057]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_17KQ732' (14#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:2057]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_UYSKKA' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:2189]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (15#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_UYSKKA' (16#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:2189]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_1' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_xbar_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_1' (17#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_xbar_1_stub.v:6]
+WARNING: [Synth 8-689] width (3) of port connection 'm_axi_arprot' does not match port width (15) of module 'design_1_xbar_1' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:1476]
+WARNING: [Synth 8-689] width (3) of port connection 'm_axi_awprot' does not match port width (15) of module 'design_1_xbar_1' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:1480]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ps7_0_axi_periph_1' (18#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:546]
+WARNING: [Synth 8-350] instance 'ps7_0_axi_periph' of module 'design_1_ps7_0_axi_periph_1' requires 139 connections, but only 128 given [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:407]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_50M_1' [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_rst_ps7_0_50M_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_50M_1' (19#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/.Xil/Vivado-11812-DESKTOP-TM8D8VH/realtime/design_1_rst_ps7_0_50M_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_ps7_0_50M' of module 'design_1_rst_ps7_0_50M_1' requires 10 connections, but only 7 given [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:536]
 INFO: [Synth 8-6155] done synthesizing module 'design_1' (20#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/synth/design_1.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (21#1) [C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 WARNING: [Synth 8-3331] design s00_couplers_imp_UYSKKA has unconnected port M_ACLK
@@ -94,7 +94,7 @@ WARNING: [Synth 8-3331] design m00_couplers_imp_15SPJYW has unconnected port M_A
 WARNING: [Synth 8-3331] design m00_couplers_imp_15SPJYW has unconnected port S_ACLK
 WARNING: [Synth 8-3331] design m00_couplers_imp_15SPJYW has unconnected port S_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 530.004 ; gain = 157.250
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 530.504 ; gain = 158.102
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -107,10 +107,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 530.004 ; gain = 157.250
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 530.504 ; gain = 158.102
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 530.004 ; gain = 157.250
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 530.504 ; gain = 158.102
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -152,16 +152,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 818.723 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 820.352 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 818.723 ; gain = 445.969
+Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:42 . Memory (MB): peak = 820.352 ; gain = 447.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 818.723 ; gain = 445.969
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:42 . Memory (MB): peak = 820.352 ; gain = 447.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -443,10 +443,10 @@ Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/xbar. (co
 Applied set_property DONT_TOUCH = true for design_1_i/clk_wiz_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 818.723 ; gain = 445.969
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:44 . Memory (MB): peak = 820.352 ; gain = 447.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 818.723 ; gain = 445.969
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:44 . Memory (MB): peak = 820.352 ; gain = 447.949
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -492,7 +492,7 @@ WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_1 has unconnected port 
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_1 has unconnected port M04_ACLK
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_1 has unconnected port M04_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 818.723 ; gain = 445.969
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:46 . Memory (MB): peak = 820.352 ; gain = 447.949
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -507,13 +507,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/processing_sys
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_wiz_0/clk_out1' to pin 'design_1_i/clk_wiz_0/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 849.465 ; gain = 476.711
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:01:10 . Memory (MB): peak = 851.012 ; gain = 478.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 849.688 ; gain = 476.934
+Finished Timing Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:01:10 . Memory (MB): peak = 851.234 ; gain = 478.832
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -525,7 +525,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 850.563 ; gain = 477.809
+Finished Technology Mapping : Time (s): cpu = 00:00:52 ; elapsed = 00:01:10 . Memory (MB): peak = 852.109 ; gain = 479.707
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -549,7 +549,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 850.938 ; gain = 478.184
+Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:01:13 . Memory (MB): peak = 852.664 ; gain = 480.262
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -562,7 +562,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 850.938 ; gain = 478.184
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:01:13 . Memory (MB): peak = 852.664 ; gain = 480.262
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -574,25 +574,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 850.938 ; gain = 478.184
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:01:13 . Memory (MB): peak = 852.664 ; gain = 480.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 850.938 ; gain = 478.184
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:01:13 . Memory (MB): peak = 852.664 ; gain = 480.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 850.938 ; gain = 478.184
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:01:13 . Memory (MB): peak = 852.664 ; gain = 480.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 850.938 ; gain = 478.184
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:01:13 . Memory (MB): peak = 852.664 ; gain = 480.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -633,24 +633,24 @@ Report Cell Usage:
 |11    |design_1_rst_ps7_0_50M_1        |     1|
 |12    |design_1_xbar_1                 |     1|
 |13    |IBUF                            |     6|
-|14    |OBUF                            |     8|
+|14    |OBUF                            |    35|
 +------+--------------------------------+------+
 
 Report Instance Areas: 
 +------+---------------------+----------------------------+------+
 |      |Instance             |Module                      |Cells |
 +------+---------------------+----------------------------+------+
-|1     |top                  |                            |  1236|
+|1     |top                  |                            |  1263|
 |2     |  design_1_i         |design_1                    |  1222|
 |3     |    ps7_0_axi_periph |design_1_ps7_0_axi_periph_1 |   773|
 |4     |      s00_couplers   |s00_couplers_imp_UYSKKA     |   177|
 +------+---------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 850.938 ; gain = 478.184
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:01:13 . Memory (MB): peak = 852.664 ; gain = 480.262
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 850.938 ; gain = 189.465
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 850.938 ; gain = 478.184
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:48 . Memory (MB): peak = 852.664 ; gain = 190.414
+Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:01:13 . Memory (MB): peak = 852.664 ; gain = 480.262
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -662,9 +662,9 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 60 Infos, 38 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:46 . Memory (MB): peak = 870.168 ; gain = 504.324
+synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:01:18 . Memory (MB): peak = 871.047 ; gain = 505.559
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 870.410 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Aug 20 10:46:09 2020...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 871.289 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Aug 25 18:33:58 2020...

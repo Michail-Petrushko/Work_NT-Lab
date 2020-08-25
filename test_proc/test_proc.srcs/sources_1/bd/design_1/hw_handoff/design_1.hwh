@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Aug 20 10:43:28 2020" VIVADOVERSION="2018.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Aug 25 18:16:25 2020" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-10:part0:1.0" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -34,8 +34,8 @@
     </PORT>
     <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_reset">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="hsv_to_rgb_0_1" PORT="reset"/>
         <CONNECTION INSTANCE="PWM_0" PORT="reset"/>
+        <CONNECTION INSTANCE="hsv_to_rgb_0_1" PORT="reset"/>
         <CONNECTION INSTANCE="FSM_0" PORT="reset"/>
       </CONNECTIONS>
     </PORT>
@@ -54,6 +54,12 @@
         <CONNECTION INSTANCE="clk_wiz_0" PORT="reset"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="O" LEFT="26" NAME="gpio" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_data_gpio_io_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_gpio_data" PORT="gpio_io_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="26" NAME="GPIO_0_tri_o" RIGHT="0" SIGIS="undef"/>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
@@ -109,6 +115,11 @@
         <PORTMAP LOGICAL="PS_SRSTB" PHYSICAL="FIXED_IO_0_ps_srstb"/>
         <PORTMAP LOGICAL="PS_CLK" PHYSICAL="FIXED_IO_0_ps_clk"/>
         <PORTMAP LOGICAL="PS_PORB" PHYSICAL="FIXED_IO_0_ps_porb"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="axi_gpio_data_GPIO" NAME="GPIO_0" TYPE="INITIATOR">
+      <PORTMAPS>
+        <PORTMAP LOGICAL="TRI_O" PHYSICAL="GPIO_0_tri_o"/>
       </PORTMAPS>
     </BUSINTERFACE>
   </EXTERNALINTERFACES>
@@ -847,6 +858,7 @@
         </PORT>
         <PORT DIR="O" LEFT="26" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_data_gpio_io_o">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="gpio"/>
             <CONNECTION INSTANCE="FSM_0" PORT="data"/>
           </CONNECTIONS>
         </PORT>
@@ -908,7 +920,7 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="__NOC__" NAME="GPIO" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
+        <BUSINTERFACE BUSNAME="axi_gpio_data_GPIO" NAME="GPIO" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="TRI_O" PHYSICAL="gpio_io_o"/>
           </PORTMAPS>
@@ -2204,8 +2216,8 @@
         </PORT>
         <PORT CLKFREQUENCY="10000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hsv_to_rgb_0_1" PORT="clk"/>
             <CONNECTION INSTANCE="PWM_0" PORT="clk"/>
+            <CONNECTION INSTANCE="hsv_to_rgb_0_1" PORT="clk"/>
             <CONNECTION INSTANCE="FSM_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>

@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Thu Aug 20 10:43:26 2020
+//Date        : Tue Aug 25 18:16:18 2020
 //Host        : DESKTOP-TM8D8VH running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -34,6 +34,7 @@ module design_1
     FIXED_IO_0_ps_srstb,
     checkBit_0,
     clk_in,
+    gpio,
     leds_4bits_tri_o,
     reset,
     reset_0,
@@ -62,6 +63,7 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO_0 PS_SRSTB" *) inout FIXED_IO_0_ps_srstb;
   output checkBit_0;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_IN CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_IN, CLK_DOMAIN design_1_clk_in, FREQ_HZ 125000000, PHASE 0.000" *) input clk_in;
+  output [26:0]gpio;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 leds_4bits TRI_O" *) output [3:0]leds_4bits_tri_o;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET, POLARITY ACTIVE_LOW" *) input reset;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET_0 RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET_0, POLARITY ACTIVE_HIGH" *) input reset_0;
@@ -218,6 +220,7 @@ module design_1
 
   assign axi_gpio_2_GPIO_TRI_I = sws_4bits_tri_i[3:0];
   assign checkBit_0 = FSM_0_checkBit;
+  assign gpio[26:0] = axi_gpio_data_gpio_io_o;
   assign leds_4bits_tri_o[3:0] = axi_gpio_1_GPIO_TRI_O;
   assign reset_0_1 = reset;
   assign reset_0_2 = reset_0;

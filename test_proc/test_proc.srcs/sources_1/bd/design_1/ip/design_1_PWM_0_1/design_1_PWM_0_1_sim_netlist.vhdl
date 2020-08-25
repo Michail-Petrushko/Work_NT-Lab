@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Thu Aug 20 08:58:39 2020
+-- Date        : Fri Aug 21 12:42:12 2020
 -- Host        : DESKTOP-TM8D8VH running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/User.1/Desktop/Work/Zybo-Z7-10-HDMI/proj/test_proc/test_proc.srcs/sources_1/bd/design_1/ip/design_1_PWM_0_1/design_1_PWM_0_1_sim_netlist.vhdl
@@ -714,7 +714,7 @@ rgb_led_tri_o0_carry: unisim.vcomponents.CARRY4
       CO(2) => rgb_led_tri_o0_carry_n_1,
       CO(1) => rgb_led_tri_o0_carry_n_2,
       CO(0) => rgb_led_tri_o0_carry_n_3,
-      CYINIT => '1',
+      CYINIT => '0',
       DI(3) => rgb_led_tri_o0_carry_i_1_n_0,
       DI(2) => rgb_led_tri_o0_carry_i_2_n_0,
       DI(1) => rgb_led_tri_o0_carry_i_3_n_0,
@@ -850,7 +850,7 @@ rgb_led_tri_o0_carry_i_8: unisim.vcomponents.LUT5
       CO(2) => \rgb_led_tri_o0_inferred__0/i__carry_n_1\,
       CO(1) => \rgb_led_tri_o0_inferred__0/i__carry_n_2\,
       CO(0) => \rgb_led_tri_o0_inferred__0/i__carry_n_3\,
-      CYINIT => '1',
+      CYINIT => '0',
       DI(3) => \i__carry_i_1__0_n_0\,
       DI(2) => \i__carry_i_2__0_n_0\,
       DI(1) => \i__carry_i_3__0_n_0\,
@@ -879,7 +879,7 @@ rgb_led_tri_o0_carry_i_8: unisim.vcomponents.LUT5
       CO(2) => \rgb_led_tri_o0_inferred__1/i__carry_n_1\,
       CO(1) => \rgb_led_tri_o0_inferred__1/i__carry_n_2\,
       CO(0) => \rgb_led_tri_o0_inferred__1/i__carry_n_3\,
-      CYINIT => '1',
+      CYINIT => '0',
       DI(3) => \i__carry_i_1_n_0\,
       DI(2) => \i__carry_i_2_n_0\,
       DI(1) => \i__carry_i_3_n_0\,
