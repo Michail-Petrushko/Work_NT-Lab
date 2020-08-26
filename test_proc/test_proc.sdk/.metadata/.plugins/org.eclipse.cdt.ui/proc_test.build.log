@@ -1,8 +1,103 @@
-19:41:02 **** Incremental Build of configuration Debug for project proc_test ****
+14:34:51 **** Auto Build of configuration Debug for project proc_test ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: Цель `main-build' не требует выполнения команд.
+'Building file: ../src/CPU_LED.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPU_LED.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../proc_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/CPU_LED.d" -MT"src/CPU_LED.o" -o "src/CPU_LED.o" "../src/CPU_LED.c"
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/CPU_LED.c:16:
+../src/CPU_LED.c: In function 'LEDs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/CPU_LED.c:46:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/CPU_LED.c:36:6: note: declared here
+ void LEDs(int data)
+      ^~~~
+../src/CPU_LED.c: In function 'BTNs':
+../src/CPU_LED.c:58:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/CPU_LED.c:16:
+../src/CPU_LED.c: In function 'SWs':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/CPU_LED.c:83:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/CPU_LED.c:72:6: note: declared here
+ void SWs()
+      ^~~
+../src/CPU_LED.c:77:6: warning: variable 'data' set but not used [-Wunused-but-set-variable]
+  int data = 0;
+      ^~~~
+../src/CPU_LED.c: In function 'sendData':
+../src/CPU_LED.c:103:2: warning: implicit declaration of function 'dataOut' [-Wimplicit-function-declaration]
+  dataOut(data);
+  ^~~~~~~
+../src/CPU_LED.c:104:2: warning: implicit declaration of function 'readBitOut' [-Wimplicit-function-declaration]
+  readBitOut(1);
+  ^~~~~~~~~~
+../src/CPU_LED.c: At top level:
+../src/CPU_LED.c:109:6: warning: conflicting types for 'dataOut'
+ void dataOut(int data)
+      ^~~~~~~
+../src/CPU_LED.c:103:2: note: previous implicit declaration of 'dataOut' was here
+  dataOut(data);
+  ^~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/CPU_LED.c:16:
+../src/CPU_LED.c: In function 'dataOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/CPU_LED.c:119:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/CPU_LED.c:109:6: note: declared here
+ void dataOut(int data)
+      ^~~~~~~
+../src/CPU_LED.c: At top level:
+../src/CPU_LED.c:127:6: warning: conflicting types for 'readBitOut'
+ void readBitOut(int data)
+      ^~~~~~~~~~
+../src/CPU_LED.c:104:2: note: previous implicit declaration of 'readBitOut' was here
+  readBitOut(1);
+  ^~~~~~~~~~
+In file included from ../../proc_test_bsp/ps7_cortexa9_0/include/xgpio.h:135:0,
+                 from ../src/CPU_LED.c:16:
+../src/CPU_LED.c: In function 'readBitOut':
+../../proc_test_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/CPU_LED.c:137:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/CPU_LED.c:127:6: note: declared here
+ void readBitOut(int data)
+      ^~~~~~~~~~
+../src/CPU_LED.c: In function 'BTNs':
+../src/CPU_LED.c:70:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/CPU_LED.c'
+' '
+'Building target: proc_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../proc_test_bsp/ps7_cortexa9_0/lib -o "proc_test.elf"  ./src/CPU_LED.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: proc_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size proc_test.elf  |tee "proc_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21652	   1208	  22600	  45460	   b194	proc_test.elf
+'Finished building: proc_test.elf.size'
+' '
 
-19:41:03 Build Finished (took 587ms)
+14:34:54 Build Finished (took 3s.479ms)
 

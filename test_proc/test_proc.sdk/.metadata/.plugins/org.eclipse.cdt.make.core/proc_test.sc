@@ -858,6 +858,8 @@
 </instance>
 <instance id="xilinx.gnu.armv7.exe.debug.1839724585;xilinx.gnu.armv7.exe.debug.1839724585.;xilinx.gnu.armv7.c.toolchain.compiler.debug.2136405982;xilinx.gnu.armv7.c.compiler.input.877752459">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="#undef __ARM_NEON" removed="true"/>
+<includePath path="#undef __ARM_NEON_FP" removed="true"/>
 <includePath path="#undef __ARM_ARCH_EXT_IDIV__" removed="true"/>
 <includePath path="#undef __ARM_FEATURE_QRDMX" removed="true"/>
 <includePath path="c:\xilinx\sdk\2018.2\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/7.2.1/include"/>

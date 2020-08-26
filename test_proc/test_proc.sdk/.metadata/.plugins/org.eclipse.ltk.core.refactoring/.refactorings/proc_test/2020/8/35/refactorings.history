@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;proc_test/src/LED_test_new.c&apos; to &apos;CPU_LED.c&apos;" description="Rename resource &apos;LED_test_new.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/LED_test_new.c" name="CPU_LED.c" stamp="1598441688967" updateReferences="true"/>
+</session>
